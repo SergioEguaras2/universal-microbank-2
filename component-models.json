@@ -280,5 +280,38 @@
         "multi": false
       }
     ]
+  },
+  {
+    "id": "condition-item",
+    "fields": [
+      {
+        "component": "text",
+        "name": "title",
+        "value": "",
+        "label": "Condition Title (e.g. Importe máximo)",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "value",
+        "value": "",
+        "label": "Condition Value (e.g. 30.000 €)",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "tooltip",
+        "value": "",
+        "label": "Tooltip Hover Text (Optional)",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "info",
+        "value": "",
+        "label": "Additional Info Underneath (Optional)",
+        "valueType": "string"
+      }
+    ]
   }
 ]
