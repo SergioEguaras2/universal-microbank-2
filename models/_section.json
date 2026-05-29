@@ -51,7 +51,9 @@
         "cards",
         "columns",
         "fragment",
-        "offer-maker"
+        "offer-maker",
+        "institutions",
+        "principal-banner"
       ]
     }
   ]

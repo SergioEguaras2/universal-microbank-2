@@ -16,7 +16,9 @@
       "cards",
       "columns",
       "fragment",
-      "offer-maker"
+      "offer-maker",
+      "institutions",
+      "principal-banner"
     ]
   },
   {
@@ -44,6 +46,12 @@
     "id": "offer-maker",
     "components": [
       "offer"
+    ]
+  },
+  {
+    "id": "principal-banner",
+    "components": [
+      "banner-slide"
     ]
   }
 ]
