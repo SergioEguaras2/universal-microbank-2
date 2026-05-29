@@ -247,5 +247,38 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id": "banner-slide",
+    "fields": [
+      {
+        "component": "text",
+        "name": "title",
+        "value": "",
+        "label": "Title",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "description",
+        "value": "",
+        "label": "Description / Text",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "link",
+        "value": "",
+        "label": "Link Button (Anchor)",
+        "valueType": "string"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Background Image",
+        "multi": false
+      }
+    ]
   }
 ]

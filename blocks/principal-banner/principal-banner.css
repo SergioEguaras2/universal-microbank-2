@@ -1,0 +1,231 @@
+/* principal-banner block styles */
+
+.principal-banner {
+  position: relative;
+  width: 100%;
+  height: 520px;
+  background-color: #000;
+  overflow: hidden;
+}
+
+.principal-banner .principal-banner-carousel {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.principal-banner .principal-banner-carousel-item {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
+  display: flex;
+  align-items: center;
+  z-index: 1;
+}
+
+.principal-banner .principal-banner-carousel-item.active {
+  opacity: 1;
+  visibility: visible;
+  z-index: 2;
+}
+
+/* Background image & masking */
+.principal-banner .principal-banner-media {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.principal-banner .principal-banner-image-group {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.principal-banner .principal-banner-image-mask {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgb(0 0 0 / 40%) 0%, rgb(0 0 0 / 60%) 100%);
+  z-index: 2;
+}
+
+.principal-banner .principal-banner-image-group picture {
+  width: 100%;
+  height: 100%;
+}
+
+.principal-banner .principal-banner-image-group img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Text overlays & fonts */
+.principal-banner .principal-banner-text {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.principal-banner .principal-banner-carousel-item .principal-banner-title {
+  font-family: roboto-condensed, sans-serif;
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 16px;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease 0.3s;
+}
+
+.principal-banner .principal-banner-carousel-item.active .principal-banner-title {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.principal-banner .principal-banner-caption {
+  font-family: roboto, sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  color: #fff;
+  margin-bottom: 28px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease 0.5s;
+}
+
+.principal-banner .principal-banner-carousel-item.active .principal-banner-caption {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.principal-banner .font-yellow {
+  color: #fd0; /* Microbank corporate yellow */
+  font-weight: 700;
+}
+
+/* CTA buttons inside slides */
+.principal-banner .principal-banner-cta a {
+  display: inline-block;
+  padding: 12px 32px;
+  background-color: #fd0;
+  color: #002b54;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 30px;
+  font-size: 0.95rem;
+  border: 2px solid transparent;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease 0.7s, background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.principal-banner .principal-banner-carousel-item.active .principal-banner-cta a {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.principal-banner .principal-banner-carousel-item .principal-banner-cta a:hover {
+  background-color: #fff;
+  color: #004481;
+  box-shadow: 0 8px 24px rgb(255 255 255 / 20%);
+}
+
+/* Auto-play and dots controls container */
+.principal-banner .principal-banner-container-toggle {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: flex-start;
+  pointer-events: none;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 24px;
+}
+
+/* Play/Pause toggle */
+.principal-banner .principal-banner-toggle {
+  background: rgb(255 255 255 / 20%);
+  border: 1px solid rgb(255 255 255 / 40%);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  pointer-events: auto;
+  transition: all 0.3s ease;
+}
+
+.principal-banner .principal-banner-toggle:hover {
+  background: rgb(255 255 255 / 40%);
+}
+
+.principal-banner .principal-banner-toggle.play svg path {
+  /* Redefine to draw a play triangle instead of pause bars when clicked */
+  d: path("M3 1 L9 6 L3 11 Z");
+}
+
+/* Slide Indicator Dots */
+.principal-banner .principal-banner-dots {
+  display: flex;
+  gap: 8px;
+  pointer-events: auto;
+}
+
+.principal-banner .principal-banner-dot {
+  background: rgb(255 255 255 / 40%);
+  border: none;
+  width: 24px;
+  height: 4px;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.principal-banner .principal-banner-dot.active {
+  background: #fff;
+  width: 36px;
+}
+
+/* Tablet & Desktop sizes */
+@media (width >= 768px) {
+  .principal-banner {
+    height: 600px;
+  }
+
+  .principal-banner .principal-banner-carousel-item .principal-banner-title {
+    font-size: 3rem;
+  }
+
+  .principal-banner .principal-banner-caption {
+    font-size: 1.5rem;
+    max-width: 600px;
+  }
+}
+
+@media (width >= 1200px) {
+  .principal-banner {
+    height: 700px;
+  }
+
+  .principal-banner .principal-banner-carousel-item .principal-banner-title {
+    font-size: 4rem;
+  }
+}
