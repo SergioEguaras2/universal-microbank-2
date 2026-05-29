@@ -18,7 +18,8 @@
       "fragment",
       "offer-maker",
       "institutions",
-      "principal-banner"
+      "principal-banner",
+      "product-conditions"
     ]
   },
   {
@@ -52,6 +53,12 @@
     "id": "principal-banner",
     "components": [
       "banner-slide"
+    ]
+  },
+  {
+    "id": "product-conditions",
+    "components": [
+      "condition-item"
     ]
   }
 ]
