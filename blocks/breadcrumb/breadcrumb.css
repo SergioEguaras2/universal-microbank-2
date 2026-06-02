@@ -1,0 +1,40 @@
+.breadcrumb {
+  display: block;
+  width: 100%;
+}
+
+.breadcrumb .breadcrumbsimple ul {
+  display: flex;
+  flex-wrap: nowrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.breadcrumb .breadcrumbsimple li {
+  font-size: 12px;
+  line-height: 16.8px;
+  color: #ffffff;
+  white-space: nowrap;
+}
+
+.breadcrumb .breadcrumbsimple li::after {
+  content: "/";
+  padding-left: 0.7rem;
+  padding-right: 0.7rem;
+}
+
+.breadcrumb .breadcrumbsimple li:last-child::after {
+  content: none;
+}
+
+.breadcrumb .breadcrumbsimple li a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.breadcrumb .breadcrumbsimple li.current {
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

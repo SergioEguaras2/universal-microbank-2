@@ -50,7 +50,12 @@
         "hero",
         "cards",
         "columns",
-        "fragment"
+        "fragment",
+        "offer-maker",
+        "institutions",
+        "principal-banner",
+        "product-conditions",
+        "search-bar"
       ]
     }
   ]
