@@ -312,6 +312,15 @@
         "label": "Additional Info Underneath (Optional)",
         "valueType": "string"
       }
-    ]
-  }
+    ]  },
+  {
+    "id": "search-bar",
+    "fields": [
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "content",
+        "label": "Contenido"
+      }
+    ]  }
 ]
