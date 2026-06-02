@@ -346,5 +346,16 @@
         "label": "Contenido"
       }
     ]
+  },
+  {
+    "id": "video-player",
+    "fields": [
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "content",
+        "label": "Contenido"
+      }
+    ]
   }
 ]
