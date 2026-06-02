@@ -225,5 +225,113 @@
         "valueType": "string"
       }
     ]
-  }
+  },
+  {
+    "id": "offer",
+    "fields": [
+      {
+        "component": "text",
+        "name": "title",
+        "value": "",
+        "label": "Loan Title (e.g. Préstamo Personal)",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "tinTae",
+        "value": "",
+        "label": "TIN / TAE (e.g. 5,00 % / 5,12 %)",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "installment",
+        "value": "",
+        "label": "Cuota Mensual (e.g. 150 €)",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "description",
+        "value": "",
+        "label": "Description & Links",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "banner-slide",
+    "fields": [
+      {
+        "component": "text",
+        "name": "title",
+        "value": "",
+        "label": "Title",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "description",
+        "value": "",
+        "label": "Description / Text",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "link",
+        "value": "",
+        "label": "Link Button (Anchor)",
+        "valueType": "string"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Background Image",
+        "multi": false
+      }
+    ]
+  },
+  {
+    "id": "condition-item",
+    "fields": [
+      {
+        "component": "text",
+        "name": "title",
+        "value": "",
+        "label": "Condition Title (e.g. Importe máximo)",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "value",
+        "value": "",
+        "label": "Condition Value (e.g. 30.000 €)",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "tooltip",
+        "value": "",
+        "label": "Tooltip Hover Text (Optional)",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "info",
+        "value": "",
+        "label": "Additional Info Underneath (Optional)",
+        "valueType": "string"
+      }
+    ]  },
+  {
+    "id": "search-bar",
+    "fields": [
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "content",
+        "label": "Contenido"
+      }
+    ]  }
 ]

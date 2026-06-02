@@ -43,5 +43,23 @@
       "button",
       "title"
     ]
+  },
+  {
+    "id": "offer-maker",
+    "components": [
+      "offer"
+    ]
+  },
+  {
+    "id": "principal-banner",
+    "components": [
+      "banner-slide"
+    ]
+  },
+  {
+    "id": "product-conditions",
+    "components": [
+      "condition-item"
+    ]
   }
 ]
