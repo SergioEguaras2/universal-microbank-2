@@ -1,9 +1,12 @@
 /**
  * breadcrumb.js — Bloque AEM EDS: Breadcrumb
- * Navegación secundaria de ubicación en la jerarquía del sitio con variantes de fondo negro y transparente
+ * Navegación secundaria de ubicación en
+ * la jerarquía del sitio con variantes de fondo
+ * negro y transparente
  *
  * Generado por SA-D02 del Sprint 2 — Red Agéntica AEM
- * Convención: export default function decorate(block) {} — vanilla JS, sin frameworks
+ * Convención: export default function decorate(block) {} —
+ * vanilla JS, sin frameworks
  */
 
 /**
@@ -27,8 +30,8 @@ export default function decorate(block) {
 
   // Cada celda es un item del breadcrumb
   const items = [];
-  rows.forEach(row => {
-    [...row.querySelectorAll(':scope > div')].forEach(cell => {
+  rows.forEach((row) => {
+    [...row.querySelectorAll(':scope > div')].forEach((cell) => {
       const text = cell.textContent.trim();
       const link = cell.querySelector('a');
       if (text) items.push({ text, href: link?.href || null });
