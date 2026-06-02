@@ -180,6 +180,17 @@
     ]
   },
   {
+    "id": "eu-institutions",
+    "fields": [
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "content",
+        "label": "Contenido"
+      }
+    ]
+  },
+  {
     "id": "fragment",
     "fields": [
       {
@@ -312,7 +323,8 @@
         "label": "Additional Info Underneath (Optional)",
         "valueType": "string"
       }
-    ]  },
+    ]
+  },
   {
     "id": "search-bar",
     "fields": [
@@ -322,5 +334,6 @@
         "name": "content",
         "label": "Contenido"
       }
-    ]  }
+    ]
+  }
 ]
