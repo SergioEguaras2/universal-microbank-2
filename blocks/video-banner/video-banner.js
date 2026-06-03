@@ -22,16 +22,16 @@ export default function decorate(block) {
   block.setAttribute('data-aue-label', 'Banner de Vídeo');
 
   const container = document.createElement('div');
-  container.className = 'video-banner__container';
+  container.className = 'video-banner-container';
 
   const mediaWrapper = document.createElement('div');
-  mediaWrapper.className = 'video-banner__media-wrapper';
+  mediaWrapper.className = 'video-banner-media-wrapper';
   mediaWrapper.setAttribute('data-aue-prop', 'media');
   mediaWrapper.setAttribute('data-aue-type', 'media');
 
   // Imagen de fondo con carga diferida (Lighthouse compliant)
   const poster = document.createElement('img');
-  poster.className = 'video-banner__poster';
+  poster.className = 'video-banner-poster';
   poster.src = posterImgSrc;
   poster.alt = `Portada de: ${titleText}`;
   poster.loading = 'lazy';
@@ -40,27 +40,27 @@ export default function decorate(block) {
 
   // Capa de contenidos
   const overlay = document.createElement('div');
-  overlay.className = 'video-banner__overlay';
+  overlay.className = 'video-banner-overlay';
 
   const title = document.createElement('h2');
-  title.className = 'video-banner__title';
+  title.className = 'video-banner-title';
   title.setAttribute('data-aue-prop', 'title');
   title.setAttribute('data-aue-type', 'text');
   title.textContent = titleText;
 
   // Botón con SVG Inline para ahorrar peticiones HTTP
   const playButton = document.createElement('button');
-  playButton.className = 'video-banner__play-button';
+  playButton.className = 'video-banner-play-button';
   playButton.setAttribute('aria-label', `Reproducir vídeo: ${titleText}`);
   playButton.innerHTML = `
-    <svg class="video-banner__play-icon" viewBox="0 0 100 100" aria-hidden="true">
+    <svg class="video-banner-play-icon" viewBox="0 0 100 100" aria-hidden="true">
       <circle cx="50" cy="50" r="48" fill="#00a0e1"/>
       <polygon points="40,30 70,50 40,70" fill="#ffffff"/>
     </svg>
   `;
 
   const subtitle = document.createElement('p');
-  subtitle.className = 'video-banner__subtitle';
+  subtitle.className = 'video-banner-subtitle';
   subtitle.setAttribute('data-aue-prop', 'subtitle');
   subtitle.setAttribute('data-aue-type', 'text');
   subtitle.textContent = subtitleText;
