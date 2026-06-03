@@ -2,11 +2,15 @@
  * @param {HTMLElement} block El elemento contenedor del bloque en el DOM
  */
 export default function decorate(block) {
-  // 1. Extraer los datos que el autor ingresó en AEM (o usar los placeholders por defecto de la foto)
-  const titleText = block.querySelector(':scope > div > div:nth-child(1)')?.textContent?.trim() || 'FINANCIACIÓN CON IMPACTO SOCIAL';
-  const subtitleText = block.querySelector(':scope > div > div:nth-child(2)')?.textContent?.trim() || 'PARA TODOS Y EN TODAS PARTES';
-  const posterImgSrc = block.querySelector(':scope > div > div:nth-child(3) img')?.src || 'https://www.microbank.com/es/inicio.html/assets/poster-video.jpg';
-  const videoSrc = block.querySelector(':scope > div > div:nth-child(4) a')?.href || '#';
+  // 1. Extraer los datos que el autor ingresó en AEM (o usar los placeholders por defecto)
+  const titleText = block.querySelector(':scope > div > div:nth-child(1)')
+    ?.textContent?.trim() || 'FINANCIACIÓN CON IMPACTO SOCIAL';
+  const subtitleText = block.querySelector(':scope > div > div:nth-child(2)')
+    ?.textContent?.trim() || 'PARA TODOS Y EN TODAS PARTES';
+  const posterImgSrc = block.querySelector(':scope > div > div:nth-child(3) img')
+    ?.src || 'https://www.microbank.com/es/inicio.html/assets/poster-video.jpg';
+  const videoSrc = block.querySelector(':scope > div > div:nth-child(4) a')
+    ?.href || '#';
 
   // 2. Limpiar el contenedor para inyectar la estructura semántica optimizada
   block.innerHTML = '';
@@ -65,17 +69,16 @@ export default function decorate(block) {
   overlay.appendChild(title);
   overlay.appendChild(playButton);
   overlay.appendChild(subtitle);
-  
+
   mediaWrapper.appendChild(poster);
   mediaWrapper.appendChild(overlay);
-  
+
   container.appendChild(mediaWrapper);
   block.appendChild(container);
 
   // 5. Evento de interacción (Accesibilidad y Buenas Prácticas)
   playButton.addEventListener('click', () => {
-    // Aquí puedes disparar la carga del reproductor real (ej: Brightcove/YouTube) de forma perezosa
-    console.log(`Cargando vídeo desde: ${videoSrc}`);
-    // Evita cargar scripts de vídeo antes del click para mantener el TBT (Total Blocking Time) en 0.
+    // Implementar la carga perezosa del reproductor usando videoSrc
+    block.dataset.videoUrl = videoSrc;
   });
 }
