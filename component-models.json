@@ -190,6 +190,70 @@
     ]
   },
   {
+    "id": "hero-banner",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "slides",
+        "label": "Slides",
+        "model": "hero-banner-slide"
+      }
+    ]
+  },
+  {
+    "id": "hero-banner-slide",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Imagen de fondo",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "imageAlt",
+        "label": "Texto alternativo imagen",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "eyebrow",
+        "label": "Texto eyebrow (pequeño, encima del título)",
+        "value": "CONSULTA NUESTRO INFORME ANUAL 2025"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "heading",
+        "label": "Título principal (H1/H2)",
+        "value": "INFORME ANUAL"
+      },
+      {
+        "component": "richtext",
+        "name": "subtitle",
+        "label": "Subtítulo / descripción",
+        "value": ""
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "ctaLabel",
+        "label": "Texto del botón CTA",
+        "value": "Ver Informe"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "ctaHref",
+        "label": "URL del botón CTA",
+        "value": "#"
+      }
+    ]
+  },
+  {
     "id": "hero",
     "fields": [
       {

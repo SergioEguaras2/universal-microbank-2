@@ -1,0 +1,286 @@
+/* hero-banner block */
+
+.hero-banner {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: #0d1e2e;
+  color: #fff;
+  font-family: 'CaixaBank Sans', Arial, sans-serif;
+  user-select: none;
+}
+
+/* ── Slider track ──────────────────────────────────────────── */
+.hero-banner .hero-banner-track {
+  display: flex;
+  transition: transform 0.5s ease;
+  will-change: transform;
+}
+
+/* ── Single slide ───────────────────────────────────────────── */
+.hero-banner .hero-banner-slide {
+  min-width: 100%;
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  min-height: 380px;
+  overflow: hidden;
+}
+
+/* Background image (full bleed, darkened) */
+.hero-banner .hero-banner-slide-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.hero-banner .hero-banner-slide-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+/* Dark overlay */
+.hero-banner .hero-banner-slide-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(5, 20, 40, 0.82) 0%,
+    rgba(5, 20, 40, 0.55) 50%,
+    rgba(5, 20, 40, 0.15) 100%
+  );
+}
+
+/* Content area */
+.hero-banner .hero-banner-slide-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 56px 48px;
+  gap: 32px;
+}
+
+/* Text column */
+.hero-banner .hero-banner-slide-text {
+  flex: 0 0 auto;
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Eyebrow / label */
+.hero-banner .hero-banner-eyebrow {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.75);
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Main heading */
+.hero-banner .hero-banner-slide-text h1,
+.hero-banner .hero-banner-slide-text h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  line-height: 1.05;
+  margin: 0;
+  color: #fff;
+  letter-spacing: -0.01em;
+}
+
+/* Subheading / description */
+.hero-banner .hero-banner-subtitle {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.85);
+  margin: 4px 0 8px;
+}
+
+/* CTA button — yellow */
+.hero-banner .hero-banner-cta {
+  display: inline-block;
+  background: #f5c500;
+  color: #0d1e2e;
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 12px 24px;
+  border-radius: 2px;
+  text-decoration: none;
+  align-self: flex-start;
+  transition: background 0.2s;
+  white-space: nowrap;
+}
+
+.hero-banner .hero-banner-cta:hover,
+.hero-banner .hero-banner-cta:focus-visible {
+  background: #e0b300;
+}
+
+.hero-banner .hero-banner-cta:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 2px;
+}
+
+/* ── Navigation arrows ──────────────────────────────────────── */
+.hero-banner .hero-banner-prev,
+.hero-banner .hero-banner-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background: #f5c500;
+  border: none;
+  color: #0d1e2e;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.2s, transform 0.15s;
+  padding: 0;
+  line-height: 1;
+}
+
+.hero-banner .hero-banner-prev {
+  left: 12px;
+}
+
+.hero-banner .hero-banner-next {
+  right: 12px;
+}
+
+.hero-banner .hero-banner-prev:hover,
+.hero-banner .hero-banner-next:hover {
+  background: #e0b300;
+  transform: translateY(-50%) scale(1.08);
+}
+
+.hero-banner .hero-banner-prev:focus-visible,
+.hero-banner .hero-banner-next:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 2px;
+}
+
+/* ── Dots ───────────────────────────────────────────────────── */
+.hero-banner .hero-banner-dots {
+  position: absolute;
+  bottom: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 10;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.hero-banner .hero-banner-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.hero-banner .hero-banner-dot[aria-selected='true'] {
+  background: #f5c500;
+  transform: scale(1.2);
+}
+
+.hero-banner .hero-banner-dot:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+/* ── RESPONSIVE — tablet 768px ─────────────────────────────── */
+@media (max-width: 900px) {
+  .hero-banner .hero-banner-slide {
+    min-height: 320px;
+  }
+
+  .hero-banner .hero-banner-slide-content {
+    padding: 40px 24px;
+  }
+
+  .hero-banner .hero-banner-slide-text {
+    max-width: 360px;
+  }
+
+  .hero-banner .hero-banner-slide-text h1,
+  .hero-banner .hero-banner-slide-text h2 {
+    font-size: clamp(1.6rem, 5vw, 2.2rem);
+  }
+
+  .hero-banner .hero-banner-slide-bg::after {
+    background: linear-gradient(
+      90deg,
+      rgba(5, 20, 40, 0.88) 0%,
+      rgba(5, 20, 40, 0.6) 60%,
+      rgba(5, 20, 40, 0.2) 100%
+    );
+  }
+}
+
+/* ── RESPONSIVE — mobile 320–480px ─────────────────────────── */
+@media (max-width: 600px) {
+  .hero-banner .hero-banner-slide {
+    min-height: 280px;
+  }
+
+  .hero-banner .hero-banner-slide-content {
+    padding: 32px 16px 48px;
+    align-items: flex-end;
+  }
+
+  .hero-banner .hero-banner-slide-text {
+    max-width: 100%;
+    gap: 10px;
+  }
+
+  .hero-banner .hero-banner-slide-text h1,
+  .hero-banner .hero-banner-slide-text h2 {
+    font-size: clamp(1.5rem, 8vw, 2rem);
+  }
+
+  .hero-banner .hero-banner-slide-bg::after {
+    background: linear-gradient(
+      180deg,
+      rgba(5, 20, 40, 0.35) 0%,
+      rgba(5, 20, 40, 0.75) 60%,
+      rgba(5, 20, 40, 0.9) 100%
+    );
+  }
+
+  .hero-banner .hero-banner-prev {
+    left: 8px;
+  }
+
+  .hero-banner .hero-banner-next {
+    right: 8px;
+  }
+
+  .hero-banner .hero-banner-prev,
+  .hero-banner .hero-banner-next {
+    width: 30px;
+    height: 30px;
+    font-size: 0.75rem;
+  }
+}
