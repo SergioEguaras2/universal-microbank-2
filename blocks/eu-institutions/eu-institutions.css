@@ -1,3 +1,145 @@
-/* Basic styles for eu-institutions */
-.eu-institutions { padding: var(--space-2,1rem); }
-.eu-institutions__list { display:grid; grid-template-columns: repeat(auto-fit,minmax(160px,1fr)); gap:var(--space-2,1rem); }
+/**
+ * eu-institutions.css — Estilos del bloque eu-institutions
+ * CSS adaptado del portal original a convenciones AEM EDS.
+ * Mobile-first. Variables CSS de :root (definidas en styles/styles.css).
+ *
+ * Generado por SA-D02 del Sprint 2 — Red Agéntica AEM
+ */
+
+/* ── Contenedor AEM EDS ── */
+.eu-institutions {
+  display: block;
+  width: 100%;
+  max-width: var(--max-width, 1200px);
+  margin: 0 auto;
+  color: var(--color-text, #333333);
+  font-family: var(--font-body, sans-serif);
+}
+
+/* ── Estado de inicialización ── */
+.eu-institutions--initialized {
+  animation: none;
+}
+
+/* ── Estilos extraídos del portal original ── */
+
+/* ── Extraído dinámicamente de: Estaticos__MBK_Home.css ── */
+.eu-institutions {
+  padding: 4rem 0;
+}
+
+.eu-institutions p {
+  font-size: 1.4rem;
+  line-height: 2.2rem;
+  color: #FFFFFF;
+}
+
+.eu-institutions h2, .eu-institutions .eu-institutions-title {
+  font-family: "ZillaSlab-RegularItalic", Helvetica, Arial, sans-serif;
+  font-size: 3.6rem;
+  line-height: 3.9rem;
+  color: #FFFFFF;
+  max-width: 420rem;
+}
+
+@media (min-width: 992px) {
+  .eu-institutions h2, .eu-institutions .eu-institutions-title {
+    font-size: 4.5rem;
+    line-height: 4.8rem;
+  }
+}
+
+.eu-institutions ul.eu-institutions__wrap {
+  margin-top: 2.8rem;
+}
+
+@media (min-width: 992px) {
+  .eu-institutions ul.eu-institutions__wrap {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.eu-institutions ul.eu-institutions__wrap li.eu-institutions__item {
+  position: relative;
+  padding: 1.7rem 1rem;
+}
+
+@media (min-width: 992px) {
+  .eu-institutions ul.eu-institutions__wrap li.eu-institutions__item {
+    min-width: 30%;
+  }
+  .eu-institutions ul.eu-institutions__wrap li.eu-institutions__item:after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 1px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: linear-gradient(to right, #FFF 33%, rgba(255, 255, 255, 0) 0%);
+    background-position: left;
+    background-size: 6px;
+    background-repeat: repeat-x;
+  }
+}
+
+.eu-institutions ul.eu-institutions__wrap li.eu-institutions__item:before {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 1px;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-image: linear-gradient(to right, #FFF 33%, rgba(255, 255, 255, 0) 0%);
+  background-position: left;
+  background-size: 6px;
+  background-repeat: repeat-x;
+}
+
+.eu-institutions ul.eu-institutions__wrap li.eu-institutions__item:last-child:after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 1px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(to right, #FFF 33%, rgba(255, 255, 255, 0) 0%);
+  background-position: left;
+  background-size: 6px;
+  background-repeat: repeat-x;
+}
+
+.eu-institutions ul.eu-institutions__wrap li.eu-institutions__item .eu-institutions__item-link {
+  display: block;
+}
+
+.eu-institutions ul.eu-institutions__wrap li.eu-institutions__item .eu-institutions__item-link:after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 1rem;
+  left: auto;
+  top: 3.7rem;
+  bottom: 0;
+  margin: auto;
+  width: 4.1rem;
+  height: 2.2rem;
+  background: url(icons/ic_drawn-arrow-right.png) no-repeat center center;
+}
+
+.eu-institutions ul.eu-institutions__wrap li.eu-institutions__item .eu-institutions__item-link p {
+  font-family: "OpenSans-Semibold", Helvetica, Arial, sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  color: #FFFFFF;
+  text-decoration: underline;
+  white-space: break-spaces;
+}
+
+.eu-institutions ul.eu-institutions__wrap li.eu-institutions__item .eu-institutions__item-link .eu-institutions__item-img {
+  margin-top: 1.7rem;
+}
+

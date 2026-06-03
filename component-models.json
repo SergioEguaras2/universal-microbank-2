@@ -142,6 +142,42 @@
     ]
   },
   {
+    "id": "alt-highlights",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Imagen",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "title",
+        "label": "Título"
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "text",
+        "label": "Descripción"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "cta-label",
+        "label": "Texto del enlace"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "cta-url",
+        "label": "URL del enlace"
+      }
+    ]
+  },
+  {
     "id": "breadcrumb",
     "fields": [
       {
@@ -253,49 +289,10 @@
     "id": "eu-institutions",
     "fields": [
       {
-        "component": "text",
+        "component": "richtext",
         "valueType": "string",
-        "name": "eyebrow",
-        "label": "Texto eyebrow",
-        "value": "CON EL APOYO DE NUESTROS PARTNERS"
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "title",
-        "label": "Título",
-        "value": "Con el apoyo de instituciones europeas"
-      },
-      {
-        "component": "multiselect",
-        "name": "items",
-        "label": "Instituciones",
-        "model": "eu-institutions-item"
-      }
-    ]
-  },
-  {
-    "id": "eu-institutions-item",
-    "fields": [
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "logo",
-        "label": "Logo",
-        "multi": false
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "name",
-        "label": "Nombre de la institución",
-        "value": "Banco Europeo de Inversiones"
-      },
-      {
-        "component": "aem-content",
-        "name": "link",
-        "label": "Enlace",
-        "value": "#"
+        "name": "content",
+        "label": "Contenido"
       }
     ]
   },
@@ -458,6 +455,42 @@
         "valueType": "string",
         "name": "content",
         "label": "Contenido"
+      }
+    ]
+  },
+  {
+    "id": "link-highlights",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Imagen",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "title",
+        "label": "Título"
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "text",
+        "label": "Descripción"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "cta-label",
+        "label": "Texto del enlace"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "cta-url",
+        "label": "URL del enlace"
       }
     ]
   },
