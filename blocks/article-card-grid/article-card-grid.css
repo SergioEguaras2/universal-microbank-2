@@ -1,0 +1,4 @@
+/* Basic styles for article-card-grid */
+.article-card-grid { display:block; padding:var(--space-2,1rem); }
+.article-card-grid__grid { display:grid; gap:var(--space-2,1rem); grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); }
+.article-card-grid__card { background:var(--surface, #fff); padding:var(--space-2,1rem); border-radius:6px; }

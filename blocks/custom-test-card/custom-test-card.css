@@ -1,0 +1,11 @@
+/* custom-test-card.css (importado y encapsulado) */
+
+.custom-test-card .test-card {
+  padding: 16px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+.custom-test-card .test-card h3 {
+  color: #333;
+  margin-top: 0;
+}

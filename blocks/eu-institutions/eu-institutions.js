@@ -1,108 +1,49 @@
 /**
- * eu-institutions block
- * @param {HTMLElement} block El elemento contenedor del bloque en el DOM
+ * eu-institutions.js — Bloque AEM EDS: EuInstitutions
+ * CSS BEM: .eu-institutions, .eu-institutions-title, .eu-institutions__wrap,
+ *          .eu-institutions__item, .eu-institutions__item-link
+ *
+ * Entrada AEM:
+ *   Fila 0: celda 0 = título (h2)
+ *   Filas 1..N: cada fila = un item de institución. Celda 0 = enlace, celda 1 = descripción
  */
 export default function decorate(block) {
-  const rows = [...block.children];
+  if (!block) return;
+  const rows = [...block.querySelectorAll(':scope > div')];
 
-  block.innerHTML = '';
+  // Fila 0 = título
+  const [titleRow, ...itemRows] = rows;
+  const titleCell = titleRow?.querySelector(':scope > div');
 
-  // Configuración raíz para el Universal Editor
-  block.classList.add('eu-institutions');
-  block.setAttribute('data-aue-component', 'eu-institutions');
-  block.setAttribute('data-aue-type', 'component');
-  block.setAttribute('data-aue-label', 'Logos Instituciones Europeas');
+  const heading = document.createElement('h2');
+  heading.className = 'eu-institutions-title';
+  heading.textContent = titleCell?.textContent.trim() ?? '';
 
-  // ── Row 0: eyebrow + title ───────────────────────────────────
-  const headerRow = rows[0];
-  if (headerRow) {
-    const cell = headerRow.children[0];
-    if (cell) {
-      const paras = [...cell.querySelectorAll('p')];
+  const ul = document.createElement('ul');
+  ul.className = 'eu-institutions__wrap';
 
-      if (paras[0]) {
-        const eyebrow = document.createElement('p');
-        eyebrow.className = 'eu-institutions-eyebrow';
-        eyebrow.textContent = paras[0].textContent.trim();
-        eyebrow.setAttribute('data-aue-prop', 'eyebrow');
-        eyebrow.setAttribute('data-aue-type', 'text');
-        block.append(eyebrow);
-      }
-
-      if (paras[1]) {
-        const title = document.createElement('p');
-        title.className = 'eu-institutions-title';
-        title.textContent = paras[1].textContent.trim();
-        title.setAttribute('data-aue-prop', 'title');
-        title.setAttribute('data-aue-type', 'text');
-        block.append(title);
-      }
-    }
-  }
-
-  // ── Rows 1+: institution items ───────────────────────────────
-  const logosWrap = document.createElement('div');
-  logosWrap.className = 'eu-institutions-logos';
-
-  const itemRows = rows.slice(1);
   itemRows.forEach((row) => {
-    const cells = [...row.children];
-    const logoCell = cells[0];
-    const textCell = cells[1];
+    const [linkCell, descCell] = [...row.querySelectorAll(':scope > div')];
 
-    // Resolve link href
-    let href = '#';
-    const link = textCell?.querySelector('a') || logoCell?.querySelector('a');
-    if (link) href = link.href;
+    const li = document.createElement('li');
+    li.className = 'eu-institutions__item';
 
-    const item = document.createElement('a');
-    item.className = 'eu-institutions-item';
-    item.href = href;
+    const linkWrap = document.createElement('div');
+    linkWrap.className = 'eu-institutions__item-link';
 
-    // Logo
-    const logoWrap = document.createElement('div');
-    logoWrap.className = 'eu-institutions-item-logo';
-    logoWrap.setAttribute('data-aue-prop', 'logo');
-    logoWrap.setAttribute('data-aue-type', 'media');
-
-    const img = logoCell?.querySelector('img');
-    if (img) {
-      img.setAttribute('loading', 'lazy');
-      img.setAttribute('decoding', 'async');
-      if (!img.alt) img.alt = '';
-      logoWrap.append(img);
+    // Preservar enlace/imagen que viene de AEM
+    if (linkCell) linkWrap.append(...linkCell.childNodes);
+    if (descCell) {
+      const desc = document.createElement('p');
+      desc.textContent = descCell.textContent.trim();
+      linkWrap.append(desc);
     }
 
-    // Label (name + arrow)
-    const labelWrap = document.createElement('div');
-    labelWrap.className = 'eu-institutions-item-label';
-
-    const nameEl = document.createElement('span');
-    nameEl.className = 'eu-institutions-item-name';
-    nameEl.setAttribute('data-aue-prop', 'name');
-    nameEl.setAttribute('data-aue-type', 'text');
-
-    // Get institution name
-    let name = '';
-    if (textCell) {
-      const textContent = [...textCell.childNodes]
-        .map((n) => n.textContent.trim())
-        .filter(Boolean)
-        .join(' ');
-      name = link ? textContent.replace(link.textContent.trim(), '').trim()
-        || link.textContent.trim() : textContent;
-    }
-    nameEl.textContent = name;
-
-    const arrowEl = document.createElement('span');
-    arrowEl.className = 'eu-institutions-item-arrow';
-    arrowEl.setAttribute('aria-hidden', 'true');
-    arrowEl.textContent = '\u2192';
-
-    labelWrap.append(nameEl, arrowEl);
-    item.append(logoWrap, labelWrap);
-    logosWrap.append(item);
+    li.append(linkWrap);
+    ul.append(li);
   });
 
-  block.append(logosWrap);
+  rows.forEach(r => r.remove());
+  block.append(heading, ul);
+  block.classList.add('eu-institutions--initialized');
 }

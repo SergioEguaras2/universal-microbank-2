@@ -1,142 +1,29 @@
-/* ==========================================================================
-   Componente AEM DES: video-banner
-   ========================================================================== */
+/**
+ * video-banner.css — Estilos del bloque video-banner
+ * Mobile-first. BEM para nomenclatura de clases.
+ * Variables CSS de :root (definidas en styles/styles.css).
+ *
+ * Generado por SA-D02 del Sprint 2 — Red Agéntica AEM
+ */
 
+/* ── Contenedor principal ── */
 .video-banner {
+  display: block;
   width: 100%;
-  box-sizing: border-box;
-  padding: 2rem 1rem;
-  background-color: #fff;
-}
-
-/* Encapsulamiento de reseteo interno para evitar colisiones globales */
-.video-banner * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-.video-banner-container {
-  max-width: 1280px;
+  max-width: var(--max-width, 1200px);
   margin: 0 auto;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 12px rgb(0 0 0 / 8%);
+  padding: var(--spacing-m, 1rem);
+  color: var(--color-text, #333333);
+  font-family: var(--font-body, sans-serif);
 }
 
-/* Truco anti-CLS: Reservamos la relación de aspecto exacta de la imagen */
-.video-banner-media-wrapper {
-  position: relative;
-  width: 100%;
-  padding-top: 35.15%;
-  background-color: #000;
+/* ── Estado de inicialización ── */
+.video-banner--initialized {
+  animation: none;
 }
 
-@media (width <= 768px) {
-  .video-banner-media-wrapper {
-    padding-top: 56.25%;
-  }
+/* ── Elementos internos (BEM) ── */
+.video-banner__item {
+  padding: var(--spacing-s, 0.5rem);
 }
 
-.video-banner-poster {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  z-index: 1;
-}
-
-.video-banner-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 2;
-
-  /* El degradado asegura el contraste requerido por Lighthouse */
-  background: linear-gradient(180deg, rgb(0 0 0 / 40%) 0%, rgb(0 0 0 / 20%) 50%, rgb(0 0 0 / 50%) 100%);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  padding: 2.5rem 1.5rem 2rem;
-  text-align: center;
-}
-
-.video-banner-title {
-  color: #fff;
-  font-family: inherit;
-  font-size: 1.85rem;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-}
-
-.video-banner-play-button {
-  background: none;
-  border: none;
-  cursor: pointer;
-  width: 72px;
-  height: 72px;
-  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-  outline: none;
-}
-
-.video-banner-play-button:hover,
-.video-banner-play-button:focus {
-  transform: scale(1.08);
-}
-
-/* Regla Lighthouse: Foco claro y accesible para navegación por teclado */
-.video-banner-play-button:focus-visible {
-  outline: 3px solid #00a0e1;
-  outline-offset: 4px;
-}
-
-.video-banner-play-icon {
-  width: 100%;
-  height: 100%;
-  filter: drop-shadow(0 4px 8px rgb(0 0 0 / 30%));
-}
-
-.video-banner-subtitle {
-  color: #fff;
-  font-family: inherit;
-  font-size: 0.88rem;
-  font-weight: 600;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-}
-
-/* Media Query para adaptabilidad perfecta en pantallas móviles */
-@media (width <= 600px) {
-  .video-banner-title {
-    font-size: 1.25rem;
-    line-height: 1.3;
-  }
-
-  .video-banner-play-button {
-    width: 56px;
-    height: 56px;
-  }
-
-  .video-banner-subtitle {
-    font-size: 0.75rem;
-  }
-
-  /* ... Todo tu código CSS anterior se mantiene intacto ... */
-
-/* Añadir únicamente esta regla al final del archivo para el reproductor: */
-.video-banner-player {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: none;
-}
-}

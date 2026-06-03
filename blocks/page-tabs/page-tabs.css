@@ -1,0 +1,4 @@
+/* Basic styles for page-tabs */
+.page-tabs { display:block; }
+.page-tabs__list { display:flex; gap:.5rem; }
+.page-tabs__panel { padding:var(--space-2,1rem); }
