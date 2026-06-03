@@ -69,7 +69,8 @@
         "transparent-banner",
         "video-carousel",
         "video-player",
-        "video-banner"
+        "video-banner",
+        "hero-banner"
         
       ]
     }
