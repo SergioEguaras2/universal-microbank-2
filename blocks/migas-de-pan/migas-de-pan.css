@@ -1,6 +1,87 @@
-/* Estilos encapsulados para el bloque migas-de-pan */
-.migas-de-pan {
+/**
+ * migas-de-pan.css — Estilos del bloque migas-de-pan
+ * Extraído automáticamente desde el portal original.
+ */
+
+.region-breadcrumb .breadcrumbsimple, .region-breadcrumb .breadcrumb {
   display: block;
-  margin: var(--spacing-m) auto;
-  max-width: var(--max-width);
+  margin-bottom: 1.3rem;
+  margin-top: 0.5rem;
+  padding-top: 1.3rem;
+}
+
+@media (min-width: 768px) {
+  .region-breadcrumb .breadcrumbsimple, .region-breadcrumb .breadcrumb {
+    padding-top: 0;
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 991px) {
+  .region-breadcrumb .breadcrumbsimple, .region-breadcrumb .breadcrumb {
+    padding-top: 1.3rem;
+    margin-top: 0.5rem;
+  }
+}
+
+.region-breadcrumb .breadcrumbsimple:after, .region-breadcrumb .breadcrumb:after {
+  content: "";
+  height: 0px;
+  background: #F1F1F1;
+  width: 200%;
+  top: 0;
+  position: absolute;
+  left: -50%;
+  right: -50%;
+  z-index: 1;
+}
+
+.region-breadcrumb .breadcrumbsimple ul, .region-breadcrumb .breadcrumb ul {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.region-breadcrumb .breadcrumbsimple li, .region-breadcrumb .breadcrumb li {
+  font-size: 1.2rem;
+  line-height: 16.8px;
+  color: #FFFFFF;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.region-breadcrumb .breadcrumbsimple li:after, .region-breadcrumb .breadcrumb li:after {
+  content: "/";
+  font-size: 12px;
+  line-height: 16.8px;
+  color: #FFFFFF;
+  right: 0;
+  padding-left: 0.7rem;
+  padding-right: 0.7rem;
+}
+
+.region-breadcrumb .breadcrumbsimple li:last-child:after, .region-breadcrumb .breadcrumb li:last-child:after {
+  content: none;
+}
+
+.region-breadcrumb .breadcrumbsimple li a, .region-breadcrumb .breadcrumb li a {
+  font-size: 12px;
+  line-height: 16.8px;
+  color: #FFFFFF;
+  font-family: "OpenSans", Helvetica, Arial, sans-serif;
+}
+
+.region-breadcrumb .breadcrumbsimple li.primero, .region-breadcrumb .breadcrumb li.primero {
+  display: none;
+}
+
+@media (min-width: 370px) {
+  .region-breadcrumb .breadcrumbsimple li.primero, .region-breadcrumb .breadcrumb li.primero {
+    display: block;
+  }
+}
+
+.region-breadcrumb .breadcrumbsimple li.ultimo, .region-breadcrumb .breadcrumbsimple li.current, .region-breadcrumb .breadcrumb li.ultimo, .region-breadcrumb .breadcrumb li.current {
+  font-family: "OpenSans-Semibold", Helvetica, Arial, sans-serif;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
