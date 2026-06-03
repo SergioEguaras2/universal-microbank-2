@@ -357,5 +357,36 @@
         "label": "Contenido"
       }
     ]
+  },
+  {
+    "id": "video-banner",
+    "fields": [
+      {
+        "component": "text",
+        "name": "title",
+        "value": "",
+        "label": "Título del Vídeo",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "subtitle",
+        "value": "",
+        "label": "Subtítulo del Vídeo",
+        "valueType": "string"
+      },
+      {
+        "component": "reference",
+        "name": "image",
+        "label": "Imagen de Portada (Poster)",
+        "valueType": "string",
+        "multi": false
+      },
+      {
+        "component": "aem-content",
+        "name": "videoUrl",
+        "label": "Enlace del Vídeo / Destino"
+      }
+    ]
   }
 ]
