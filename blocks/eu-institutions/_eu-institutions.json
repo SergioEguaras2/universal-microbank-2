@@ -21,10 +21,49 @@
       "id": "eu-institutions",
       "fields": [
         {
-          "component": "richtext",
+          "component": "text",
           "valueType": "string",
-          "name": "content",
-          "label": "Contenido"
+          "name": "eyebrow",
+          "label": "Texto eyebrow",
+          "value": "CON EL APOYO DE NUESTROS PARTNERS"
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "title",
+          "label": "Título",
+          "value": "Con el apoyo de instituciones europeas"
+        },
+        {
+          "component": "multiselect",
+          "name": "items",
+          "label": "Instituciones",
+          "model": "eu-institutions-item"
+        }
+      ]
+    },
+    {
+      "id": "eu-institutions-item",
+      "fields": [
+        {
+          "component": "reference",
+          "valueType": "string",
+          "name": "logo",
+          "label": "Logo",
+          "multi": false
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "name",
+          "label": "Nombre de la institución",
+          "value": "Banco Europeo de Inversiones"
+        },
+        {
+          "component": "aem-content",
+          "name": "link",
+          "label": "Enlace",
+          "value": "#"
         }
       ]
     }
