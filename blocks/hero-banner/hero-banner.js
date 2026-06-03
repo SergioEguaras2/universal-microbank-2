@@ -1,25 +1,7 @@
 /**
  * hero-banner block — carousel/slider
- *
- * Document table structure (one row per slide):
- *
- * | hero-banner                          |                        |
- * |--------------------------------------|------------------------|
- * | [background image]                   | Eyebrow text           |
- * |                                      | # Heading (H1/H2)      |
- * |                                      | Subtitle paragraph     |
- * |                                      | [CTA link]             |
- * |--------------------------------------|------------------------|
- * | [background image 2]                 | Eyebrow text 2         |
- * |                                      | # Heading 2            |
- * |                                      | Subtitle 2             |
- * |                                      | [CTA link 2]           |
- *
- * Each row = one slide.
- * Col 0 = background image
- * Col 1 = text content (eyebrow, heading, subtitle, cta link)
+ * @param {HTMLElement} block El elemento contenedor del bloque en el DOM
  */
-
 export default function decorate(block) {
   const rows = [...block.children];
 
@@ -39,6 +21,9 @@ export default function decorate(block) {
     // Background image
     const bg = document.createElement('div');
     bg.className = 'hero-banner-slide-bg';
+    bg.setAttribute('data-aue-prop', 'image');
+    bg.setAttribute('data-aue-type', 'media');
+
     const img = imageCell?.querySelector('img');
     if (img) {
       img.setAttribute('loading', index === 0 ? 'eager' : 'lazy');
@@ -68,17 +53,21 @@ export default function decorate(block) {
         if (tag === 'h1' || tag === 'h2' || tag === 'h3') {
           const heading = document.createElement(index === 0 ? 'h1' : 'h2');
           heading.innerHTML = el.innerHTML;
+          heading.setAttribute('data-aue-prop', 'heading');
+          heading.setAttribute('data-aue-type', 'text');
           textWrap.append(heading);
           return;
         }
 
         // CTA: paragraph containing only a link
         const links = el.querySelectorAll('a');
-        if (tag === 'p' && links.length === 1 && el.textContent.trim() === links[0].textContent.trim()) {
+        if (tag === 'p' && links.length === 1 && text === links[0].textContent.trim()) {
           const cta = document.createElement('a');
           cta.className = 'hero-banner-cta';
           cta.href = links[0].href;
           cta.textContent = links[0].textContent.trim();
+          cta.setAttribute('data-aue-prop', 'cta');
+          cta.setAttribute('data-aue-type', 'component');
           textWrap.append(cta);
           return;
         }
@@ -88,6 +77,8 @@ export default function decorate(block) {
           const eyebrow = document.createElement('p');
           eyebrow.className = 'hero-banner-eyebrow';
           eyebrow.textContent = text;
+          eyebrow.setAttribute('data-aue-prop', 'eyebrow');
+          eyebrow.setAttribute('data-aue-type', 'text');
           textWrap.append(eyebrow);
           return;
         }
@@ -110,6 +101,12 @@ export default function decorate(block) {
   // ── Clear block & build structure ───────────────────────────────
   block.innerHTML = '';
 
+  // Configuración raíz Universal Editor
+  block.classList.add('hero-banner');
+  block.setAttribute('data-aue-component', 'hero-banner');
+  block.setAttribute('data-aue-type', 'component');
+  block.setAttribute('data-aue-label', 'Hero Banner');
+
   // Track
   const track = document.createElement('div');
   track.className = 'hero-banner-track';
@@ -120,13 +117,13 @@ export default function decorate(block) {
   const prev = document.createElement('button');
   prev.className = 'hero-banner-prev';
   prev.setAttribute('aria-label', 'Slide anterior');
-  prev.innerHTML = '&#9664;'; // ◀
+  prev.innerHTML = '&#9664;';
 
   // Next button
   const next = document.createElement('button');
   next.className = 'hero-banner-next';
   next.setAttribute('aria-label', 'Slide siguiente');
-  next.innerHTML = '&#9654;'; // ▶
+  next.innerHTML = '&#9654;';
 
   // Dots
   const dotsNav = document.createElement('div');
