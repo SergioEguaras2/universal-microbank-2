@@ -1,7 +1,7 @@
 {
   "definitions": [
     {
-      "title": "Logos de instituciones europeas",
+      "title": "Eu Institutions",
       "id": "eu-institutions",
       "plugins": {
         "xwalk": {

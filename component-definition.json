@@ -155,7 +155,7 @@
           }
         },
         {
-          "title": "Logos de instituciones europeas",
+          "title": "Eu Institutions",
           "id": "eu-institutions",
           "plugins": {
             "xwalk": {
@@ -215,7 +215,7 @@
           }
         },
         {
-          "title": "Carrusel de destacados",
+          "title": "Highlights Carousel",
           "id": "highlights-carousel",
           "plugins": {
             "xwalk": {
