@@ -49,9 +49,9 @@
   inset: 0;
   background: linear-gradient(
     90deg,
-    rgba(5, 20, 40, 0.82) 0%,
-    rgba(5, 20, 40, 0.55) 50%,
-    rgba(5, 20, 40, 0.15) 100%
+    rgb(5 20 40 / 82%) 0%,
+    rgb(5 20 40 / 55%) 50%,
+    rgb(5 20 40 / 15%) 100%
   );
 }
 
@@ -83,7 +83,7 @@
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.75);
+  color: rgb(255 255 255 / 75%);
   margin: 0;
   line-height: 1.4;
 }
@@ -103,7 +103,7 @@
 .hero-banner .hero-banner-subtitle {
   font-size: 0.85rem;
   line-height: 1.5;
-  color: rgba(255, 255, 255, 0.85);
+  color: rgb(255 255 255 / 85%);
   margin: 4px 0 8px;
 }
 
@@ -193,7 +193,7 @@
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.4);
+  background: rgb(255 255 255 / 40%);
   border: none;
   padding: 0;
   cursor: pointer;
@@ -211,7 +211,7 @@
 }
 
 /* ── RESPONSIVE — tablet 768px ─────────────────────────────── */
-@media (max-width: 900px) {
+@media (width <= 900px) {
   .hero-banner .hero-banner-slide {
     min-height: 320px;
   }
@@ -232,15 +232,15 @@
   .hero-banner .hero-banner-slide-bg::after {
     background: linear-gradient(
       90deg,
-      rgba(5, 20, 40, 0.88) 0%,
-      rgba(5, 20, 40, 0.6) 60%,
-      rgba(5, 20, 40, 0.2) 100%
+      rgb(5 20 40 / 88%) 0%,
+      rgb(5 20 40 / 60%) 60%,
+      rgb(5 20 40 / 20%) 100%
     );
   }
 }
 
 /* ── RESPONSIVE — mobile 320–480px ─────────────────────────── */
-@media (max-width: 600px) {
+@media (width <= 600px) {
   .hero-banner .hero-banner-slide {
     min-height: 280px;
   }
@@ -263,9 +263,9 @@
   .hero-banner .hero-banner-slide-bg::after {
     background: linear-gradient(
       180deg,
-      rgba(5, 20, 40, 0.35) 0%,
-      rgba(5, 20, 40, 0.75) 60%,
-      rgba(5, 20, 40, 0.9) 100%
+      rgb(5 20 40 / 35%) 0%,
+      rgb(5 20 40 / 75%) 60%,
+      rgb(5 20 40 / 90%) 100%
     );
   }
 

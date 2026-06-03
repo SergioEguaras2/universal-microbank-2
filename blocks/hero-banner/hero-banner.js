@@ -164,13 +164,13 @@ export default function decorate(block) {
     slides[current].removeAttribute('aria-hidden');
   }
 
+  function stopAutoplay() {
+    clearInterval(autoplayTimer);
+  }
+
   function startAutoplay() {
     stopAutoplay();
     autoplayTimer = setInterval(() => goTo(current + 1), 5000);
-  }
-
-  function stopAutoplay() {
-    clearInterval(autoplayTimer);
   }
 
   // Init: hide non-active slides from AT

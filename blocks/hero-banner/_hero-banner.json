@@ -41,43 +41,22 @@
         {
           "component": "text",
           "valueType": "string",
-          "name": "imageAlt",
-          "label": "Texto alternativo imagen",
-          "value": ""
-        },
-        {
-          "component": "text",
-          "valueType": "string",
           "name": "eyebrow",
-          "label": "Texto eyebrow (pequeño, encima del título)",
+          "label": "Eyebrow (texto pequeño sobre el título)",
           "value": "CONSULTA NUESTRO INFORME ANUAL 2025"
         },
         {
           "component": "text",
           "valueType": "string",
           "name": "heading",
-          "label": "Título principal (H1/H2)",
+          "label": "Título principal",
           "value": "INFORME ANUAL"
         },
         {
-          "component": "richtext",
-          "name": "subtitle",
-          "label": "Subtítulo / descripción",
-          "value": ""
-        },
-        {
-          "component": "text",
-          "valueType": "string",
-          "name": "ctaLabel",
-          "label": "Texto del botón CTA",
+          "component": "aem-content",
+          "name": "cta",
+          "label": "Enlace CTA (texto + URL)",
           "value": "Ver Informe"
-        },
-        {
-          "component": "text",
-          "valueType": "string",
-          "name": "ctaHref",
-          "label": "URL del botón CTA",
-          "value": "#"
         }
       ]
     }
