@@ -142,6 +142,17 @@
     ]
   },
   {
+    "id": "breadcrumb",
+    "fields": [
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "content",
+        "label": "Contenido"
+      }
+    ]
+  },
+  {
     "id": "card",
     "fields": [
       {
@@ -176,6 +187,17 @@
         "name": "rows",
         "value": "",
         "label": "Rows"
+      }
+    ]
+  },
+  {
+    "id": "eu-institutions",
+    "fields": [
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "content",
+        "label": "Contenido"
       }
     ]
   },
@@ -354,6 +376,59 @@
         "value": "",
         "label": "Additional Info Underneath (Optional)",
         "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "search-bar",
+    "fields": [
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "content",
+        "label": "Contenido"
+      }
+    ]
+  },
+  {
+    "id": "video-player",
+    "fields": [
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "content",
+        "label": "Contenido"
+      }
+    ]
+  },
+  {
+    "id": "video-banner",
+    "fields": [
+      {
+        "component": "text",
+        "name": "title",
+        "value": "",
+        "label": "Título del Vídeo",
+        "valueType": "string"
+      },
+      {
+        "component": "text",
+        "name": "subtitle",
+        "value": "",
+        "label": "Subtítulo del Vídeo",
+        "valueType": "string"
+      },
+      {
+        "component": "reference",
+        "name": "image",
+        "label": "Imagen de Portada (Poster)",
+        "valueType": "string",
+        "multi": false
+      },
+      {
+        "component": "aem-content",
+        "name": "videoUrl",
+        "label": "Enlace del Vídeo / Destino"
       }
     ]
   }

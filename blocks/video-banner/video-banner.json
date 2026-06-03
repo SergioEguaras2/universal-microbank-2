@@ -1,0 +1,32 @@
+{
+  "definitions": {
+    "video-banner": {
+      "title": "Banner de Vídeo",
+      "type": "object",
+      "properties": {
+        "title": {
+          "title": "Título del Vídeo",
+          "type": "string",
+          "default": "FINANCIACIÓN CON IMPACTO SOCIAL"
+        },
+        "subtitle": {
+          "title": "Subtítulo",
+          "type": "string",
+          "default": "PARA TODOS Y EN TODAS PARTES"
+        },
+        "poster": {
+          "title": "Imagen de Portada (Poster)",
+          "type": "string",
+          "format": "uri-reference",
+          "default": "/assets/poster-video.jpg"
+        },
+        "videoUrl": {
+          "title": "URL del Vídeo",
+          "type": "string",
+          "format": "uri-reference",
+          "default": "https://www.microbank.com/es/inicio.html"
+        }
+      }
+    }
+  }
+}
