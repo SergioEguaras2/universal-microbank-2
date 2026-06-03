@@ -153,21 +153,35 @@
     ]
   },
   {
-    "id": "card",
+    "id": "buscador-en-cabecera",
     "fields": [
       {
-        "component": "reference",
+        "component": "richtext",
         "valueType": "string",
-        "name": "image",
-        "label": "Image",
-        "multi": false
-      },
+        "name": "content",
+        "label": "Contenido del Bloque"
+      }
+    ]
+  },
+  {
+    "id": "cards",
+    "fields": [
       {
         "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
+        "valueType": "string",
+        "name": "content",
+        "label": "Contenido del Bloque"
+      }
+    ]
+  },
+  {
+    "id": "carrusel-de-destacados",
+    "fields": [
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "content",
+        "label": "Contenido del Bloque"
       }
     ]
   },
@@ -176,17 +190,51 @@
     "fields": [
       {
         "component": "text",
-        "valueType": "number",
-        "name": "columns",
-        "value": "",
-        "label": "Columns"
+        "valueType": "string",
+        "name": "title_0_0",
+        "label": "Título (H2)"
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "text_1",
+        "label": "Texto Descriptivo 1"
       },
       {
         "component": "text",
-        "valueType": "number",
-        "name": "rows",
-        "value": "",
-        "label": "Rows"
+        "valueType": "string",
+        "name": "title_0_1",
+        "label": "Título (H2)"
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "text_2",
+        "label": "Texto Descriptivo 2"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "title_1_0",
+        "label": "Título (H2)"
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "text_3",
+        "label": "Texto Descriptivo 3"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "title_1_1",
+        "label": "Título (H2)"
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "text_4",
+        "label": "Texto Descriptivo 4"
       }
     ]
   },
@@ -348,25 +396,10 @@
     "id": "hero",
     "fields": [
       {
-        "component": "reference",
-        "valueType": "string",
-        "name": "image",
-        "label": "Image",
-        "multi": false
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "imageAlt",
-        "label": "Alt",
-        "value": ""
-      },
-      {
         "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
+        "valueType": "string",
+        "name": "content",
+        "label": "Contenido del Bloque"
       }
     ]
   },
@@ -374,61 +407,10 @@
     "id": "highlights-carousel",
     "fields": [
       {
-        "component": "text",
-        "valueType": "string",
-        "name": "title",
-        "label": "Título",
-        "value": "Elige el préstamo que mejor se adapte a ti"
-      },
-      {
         "component": "richtext",
-        "name": "description",
-        "label": "Descripción",
-        "value": "En MicroBank encontrarás productos de financiación a medida para que hagas realidad todos <a href=\"#\">tus proyectos</a>."
-      },
-      {
-        "component": "aem-content",
-        "name": "viewAllLink",
-        "label": "Enlace Ver todos los productos",
-        "value": "Ver todos los productos"
-      },
-      {
-        "component": "multiselect",
-        "name": "cards",
-        "label": "Tarjetas",
-        "model": "highlights-carousel-card"
-      }
-    ]
-  },
-  {
-    "id": "highlights-carousel-card",
-    "fields": [
-      {
-        "component": "reference",
         "valueType": "string",
-        "name": "image",
-        "label": "Imagen de fondo",
-        "multi": false
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "title",
-        "label": "Título tarjeta",
-        "value": "Transforma tu idea en un proyecto real"
-      },
-      {
-        "component": "text",
-        "valueType": "string",
-        "name": "subtitle",
-        "label": "Subtítulo",
-        "value": "Microcrédito Negocios Comercio Ambulante"
-      },
-      {
-        "component": "aem-content",
-        "name": "link",
-        "label": "Enlace de la tarjeta",
-        "value": "#"
+        "name": "content",
+        "label": "Contenido del Bloque"
       }
     ]
   },
@@ -480,6 +462,28 @@
     ]
   },
   {
+    "id": "logos-de-instituciones-europeas",
+    "fields": [
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "content",
+        "label": "Contenido del Bloque"
+      }
+    ]
+  },
+  {
+    "id": "migas-de-pan",
+    "fields": [
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "content",
+        "label": "Contenido del Bloque"
+      }
+    ]
+  },
+  {
     "id": "modal",
     "fields": [
       {
@@ -508,67 +512,31 @@
     ]
   },
   {
-    "id": "offer",
+    "id": "offer-maker",
     "fields": [
       {
-        "component": "text",
-        "name": "title",
-        "value": "",
-        "label": "Loan Title (e.g. Préstamo Personal)",
-        "valueType": "string"
-      },
-      {
-        "component": "text",
-        "name": "tinTae",
-        "value": "",
-        "label": "TIN / TAE (e.g. 5,00 % / 5,12 %)",
-        "valueType": "string"
-      },
-      {
-        "component": "text",
-        "name": "installment",
-        "value": "",
-        "label": "Cuota Mensual (e.g. 150 €)",
-        "valueType": "string"
-      },
-      {
         "component": "richtext",
-        "name": "description",
-        "value": "",
-        "label": "Description & Links",
-        "valueType": "string"
+        "valueType": "string",
+        "name": "content",
+        "label": "Contenido del Bloque"
       }
     ]
   },
   {
-    "id": "banner-slide",
+    "id": "principal-banner",
     "fields": [
       {
-        "component": "text",
-        "name": "title",
-        "value": "",
-        "label": "Title",
-        "valueType": "string"
-      },
-      {
-        "component": "richtext",
-        "name": "description",
-        "value": "",
-        "label": "Description / Text",
-        "valueType": "string"
-      },
-      {
-        "component": "richtext",
-        "name": "link",
-        "value": "",
-        "label": "Link Button (Anchor)",
-        "valueType": "string"
+        "component": "reference",
+        "valueType": "string",
+        "name": "image_1",
+        "label": "Imagen 1",
+        "multi": false
       },
       {
         "component": "reference",
         "valueType": "string",
-        "name": "image",
-        "label": "Background Image",
+        "name": "image_2",
+        "label": "Imagen 2",
         "multi": false
       }
     ]
@@ -585,35 +553,13 @@
     ]
   },
   {
-    "id": "condition-item",
+    "id": "product-conditions",
     "fields": [
       {
-        "component": "text",
-        "name": "title",
-        "value": "",
-        "label": "Condition Title (e.g. Importe máximo)",
-        "valueType": "string"
-      },
-      {
-        "component": "text",
-        "name": "value",
-        "value": "",
-        "label": "Condition Value (e.g. 30.000 €)",
-        "valueType": "string"
-      },
-      {
-        "component": "text",
-        "name": "tooltip",
-        "value": "",
-        "label": "Tooltip Hover Text (Optional)",
-        "valueType": "string"
-      },
-      {
-        "component": "text",
-        "name": "info",
-        "value": "",
-        "label": "Additional Info Underneath (Optional)",
-        "valueType": "string"
+        "component": "richtext",
+        "valueType": "string",
+        "name": "content",
+        "label": "Contenido del Bloque"
       }
     ]
   },
@@ -625,6 +571,17 @@
         "valueType": "string",
         "name": "content",
         "label": "Contenido"
+      }
+    ]
+  },
+  {
+    "id": "reproductor-de-v-deo-brightcove",
+    "fields": [
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "content",
+        "label": "Contenido del Bloque"
       }
     ]
   },
@@ -658,6 +615,23 @@
         "valueType": "string",
         "name": "content",
         "label": "Contenido"
+      }
+    ]
+  },
+  {
+    "id": "tabs",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "tab-label",
+        "label": "Etiqueta de la pestaña"
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "tab-content",
+        "label": "Contenido de la pestaña"
       }
     ]
   },

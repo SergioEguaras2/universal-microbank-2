@@ -1,0 +1,6 @@
+/* Estilos encapsulados para el bloque carrusel-de-destacados */
+.carrusel-de-destacados {
+  display: block;
+  margin: var(--spacing-m) auto;
+  max-width: var(--max-width);
+}

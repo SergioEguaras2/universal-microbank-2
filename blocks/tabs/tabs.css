@@ -1,0 +1,247 @@
+/**
+ * tabs.css — Estilos del bloque tabs
+ * CSS adaptado del portal original a convenciones AEM EDS.
+ * Mobile-first. Variables CSS de :root (definidas en styles/styles.css).
+ *
+ * Generado por SA-D02 del Sprint 2 — Red Agéntica AEM
+ */
+
+/* ── Contenedor AEM EDS ── */
+.tabs {
+  display: block;
+  width: 100%;
+  max-width: var(--max-width, 1200px);
+  margin: 0 auto;
+  color: var(--color-text, #333333);
+  font-family: var(--font-body, sans-serif);
+}
+
+/* ── Estado de inicialización ── */
+.tabs--initialized {
+  animation: none;
+}
+
+/* ── Estilos extraídos del portal original ── */
+/* Estilos para bloque AEM EDS: tabs */
+/* Raíces BEM: tabs */
+/* Extraído de: Estaticos__MBK_Home.css */
+
+/* ── Origen: Estaticos__MBK_Home.css ── */
+@media (min-width: 1440px) {
+  .zoom-text-110 #tabsSubhomeProductos.tabs-subhome .hl-carousel .hl-carousel__highlights .hl-carousel__highlights-wrap,
+  .zoom-text-120 #tabsSubhomeProductos.tabs-subhome .hl-carousel .hl-carousel__highlights .hl-carousel__highlights-wrap,
+  .zoom-text-133 #tabsSubhomeProductos.tabs-subhome .hl-carousel .hl-carousel__highlights .hl-carousel__highlights-wrap,
+  .zoom-text-150 #tabsSubhomeProductos.tabs-subhome .hl-carousel .hl-carousel__highlights .hl-carousel__highlights-wrap,
+  .zoom-text-170 #tabsSubhomeProductos.tabs-subhome .hl-carousel .hl-carousel__highlights .hl-carousel__highlights-wrap,
+  .zoom-text-200 #tabsSubhomeProductos.tabs-subhome .hl-carousel .hl-carousel__highlights .hl-carousel__highlights-wrap {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fill, minmax(calc(25% - 1.9rem), 1fr));
+    gap: 1.9rem;
+  }
+  .zoom-text-110 #tabsSubhomeProductos.tabs-subhome .hl-carousel .hl-carousel__highlights .hl-carousel__highlights-wrap .hl-carousel__highlights-item,
+  .zoom-text-120 #tabsSubhomeProductos.tabs-subhome .hl-carousel .hl-carousel__highlights .hl-carousel__highlights-wrap .hl-carousel__highlights-item,
+  .zoom-text-133 #tabsSubhomeProductos.tabs-subhome .hl-carousel .hl-carousel__highlights .hl-carousel__highlights-wrap .hl-carousel__highlights-item,
+  .zoom-text-150 #tabsSubhomeProductos.tabs-subhome .hl-carousel .hl-carousel__highlights .hl-carousel__highlights-wrap .hl-carousel__highlights-item,
+  .zoom-text-170 #tabsSubhomeProductos.tabs-subhome .hl-carousel .hl-carousel__highlights .hl-carousel__highlights-wrap .hl-carousel__highlights-item,
+  .zoom-text-200 #tabsSubhomeProductos.tabs-subhome .hl-carousel .hl-carousel__highlights .hl-carousel__highlights-wrap .hl-carousel__highlights-item {
+    margin: 0 !important;
+  }
+  .zoom-text-110 #tabsSubhomeProductos.tabs-subhome .hl-carousel .hl-carousel__highlights .hl-carousel__highlights-wrap .hl-carousel__highlights-item .hl-carousel__highlights-item-img img,
+  .zoom-text-120 #tabsSubhomeProductos.tabs-subhome .hl-carousel .hl-carousel__highlights .hl-carousel__highlights-wrap .hl-carousel__highlights-item .hl-carousel__highlights-item-img img,
+  .zoom-text-133 #tabsSubhomeProductos.tabs-subhome .hl-carousel .hl-carousel__highlights .hl-carousel__highlights-wrap .hl-carousel__highlights-item .hl-carousel__highlights-item-img img,
+  .zoom-text-150 #tabsSubhomeProductos.tabs-subhome .hl-carousel .hl-carousel__highlights .hl-carousel__highlights-wrap .hl-carousel__highlights-item .hl-carousel__highlights-item-img img,
+  .zoom-text-170 #tabsSubhomeProductos.tabs-subhome .hl-carousel .hl-carousel__highlights .hl-carousel__highlights-wrap .hl-carousel__highlights-item .hl-carousel__highlights-item-img img,
+  .zoom-text-200 #tabsSubhomeProductos.tabs-subhome .hl-carousel .hl-carousel__highlights .hl-carousel__highlights-wrap .hl-carousel__highlights-item .hl-carousel__highlights-item-img img {
+    width: 100%;
+    aspect-ratio: 1/1 !important;
+    -o-object-fit: cover;
+       object-fit: cover;
+    min-height: 46rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .zoom-text-120 #tabsSubhomeProductos.tabs-subhome .hl-carousel .hl-carousel__highlights .hl-carousel__highlights-wrap,
+  .zoom-text-133 #tabsSubhomeProductos.tabs-subhome .hl-carousel .hl-carousel__highlights .hl-carousel__highlights-wrap,
+  .zoom-text-150 #tabsSubhomeProductos.tabs-subhome .hl-carousel .hl-carousel__highlights .hl-carousel__highlights-wrap {
+    grid-template-columns: repeat(auto-fill, minmax(calc(33% - 1.9rem), 1fr));
+  }
+}
+
+@media (min-width: 1440px) {
+  .zoom-text-170 #tabsSubhomeProductos.tabs-subhome .hl-carousel .hl-carousel__highlights .hl-carousel__highlights-wrap,
+  .zoom-text-200 #tabsSubhomeProductos.tabs-subhome .hl-carousel .hl-carousel__highlights .hl-carousel__highlights-wrap {
+    grid-template-columns: repeat(auto-fill, minmax(calc(50% - 1.9rem), 1fr));
+  }
+}
+
+@media (min-width: 1440px) {
+  .zoom-text-110 #tabsSubhomeCasos.tabs-subhome .hl-carousel .hl-carousel__highlights .hl-carousel__highlights-wrap,
+  .zoom-text-120 #tabsSubhomeCasos.tabs-subhome .hl-carousel .hl-carousel__highlights .hl-carousel__highlights-wrap,
+  .zoom-text-133 #tabsSubhomeCasos.tabs-subhome .hl-carousel .hl-carousel__highlights .hl-carousel__highlights-wrap,
+  .zoom-text-150 #tabsSubhomeCasos.tabs-subhome .hl-carousel .hl-carousel__highlights .hl-carousel__highlights-wrap,
+  .zoom-text-170 #tabsSubhomeCasos.tabs-subhome .hl-carousel .hl-carousel__highlights .hl-carousel__highlights-wrap,
+  .zoom-text-200 #tabsSubhomeCasos.tabs-subhome .hl-carousel .hl-carousel__highlights .hl-carousel__highlights-wrap {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fill, minmax(calc(50% - 1.9rem), 1fr));
+    gap: 1.9rem;
+  }
+  .zoom-text-110 #tabsSubhomeCasos.tabs-subhome .hl-carousel .hl-carousel__highlights .hl-carousel__highlights-wrap .hl-carousel__highlights-item,
+  .zoom-text-120 #tabsSubhomeCasos.tabs-subhome .hl-carousel .hl-carousel__highlights .hl-carousel__highlights-wrap .hl-carousel__highlights-item,
+  .zoom-text-133 #tabsSubhomeCasos.tabs-subhome .hl-carousel .hl-carousel__highlights .hl-carousel__highlights-wrap .hl-carousel__highlights-item,
+  .zoom-text-150 #tabsSubhomeCasos.tabs-subhome .hl-carousel .hl-carousel__highlights .hl-carousel__highlights-wrap .hl-carousel__highlights-item,
+  .zoom-text-170 #tabsSubhomeCasos.tabs-subhome .hl-carousel .hl-carousel__highlights .hl-carousel__highlights-wrap .hl-carousel__highlights-item,
+  .zoom-text-200 #tabsSubhomeCasos.tabs-subhome .hl-carousel .hl-carousel__highlights .hl-carousel__highlights-wrap .hl-carousel__highlights-item {
+    max-width: 100% !important;
+    min-width: -moz-fit-content !important;
+    min-width: fit-content !important;
+    margin: 0 !important;
+  }
+  .zoom-text-110 #tabsSubhomeCasos.tabs-subhome .hl-carousel .hl-carousel__highlights .hl-carousel__highlights-wrap .hl-carousel__highlights-item .hl-carousel__highlights-item-img img,
+  .zoom-text-120 #tabsSubhomeCasos.tabs-subhome .hl-carousel .hl-carousel__highlights .hl-carousel__highlights-wrap .hl-carousel__highlights-item .hl-carousel__highlights-item-img img,
+  .zoom-text-133 #tabsSubhomeCasos.tabs-subhome .hl-carousel .hl-carousel__highlights .hl-carousel__highlights-wrap .hl-carousel__highlights-item .hl-carousel__highlights-item-img img,
+  .zoom-text-150 #tabsSubhomeCasos.tabs-subhome .hl-carousel .hl-carousel__highlights .hl-carousel__highlights-wrap .hl-carousel__highlights-item .hl-carousel__highlights-item-img img,
+  .zoom-text-170 #tabsSubhomeCasos.tabs-subhome .hl-carousel .hl-carousel__highlights .hl-carousel__highlights-wrap .hl-carousel__highlights-item .hl-carousel__highlights-item-img img,
+  .zoom-text-200 #tabsSubhomeCasos.tabs-subhome .hl-carousel .hl-carousel__highlights .hl-carousel__highlights-wrap .hl-carousel__highlights-item .hl-carousel__highlights-item-img img {
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    min-height: 45.6rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .zoom-text-133 #tabsSubhomeCasos.tabs-subhome .hl-carousel .hl-carousel__highlights .hl-carousel__highlights-wrap,
+  .zoom-text-150 #tabsSubhomeCasos.tabs-subhome .hl-carousel .hl-carousel__highlights .hl-carousel__highlights-wrap,
+  .zoom-text-170 #tabsSubhomeCasos.tabs-subhome .hl-carousel .hl-carousel__highlights .hl-carousel__highlights-wrap,
+  .zoom-text-200 #tabsSubhomeCasos.tabs-subhome .hl-carousel .hl-carousel__highlights .hl-carousel__highlights-wrap {
+    grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+  }
+}
+
+@media (min-width: 1440px) {
+  .zoom-text-110 #tabsAcademy.tabs-subhome.academy #tabsSubhomeContent.tab-content #carouselAcademy.hl-carousel .hl-carousel__highlights .hl-carousel__highlights-wrap,
+  .zoom-text-120 #tabsAcademy.tabs-subhome.academy #tabsSubhomeContent.tab-content #carouselAcademy.hl-carousel .hl-carousel__highlights .hl-carousel__highlights-wrap,
+  .zoom-text-133 #tabsAcademy.tabs-subhome.academy #tabsSubhomeContent.tab-content #carouselAcademy.hl-carousel .hl-carousel__highlights .hl-carousel__highlights-wrap,
+  .zoom-text-150 #tabsAcademy.tabs-subhome.academy #tabsSubhomeContent.tab-content #carouselAcademy.hl-carousel .hl-carousel__highlights .hl-carousel__highlights-wrap,
+  .zoom-text-170 #tabsAcademy.tabs-subhome.academy #tabsSubhomeContent.tab-content #carouselAcademy.hl-carousel .hl-carousel__highlights .hl-carousel__highlights-wrap,
+  .zoom-text-200 #tabsAcademy.tabs-subhome.academy #tabsSubhomeContent.tab-content #carouselAcademy.hl-carousel .hl-carousel__highlights .hl-carousel__highlights-wrap {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(calc(25% - 1.9rem), 1fr));
+    gap: 1.9rem;
+  }
+  .zoom-text-110 #tabsAcademy.tabs-subhome.academy #tabsSubhomeContent.tab-content #carouselAcademy.hl-carousel .hl-carousel__highlights .hl-carousel__highlights-wrap .hl-carousel__highlights-item,
+  .zoom-text-120 #tabsAcademy.tabs-subhome.academy #tabsSubhomeContent.tab-content #carouselAcademy.hl-carousel .hl-carousel__highlights .hl-carousel__highlights-wrap .hl-carousel__highlights-item,
+  .zoom-text-133 #tabsAcademy.tabs-subhome.academy #tabsSubhomeContent.tab-content #carouselAcademy.hl-carousel .hl-carousel__highlights .hl-carousel__highlights-wrap .hl-carousel__highlights-item,
+  .zoom-text-150 #tabsAcademy.tabs-subhome.academy #tabsSubhomeContent.tab-content #carouselAcademy.hl-carousel .hl-carousel__highlights .hl-carousel__highlights-wrap .hl-carousel__highlights-item,
+  .zoom-text-170 #tabsAcademy.tabs-subhome.academy #tabsSubhomeContent.tab-content #carouselAcademy.hl-carousel .hl-carousel__highlights .hl-carousel__highlights-wrap .hl-carousel__highlights-item,
+  .zoom-text-200 #tabsAcademy.tabs-subhome.academy #tabsSubhomeContent.tab-content #carouselAcademy.hl-carousel .hl-carousel__highlights .hl-carousel__highlights-wrap .hl-carousel__highlights-item {
+    margin: 0;
+  }
+  .zoom-text-110 #tabsAcademy.tabs-subhome.academy #tabsSubhomeContent.tab-content #carouselAcademy.hl-carousel .hl-carousel__highlights .hl-carousel__highlights-wrap .hl-carousel__highlights-item a,
+  .zoom-text-120 #tabsAcademy.tabs-subhome.academy #tabsSubhomeContent.tab-content #carouselAcademy.hl-carousel .hl-carousel__highlights .hl-carousel__highlights-wrap .hl-carousel__highlights-item a,
+  .zoom-text-133 #tabsAcademy.tabs-subhome.academy #tabsSubhomeContent.tab-content #carouselAcademy.hl-carousel .hl-carousel__highlights .hl-carousel__highlights-wrap .hl-carousel__highlights-item a,
+  .zoom-text-150 #tabsAcademy.tabs-subhome.academy #tabsSubhomeContent.tab-content #carouselAcademy.hl-carousel .hl-carousel__highlights .hl-carousel__highlights-wrap .hl-carousel__highlights-item a,
+  .zoom-text-170 #tabsAcademy.tabs-subhome.academy #tabsSubhomeContent.tab-content #carouselAcademy.hl-carousel .hl-carousel__highlights .hl-carousel__highlights-wrap .hl-carousel__highlights-item a,
+  .zoom-text-200 #tabsAcademy.tabs-subhome.academy #tabsSubhomeContent.tab-content #carouselAcademy.hl-carousel .hl-carousel__highlights .hl-carousel__highlights-wrap .hl-carousel__highlights-item a {
+    width: 100%;
+  }
+  .zoom-text-110 #tabsAcademy.tabs-subhome.academy #tabsSubhomeContent.tab-content #carouselAcademy.hl-carousel .hl-carousel__highlights .hl-carousel__highlights-wrap .hl-carousel__highlights-item .hl-carousel__highlights-item-img img,
+  .zoom-text-120 #tabsAcademy.tabs-subhome.academy #tabsSubhomeContent.tab-content #carouselAcademy.hl-carousel .hl-carousel__highlights .hl-carousel__highlights-wrap .hl-carousel__highlights-item .hl-carousel__highlights-item-img img,
+  .zoom-text-133 #tabsAcademy.tabs-subhome.academy #tabsSubhomeContent.tab-content #carouselAcademy.hl-carousel .hl-carousel__highlights .hl-carousel__highlights-wrap .hl-carousel__highlights-item .hl-carousel__highlights-item-img img,
+  .zoom-text-150 #tabsAcademy.tabs-subhome.academy #tabsSubhomeContent.tab-content #carouselAcademy.hl-carousel .hl-carousel__highlights .hl-carousel__highlights-wrap .hl-carousel__highlights-item .hl-carousel__highlights-item-img img,
+  .zoom-text-170 #tabsAcademy.tabs-subhome.academy #tabsSubhomeContent.tab-content #carouselAcademy.hl-carousel .hl-carousel__highlights .hl-carousel__highlights-wrap .hl-carousel__highlights-item .hl-carousel__highlights-item-img img,
+  .zoom-text-200 #tabsAcademy.tabs-subhome.academy #tabsSubhomeContent.tab-content #carouselAcademy.hl-carousel .hl-carousel__highlights .hl-carousel__highlights-wrap .hl-carousel__highlights-item .hl-carousel__highlights-item-img img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    -o-object-fit: cover;
+       object-fit: cover;
+    min-height: 45.6rem;
+  }
+  .zoom-text-110 #tabsAcademy.tabs-subhome.academy #tabsSubhomeContent.tab-content #carouselAcademy.hl-carousel .hl-carousel__highlights .hl-carousel__highlights-wrap .hl-carousel__highlights-item .hl-carousel__highlights-item-img .hl-carousel__google-item img,
+  .zoom-text-120 #tabsAcademy.tabs-subhome.academy #tabsSubhomeContent.tab-content #carouselAcademy.hl-carousel .hl-carousel__highlights .hl-carousel__highlights-wrap .hl-carousel__highlights-item .hl-carousel__highlights-item-img .hl-carousel__google-item img,
+  .zoom-text-133 #tabsAcademy.tabs-subhome.academy #tabsSubhomeContent.tab-content #carouselAcademy.hl-carousel .hl-carousel__highlights .hl-carousel__highlights-wrap .hl-carousel__highlights-item .hl-carousel__highlights-item-img .hl-carousel__google-item img,
+  .zoom-text-150 #tabsAcademy.tabs-subhome.academy #tabsSubhomeContent.tab-content #carouselAcademy.hl-carousel .hl-carousel__highlights .hl-carousel__highlights-wrap .hl-carousel__highlights-item .hl-carousel__highlights-item-img .hl-carousel__google-item img,
+  .zoom-text-170 #tabsAcademy.tabs-subhome.academy #tabsSubhomeContent.tab-content #carouselAcademy.hl-carousel .hl-carousel__highlights .hl-carousel__highlights-wrap .hl-carousel__highlights-item .hl-carousel__highlights-item-img .hl-carousel__google-item img,
+  .zoom-text-200 #tabsAcademy.tabs-subhome.academy #tabsSubhomeContent.tab-content #carouselAcademy.hl-carousel .hl-carousel__highlights .hl-carousel__highlights-wrap .hl-carousel__highlights-item .hl-carousel__highlights-item-img .hl-carousel__google-item img {
+    width: 100%;
+    height: auto;
+    min-height: -moz-fit-content;
+    min-height: fit-content;
+  }
+}
+
+@media (min-width: 1440px) {
+  .zoom-text-120 #tabsAcademy.tabs-subhome.academy #tabsSubhomeContent.tab-content #carouselAcademy.hl-carousel .hl-carousel__highlights .hl-carousel__highlights-wrap,
+  .zoom-text-133 #tabsAcademy.tabs-subhome.academy #tabsSubhomeContent.tab-content #carouselAcademy.hl-carousel .hl-carousel__highlights .hl-carousel__highlights-wrap,
+  .zoom-text-150 #tabsAcademy.tabs-subhome.academy #tabsSubhomeContent.tab-content #carouselAcademy.hl-carousel .hl-carousel__highlights .hl-carousel__highlights-wrap {
+    grid-template-columns: repeat(auto-fill, minmax(calc(33% - 1.9rem), 1fr));
+  }
+}
+
+@media (min-width: 1440px) {
+  .zoom-text-170 #tabsAcademy.tabs-subhome.academy #tabsSubhomeContent.tab-content #carouselAcademy.hl-carousel .hl-carousel__highlights .hl-carousel__highlights-wrap,
+  .zoom-text-200 #tabsAcademy.tabs-subhome.academy #tabsSubhomeContent.tab-content #carouselAcademy.hl-carousel .hl-carousel__highlights .hl-carousel__highlights-wrap {
+    grid-template-columns: repeat(auto-fill, minmax(calc(50% - 1.9rem), 1fr));
+  }
+}
+
+@media (min-width: 1440px) {
+  .zoom-text-110 #tabsSubhomeBlog.tabs-subhome .hl-carousel.blog-images_visualization .hl-carousel__highlights.parrilla-blog-visualization .hl-carousel__highlights-wrap,
+  .zoom-text-120 #tabsSubhomeBlog.tabs-subhome .hl-carousel.blog-images_visualization .hl-carousel__highlights.parrilla-blog-visualization .hl-carousel__highlights-wrap,
+  .zoom-text-133 #tabsSubhomeBlog.tabs-subhome .hl-carousel.blog-images_visualization .hl-carousel__highlights.parrilla-blog-visualization .hl-carousel__highlights-wrap,
+  .zoom-text-150 #tabsSubhomeBlog.tabs-subhome .hl-carousel.blog-images_visualization .hl-carousel__highlights.parrilla-blog-visualization .hl-carousel__highlights-wrap,
+  .zoom-text-170 #tabsSubhomeBlog.tabs-subhome .hl-carousel.blog-images_visualization .hl-carousel__highlights.parrilla-blog-visualization .hl-carousel__highlights-wrap,
+  .zoom-text-200 #tabsSubhomeBlog.tabs-subhome .hl-carousel.blog-images_visualization .hl-carousel__highlights.parrilla-blog-visualization .hl-carousel__highlights-wrap {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(calc(25% - 1.9rem), 1fr));
+    gap: 1.9rem;
+  }
+  .zoom-text-110 #tabsSubhomeBlog.tabs-subhome .hl-carousel.blog-images_visualization .hl-carousel__highlights.parrilla-blog-visualization .hl-carousel__highlights-wrap .hl-carousel__highlights-item,
+  .zoom-text-120 #tabsSubhomeBlog.tabs-subhome .hl-carousel.blog-images_visualization .hl-carousel__highlights.parrilla-blog-visualization .hl-carousel__highlights-wrap .hl-carousel__highlights-item,
+  .zoom-text-133 #tabsSubhomeBlog.tabs-subhome .hl-carousel.blog-images_visualization .hl-carousel__highlights.parrilla-blog-visualization .hl-carousel__highlights-wrap .hl-carousel__highlights-item,
+  .zoom-text-150 #tabsSubhomeBlog.tabs-subhome .hl-carousel.blog-images_visualization .hl-carousel__highlights.parrilla-blog-visualization .hl-carousel__highlights-wrap .hl-carousel__highlights-item,
+  .zoom-text-170 #tabsSubhomeBlog.tabs-subhome .hl-carousel.blog-images_visualization .hl-carousel__highlights.parrilla-blog-visualization .hl-carousel__highlights-wrap .hl-carousel__highlights-item,
+  .zoom-text-200 #tabsSubhomeBlog.tabs-subhome .hl-carousel.blog-images_visualization .hl-carousel__highlights.parrilla-blog-visualization .hl-carousel__highlights-wrap .hl-carousel__highlights-item {
+    margin: 0 !important;
+  }
+  .zoom-text-110 #tabsSubhomeBlog.tabs-subhome .hl-carousel.blog-images_visualization .hl-carousel__highlights.parrilla-blog-visualization .hl-carousel__highlights-wrap .hl-carousel__highlights-item a,
+  .zoom-text-120 #tabsSubhomeBlog.tabs-subhome .hl-carousel.blog-images_visualization .hl-carousel__highlights.parrilla-blog-visualization .hl-carousel__highlights-wrap .hl-carousel__highlights-item a,
+  .zoom-text-133 #tabsSubhomeBlog.tabs-subhome .hl-carousel.blog-images_visualization .hl-carousel__highlights.parrilla-blog-visualization .hl-carousel__highlights-wrap .hl-carousel__highlights-item a,
+  .zoom-text-150 #tabsSubhomeBlog.tabs-subhome .hl-carousel.blog-images_visualization .hl-carousel__highlights.parrilla-blog-visualization .hl-carousel__highlights-wrap .hl-carousel__highlights-item a,
+  .zoom-text-170 #tabsSubhomeBlog.tabs-subhome .hl-carousel.blog-images_visualization .hl-carousel__highlights.parrilla-blog-visualization .hl-carousel__highlights-wrap .hl-carousel__highlights-item a,
+  .zoom-text-200 #tabsSubhomeBlog.tabs-subhome .hl-carousel.blog-images_visualization .hl-carousel__highlights.parrilla-blog-visualization .hl-carousel__highlights-wrap .hl-carousel__highlights-item a {
+    width: 100%;
+  }
+  .zoom-text-110 #tabsSubhomeBlog.tabs-subhome .hl-carousel.blog-images_visualization .hl-carousel__highlights.parrilla-blog-visualization .hl-carousel__highlights-wrap .hl-carousel__highlights-item .hl-carousel__highlights-item-img img,
+  .zoom-text-120 #tabsSubhomeBlog.tabs-subhome .hl-carousel.blog-images_visualization .hl-carousel__highlights.parrilla-blog-visualization .hl-carousel__highlights-wrap .hl-carousel__highlights-item .hl-carousel__highlights-item-img img,
+  .zoom-text-133 #tabsSubhomeBlog.tabs-subhome .hl-carousel.blog-images_visualization .hl-carousel__highlights.parrilla-blog-visualization .hl-carousel__highlights-wrap .hl-carousel__highlights-item .hl-carousel__highlights-item-img img,
+  .zoom-text-150 #tabsSubhomeBlog.tabs-subhome .hl-carousel.blog-images_visualization .hl-carousel__highlights.parrilla-blog-visualization .hl-carousel__highlights-wrap .hl-carousel__highlights-item .hl-carousel__highlights-item-img img,
+  .zoom-text-170 #tabsSubhomeBlog.tabs-subhome .hl-carousel.blog-images_visualization .hl-carousel__highlights.parrilla-blog-visualization .hl-carousel__highlights-wrap .hl-carousel__highlights-item .hl-carousel__highlights-item-img img,
+  .zoom-text-200 #tabsSubhomeBlog.tabs-subhome .hl-carousel.blog-images_visualization .hl-carousel__highlights.parrilla-blog-visualization .hl-carousel__highlights-wrap .hl-carousel__highlights-item .hl-carousel__highlights-item-img img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    -o-object-fit: cover;
+       object-fit: cover;
+    min-height: 45.6rem;
+    max-width: 100%;
+    max-height: -moz-fit-content;
+    max-height: fit-content;
+    margin: 0;
+  }
+}
+
+@media (min-width: 1440px) {
+  .zoom-text-120 #tabsSubhomeBlog.tabs-subhome .hl-carousel.blog-images_visualization .hl-carousel__highlights.parrilla-blog-visualization .hl-carousel__highlights-wrap,
+  .zoom-text-133 #tabsSubhomeBlog.tabs-subhome .hl-carousel.blog-images_visualization .hl-carousel__highlights.parrilla-blog-visualization .hl-carousel__highlights-wrap,
+  .zoom-text-150 #tabsSubhomeBlog.tabs-subhome .hl-carousel.blog-images_visualization .hl-carousel__highlights.parrilla-blog-visualization .hl-carousel__highlights-wrap {
+    grid-template-columns: repeat(auto-fill, minmax(calc(33% - 1.9rem), 1fr));
+  }
+}
+
+@media (min-width: 1440px) {
+  .zoom-text-170 #tabsSubhomeBlog.tabs-subhome .hl-carousel.blog-images_visualization .hl-carousel__highlights.parrilla-blog-visualization .hl-carousel__highlights-wrap,
+  .zoom-text-200 #tabsSubhomeBlog.tabs-subhome .hl-carousel.blog-images_visualization .hl-carousel__highlights.parrilla-blog-visualization .hl-carousel__highlights-wrap {
+    grid-template-columns: repeat(auto-fill, minmax(calc(50% - 1.9rem), 1fr));
+  }
+}

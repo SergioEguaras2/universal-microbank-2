@@ -1,0 +1,6 @@
+/* Estilos encapsulados para el bloque migas-de-pan */
+.migas-de-pan {
+  display: block;
+  margin: var(--spacing-m) auto;
+  max-width: var(--max-width);
+}
