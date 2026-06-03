@@ -127,4 +127,16 @@
   .video-banner-subtitle {
     font-size: 0.75rem;
   }
+
+  /* ... Todo tu código CSS anterior se mantiene intacto ... */
+
+/* Añadir únicamente esta regla al final del archivo para el reproductor: */
+.video-banner-player {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
 }

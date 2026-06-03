@@ -2,20 +2,15 @@
  * @param {HTMLElement} block El elemento contenedor del bloque en el DOM
  */
 export default function decorate(block) {
-  // 1. Extraer los datos que el autor ingresó en AEM (o usar los placeholders por defecto)
   const titleText = block.querySelector(':scope > div > div:nth-child(1)')
     ?.textContent?.trim() || 'FINANCIACIÓN CON IMPACTO SOCIAL';
   const subtitleText = block.querySelector(':scope > div > div:nth-child(2)')
     ?.textContent?.trim() || 'PARA TODOS Y EN TODAS PARTES';
   const posterImgSrc = block.querySelector(':scope > div > div:nth-child(3) img')
     ?.src || 'https://www.microbank.com/es/inicio.html/assets/poster-video.jpg';
-  const videoSrc = block.querySelector(':scope > div > div:nth-child(4) a')
-    ?.href || '#';
 
-  // 2. Limpiar el contenedor para inyectar la estructura semántica optimizada
   block.innerHTML = '';
 
-  // 3. Crear la estructura BEM en kebab-case y añadir atributos para el Universal Editor
   block.classList.add('video-banner');
   block.setAttribute('data-aue-component', 'video-banner');
   block.setAttribute('data-aue-type', 'component');
@@ -29,7 +24,6 @@ export default function decorate(block) {
   mediaWrapper.setAttribute('data-aue-prop', 'media');
   mediaWrapper.setAttribute('data-aue-type', 'media');
 
-  // Imagen de fondo con carga diferida (Lighthouse compliant)
   const poster = document.createElement('img');
   poster.className = 'video-banner-poster';
   poster.src = posterImgSrc;
@@ -38,7 +32,6 @@ export default function decorate(block) {
   poster.width = 1280;
   poster.height = 450;
 
-  // Capa de contenidos
   const overlay = document.createElement('div');
   overlay.className = 'video-banner-overlay';
 
@@ -48,7 +41,6 @@ export default function decorate(block) {
   title.setAttribute('data-aue-type', 'text');
   title.textContent = titleText;
 
-  // Botón con SVG Inline para ahorrar peticiones HTTP
   const playButton = document.createElement('button');
   playButton.className = 'video-banner-play-button';
   playButton.setAttribute('aria-label', `Reproducir vídeo: ${titleText}`);
@@ -65,7 +57,6 @@ export default function decorate(block) {
   subtitle.setAttribute('data-aue-type', 'text');
   subtitle.textContent = subtitleText;
 
-  // 4. Armar el árbol del DOM
   overlay.appendChild(title);
   overlay.appendChild(playButton);
   overlay.appendChild(subtitle);
@@ -76,9 +67,30 @@ export default function decorate(block) {
   container.appendChild(mediaWrapper);
   block.appendChild(container);
 
-  // 5. Evento de interacción (Accesibilidad y Buenas Prácticas)
+  // Interacción: Carga dinámica y perezosa de Brightcove al hacer Click
   playButton.addEventListener('click', () => {
-    // Implementar la carga perezosa del reproductor usando videoSrc
-    block.dataset.videoUrl = videoSrc;
+    // 1. Limpiar los elementos visuales del wrapper (imagen y textos)
+    mediaWrapper.innerHTML = '';
+
+    // 2. Crear el elemento de video nativo de Brightcove con tus datos extraídos
+    const videoElement = document.createElement('video-js');
+    videoElement.setAttribute('data-video-id', '6392232090112');
+    videoElement.setAttribute('data-account', '6236382021001');
+    videoElement.setAttribute('data-player', 'Jdfh8iZrx5');
+    videoElement.setAttribute('data-embed', 'default');
+    videoElement.setAttribute('controls', '');
+    videoElement.setAttribute('autoplay', '');
+    videoElement.className = 'video-banner-player video-js';
+
+    mediaWrapper.appendChild(videoElement);
+
+    // 3. Inyectar el script SDK de Brightcove de manera dinámica para inicializar el reproductor
+    const script = document.createElement('script');
+    script.src = 'https://players.brightcove.net/6236382021001/Jdfh8iZrx5_default/index.min.js';
+    script.async = true;
+    script.onload = () => {
+      // El SDK de Brightcove detectará automáticamente el tag <video-js> y lo activará
+    };
+    document.head.appendChild(script);
   });
 }
