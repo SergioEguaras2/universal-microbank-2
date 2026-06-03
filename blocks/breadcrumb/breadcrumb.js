@@ -1,62 +1,54 @@
 /**
  * breadcrumb.js — Bloque AEM EDS: Breadcrumb
- * Navegación secundaria de ubicación en
- * la jerarquía del sitio con variantes de fondo
- * negro y transparente
+ * CSS BEM: .region-breadcrumb, .region-breadcrumb--transparent,
+ *          .region-breadcrumb--black, .breadcrumb ul li.primero/.ultimo/.current
  *
- * Generado por SA-D02 del Sprint 2 — Red Agéntica AEM
- * Convención: export default function decorate(block) {} —
- * vanilla JS, sin frameworks
- */
-
-/**
- * Decora el bloque breadcrumb añadiendo comportamiento interactivo y accesibilidad.
- * @param {HTMLElement} block - El elemento raíz del bloque en el DOM
+ * Entrada AEM:
+ *   Fila 0: celda 0 = variante ("transparent" | "black"), celdas 1..N = niveles
  */
 export default function decorate(block) {
   if (!block) return;
-  // CSS: .breadcrumb .breadcrumbsimple ul > li con clases .primero / .ultimo
   const rows = [...block.querySelectorAll(':scope > div')];
-  block.innerHTML = '';
+  const cells = rows[0] ? [...rows[0].querySelectorAll(':scope > div')] : [];
+
+  // Primera celda determina la variante visual
+  const variant = cells[0]?.textContent.trim().toLowerCase() || '';
+  const modClass = variant === 'transparent'
+    ? 'region-breadcrumb--transparent'
+    : variant === 'black'
+      ? 'region-breadcrumb--black'
+      : '';
 
   const nav = document.createElement('nav');
-  nav.setAttribute('aria-label', 'Breadcrumb');
+  nav.className = 'region-breadcrumb' + (modClass ? ` ${modClass}` : '');
+  nav.setAttribute('aria-label', 'Ruta de navegación');
 
-  const wrapper = document.createElement('div');
-  wrapper.className = 'breadcrumbsimple';
+  const breadcrumb = document.createElement('div');
+  breadcrumb.className = 'breadcrumb';
 
   const ul = document.createElement('ul');
-  ul.setAttribute('role', 'list');
 
-  // Cada celda es un item del breadcrumb
-  const items = [];
-  rows.forEach((row) => {
-    [...row.querySelectorAll(':scope > div')].forEach((cell) => {
-      const text = cell.textContent.trim();
-      const link = cell.querySelector('a');
-      if (text) items.push({ text, href: link?.href || null });
-    });
-  });
-
-  items.forEach(({ text, href }, i) => {
+  const linkCells = cells.slice(1);
+  linkCells.forEach((cell, i) => {
     const li = document.createElement('li');
-    if (i === 0) li.classList.add('primero');
-    if (i === items.length - 1) li.classList.add('ultimo', 'current');
+    const isFirst = i === 0;
+    const isLast = i === linkCells.length - 1;
+    li.className = [
+      isFirst ? 'primero' : '',
+      isLast ? 'ultimo current' : '',
+    ].filter(Boolean).join(' ');
 
-    if (href && i < items.length - 1) {
-      const a = document.createElement('a');
-      a.href = href;
-      a.textContent = text;
-      li.appendChild(a);
-    } else {
-      li.setAttribute('aria-current', 'page');
-      li.textContent = text;
-    }
-    ul.appendChild(li);
+    // Preservar enlace o texto tal cual llegue de AEM (usar clones para no mover nodos)
+    const clones = Array.from(cell.childNodes).map(n => n.cloneNode(true));
+    li.append(...clones);
+    if (isLast) li.setAttribute('aria-current', 'page');
+    ul.append(li);
   });
 
-  wrapper.appendChild(ul);
-  nav.appendChild(wrapper);
-  block.appendChild(nav);
+  breadcrumb.append(ul);
+  nav.append(breadcrumb);
+
+  // Añadir la estructura final sin eliminar el contenido original
+  block.append(nav);
   block.classList.add('breadcrumb--initialized');
 }

@@ -1,0 +1,7 @@
+/* Basic styles for alt-highlights */
+.alt-highlights {
+  display: block;
+  padding: var(--space-2, 1rem);
+  color: var(--text-color, #111);
+}
+.alt-highlights__item { margin-bottom: var(--space-1, .5rem); }

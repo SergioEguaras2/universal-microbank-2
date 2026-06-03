@@ -191,6 +191,17 @@
     ]
   },
   {
+    "id": "custom-test-card",
+    "fields": [
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "content",
+        "label": "Contenido del bloque"
+      }
+    ]
+  },
+  {
     "id": "eu-institutions",
     "fields": [
       {
@@ -241,6 +252,29 @@
     ]
   },
   {
+    "id": "footer",
+    "fields": [
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "links",
+        "label": "Columnas de enlaces"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "copyright",
+        "label": "Texto de copyright"
+      },
+      {
+        "component": "multiselect",
+        "valueType": "string[]",
+        "name": "social-links",
+        "label": "Redes sociales"
+      }
+    ]
+  },
+  {
     "id": "fragment",
     "fields": [
       {
@@ -251,18 +285,31 @@
     ]
   },
   {
-    "id": "hero-banner",
+    "id": "header",
     "fields": [
       {
+        "component": "reference",
+        "valueType": "string",
+        "name": "logo",
+        "label": "Logo",
+        "multi": false
+      },
+      {
         "component": "multiselect",
-        "name": "slides",
-        "label": "Slides",
-        "model": "hero-banner-slide"
+        "valueType": "string[]",
+        "name": "nav-links",
+        "label": "Vínculos de navegación"
+      },
+      {
+        "component": "multiselect",
+        "valueType": "string[]",
+        "name": "languages",
+        "label": "Idiomas disponibles"
       }
     ]
   },
   {
-    "id": "hero-banner-slide",
+    "id": "hero-banner",
     "fields": [
       {
         "component": "reference",
@@ -274,22 +321,26 @@
       {
         "component": "text",
         "valueType": "string",
-        "name": "eyebrow",
-        "label": "Eyebrow (texto pequeño sobre el título)",
-        "value": "CONSULTA NUESTRO INFORME ANUAL 2025"
+        "name": "title",
+        "label": "Título principal"
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "text",
+        "label": "Texto descriptivo"
       },
       {
         "component": "text",
         "valueType": "string",
-        "name": "heading",
-        "label": "Título principal",
-        "value": "INFORME ANUAL"
+        "name": "cta-label",
+        "label": "Texto del CTA"
       },
       {
-        "component": "aem-content",
-        "name": "cta",
-        "label": "Enlace CTA (texto + URL)",
-        "value": "Ver Informe"
+        "component": "text",
+        "valueType": "string",
+        "name": "cta-url",
+        "label": "URL del CTA"
       }
     ]
   },
@@ -382,6 +433,81 @@
     ]
   },
   {
+    "id": "highlights",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Imagen",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "title",
+        "label": "Título"
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "text",
+        "label": "Descripción"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "cta-label",
+        "label": "Texto del enlace"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "cta-url",
+        "label": "URL del enlace"
+      }
+    ]
+  },
+  {
+    "id": "institutions",
+    "fields": [
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "content",
+        "label": "Contenido"
+      }
+    ]
+  },
+  {
+    "id": "modal",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "trigger-label",
+        "label": "Texto del disparador"
+      },
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "content",
+        "label": "Contenido del modal"
+      }
+    ]
+  },
+  {
+    "id": "navigation",
+    "fields": [
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "content",
+        "label": "Contenido"
+      }
+    ]
+  },
+  {
     "id": "offer",
     "fields": [
       {
@@ -448,6 +574,17 @@
     ]
   },
   {
+    "id": "product-carousel",
+    "fields": [
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "content",
+        "label": "Contenido"
+      }
+    ]
+  },
+  {
     "id": "condition-item",
     "fields": [
       {
@@ -481,7 +618,51 @@
     ]
   },
   {
+    "id": "real-cases-grid",
+    "fields": [
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "content",
+        "label": "Contenido"
+      }
+    ]
+  },
+  {
     "id": "search-bar",
+    "fields": [
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "content",
+        "label": "Contenido"
+      }
+    ]
+  },
+  {
+    "id": "search",
+    "fields": [
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "content",
+        "label": "Contenido"
+      }
+    ]
+  },
+  {
+    "id": "social",
+    "fields": [
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "content",
+        "label": "Contenido"
+      }
+    ]
+  },
+  {
+    "id": "video-banner",
     "fields": [
       {
         "component": "richtext",
