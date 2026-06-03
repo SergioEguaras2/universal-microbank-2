@@ -1,7 +1,7 @@
 {
   "definitions": [
     {
-      "title": "Carrusel de destacados",
+      "title": "Highlights Carousel",
       "id": "highlights-carousel",
       "plugins": {
         "xwalk": {
