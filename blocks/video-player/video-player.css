@@ -1,0 +1,28 @@
+/**
+ * video-player.css — Estilos del bloque video-player
+ * Mobile-first. Kebab-case para nomenclatura de clases.
+ * Variables CSS de :root (definidas en styles/styles.css).
+ *
+ * Generado por SA-D02 del Sprint 2 — Red Agéntica AEM
+ */
+
+/* ── Contenedor principal ── */
+.video-player {
+  display: block;
+  width: 100%;
+  max-width: var(--max-width, 1200px);
+  margin: 0 auto;
+  padding: var(--spacing-m, 1rem);
+  color: var(--color-text, #333);
+  font-family: var(--font-body, sans-serif);
+}
+
+/* ── Estado de inicialización ── */
+.video-player-initialized {
+  animation: none;
+}
+
+/* ── Elementos internos ── */
+.video-player-item {
+  padding: var(--spacing-s, 0.5rem);
+}

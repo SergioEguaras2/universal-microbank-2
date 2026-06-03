@@ -142,6 +142,17 @@
     ]
   },
   {
+    "id": "breadcrumb",
+    "fields": [
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "content",
+        "label": "Contenido"
+      }
+    ]
+  },
+  {
     "id": "card",
     "fields": [
       {
@@ -180,12 +191,105 @@
     ]
   },
   {
+    "id": "eu-institutions",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "eyebrow",
+        "label": "Texto eyebrow",
+        "value": "CON EL APOYO DE NUESTROS PARTNERS"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "title",
+        "label": "Título",
+        "value": "Con el apoyo de instituciones europeas"
+      },
+      {
+        "component": "multiselect",
+        "name": "items",
+        "label": "Instituciones",
+        "model": "eu-institutions-item"
+      }
+    ]
+  },
+  {
+    "id": "eu-institutions-item",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "logo",
+        "label": "Logo",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "name",
+        "label": "Nombre de la institución",
+        "value": "Banco Europeo de Inversiones"
+      },
+      {
+        "component": "aem-content",
+        "name": "link",
+        "label": "Enlace",
+        "value": "#"
+      }
+    ]
+  },
+  {
     "id": "fragment",
     "fields": [
       {
         "component": "aem-content",
         "name": "reference",
         "label": "Reference"
+      }
+    ]
+  },
+  {
+    "id": "hero-banner",
+    "fields": [
+      {
+        "component": "multiselect",
+        "name": "slides",
+        "label": "Slides",
+        "model": "hero-banner-slide"
+      }
+    ]
+  },
+  {
+    "id": "hero-banner-slide",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Imagen de fondo",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "eyebrow",
+        "label": "Eyebrow (texto pequeño sobre el título)",
+        "value": "CONSULTA NUESTRO INFORME ANUAL 2025"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "heading",
+        "label": "Título principal",
+        "value": "INFORME ANUAL"
+      },
+      {
+        "component": "aem-content",
+        "name": "cta",
+        "label": "Enlace CTA (texto + URL)",
+        "value": "Ver Informe"
       }
     ]
   },
@@ -212,6 +316,68 @@
         "value": "",
         "label": "Text",
         "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "highlights-carousel",
+    "fields": [
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "title",
+        "label": "Título",
+        "value": "Elige el préstamo que mejor se adapte a ti"
+      },
+      {
+        "component": "richtext",
+        "name": "description",
+        "label": "Descripción",
+        "value": "En MicroBank encontrarás productos de financiación a medida para que hagas realidad todos <a href=\"#\">tus proyectos</a>."
+      },
+      {
+        "component": "aem-content",
+        "name": "viewAllLink",
+        "label": "Enlace Ver todos los productos",
+        "value": "Ver todos los productos"
+      },
+      {
+        "component": "multiselect",
+        "name": "cards",
+        "label": "Tarjetas",
+        "model": "highlights-carousel-card"
+      }
+    ]
+  },
+  {
+    "id": "highlights-carousel-card",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Imagen de fondo",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "title",
+        "label": "Título tarjeta",
+        "value": "Transforma tu idea en un proyecto real"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "subtitle",
+        "label": "Subtítulo",
+        "value": "Microcrédito Negocios Comercio Ambulante"
+      },
+      {
+        "component": "aem-content",
+        "name": "link",
+        "label": "Enlace de la tarjeta",
+        "value": "#"
       }
     ]
   },
@@ -311,6 +477,28 @@
         "value": "",
         "label": "Additional Info Underneath (Optional)",
         "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "search-bar",
+    "fields": [
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "content",
+        "label": "Contenido"
+      }
+    ]
+  },
+  {
+    "id": "video-player",
+    "fields": [
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "content",
+        "label": "Contenido"
       }
     ]
   }

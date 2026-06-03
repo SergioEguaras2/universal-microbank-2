@@ -52,9 +52,26 @@
         "columns",
         "fragment",
         "offer-maker",
-        "institutions",
+        "eu-institutions",
         "principal-banner",
-        "product-conditions"
+        "product-conditions",
+        "search-bar",
+        "breadcrumb",
+        "highlight-double",
+        "highlights-carousel",
+        "link-highlights",
+        "nav-main",
+        "real-cases-grid",
+        "rich-text",
+        "search-results",
+        "tabs-banner",
+        "tabs-nested",
+        "transparent-banner",
+        "video-carousel",
+        "video-player",
+        "video-banner",
+        "hero-banner"
+        
       ]
     }
   ]
