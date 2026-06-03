@@ -1,0 +1,6 @@
+/* Estilos encapsulados para el bloque logos-de-instituciones-europeas */
+.logos-de-instituciones-europeas {
+  display: block;
+  margin: var(--spacing-m) auto;
+  max-width: var(--max-width);
+}

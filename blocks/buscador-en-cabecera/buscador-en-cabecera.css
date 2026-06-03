@@ -1,0 +1,6 @@
+/* Estilos encapsulados para el bloque buscador-en-cabecera */
+.buscador-en-cabecera {
+  display: block;
+  margin: var(--spacing-m) auto;
+  max-width: var(--max-width);
+}
