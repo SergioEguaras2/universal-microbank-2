@@ -17,10 +17,10 @@ export default function decorate(block) {
   const playerId = cells[2]?.textContent?.trim() || 'Jdfh8iZrx5';
 
   // Añadir clase de inicialización para CSS transitions
-  block.classList.add('video-banner--initialized');
+  block.classList.add('video-banner--initialized', 'video-article');
 
   const placeholder = document.createElement('div');
-  placeholder.className = 'video-banner-placeholder';
+  placeholder.className = 'video-banner-placeholder video-placeholder';
 
   const videoEl = document.createElement('video-js');
   videoEl.setAttribute('data-video-id', videoId);

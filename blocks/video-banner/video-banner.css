@@ -9,27 +9,31 @@
   }
 }
 
-.video-banner-placeholder {
+.video-banner-placeholder,
+.video-placeholder {
   margin: auto;
-  max-width: 100%;
+  max-width: 768px;
 }
 
 @media (width >= 768px) {
-  .video-banner-placeholder {
+  .video-banner-placeholder,
+  .video-placeholder {
     overflow: hidden;
     border-radius: 2rem;
   }
 }
 
 @media (width >= 1200px) {
-  .video-banner-placeholder {
-    max-width: 1200px;
+  .video-banner-placeholder,
+  .video-placeholder {
+    max-width: 991px;
   }
 }
 
 @media (width >= 1440px) {
-  .video-banner-placeholder {
-    max-width: 1400px;
+  .video-banner-placeholder,
+  .video-placeholder {
+    max-width: 1200px;
   }
 }
 
@@ -40,6 +44,25 @@
 
 .video-banner .video-banner-placeholder .video-js .vjs-big-play-button {
   background-color: #009ad8 !important;
+}
+
+.video-banner .video-banner-placeholder .video-js:hover .vjs-big-play-button,
+.video-banner .video-banner-placeholder .video-js:focus .vjs-big-play-button,
+.video-banner .video-banner-placeholder .video-js:active .vjs-big-play-button,
+.video-banner .video-placeholder .video-js:hover .vjs-big-play-button,
+.video-banner .video-placeholder .video-js:focus .vjs-big-play-button,
+.video-banner .video-placeholder .video-js:active .vjs-big-play-button {
+  background-color: #009ad8 !important;
+}
+
+.video-banner .video-banner-placeholder .video-js .vjs-big-play-button .vjs-icon-placeholder,
+.video-banner .video-placeholder .video-js .vjs-big-play-button .vjs-icon-placeholder {
+  color: transparent;
+}
+
+.video-banner .video-banner-placeholder .video-js .vjs-big-play-button .vjs-icon-placeholder::before,
+.video-banner .video-placeholder .video-js .vjs-big-play-button .vjs-icon-placeholder::before {
+  color: #fff;
 }
 
 .video-banner .video-banner-placeholder video {
