@@ -6,8 +6,10 @@ export default function decorate(block) {
   const items = [...block.children];
   block.innerHTML = '';
 
+  const TEST_IMAGE_URL = 'https://main--universal-microbank-2--sergioeguaras2.aem.live/media_134b848c697e9152f269fa3b79696b855040912ba.png?width=2000&format=webply&optimize=medium';
+
   const getImageUrl = (path) => {
-    if (!path) return '';
+    if (!path || path === 'negocios432x425.png') return TEST_IMAGE_URL;
     if (path.startsWith('http') || path.startsWith('//') || path.startsWith('data:')) {
       return path;
     }
@@ -105,36 +107,13 @@ export default function decorate(block) {
         <path d="M189.036 31.8905C189.503 35.2331 190.576 38.6347 192.751 41.329C194.788 43.8534 198.904 44.2218 201.578 42.3835C204.264 40.5372 203.5 32.5 200.5 29.5007" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" />
       </g>
       <defs>
-        <clipPath id="clip0_1850_136924">
-          <rect width="220" height="214" fill="white" transform="matrix(-1 0 0 1 220 0)" />
+        <clipPath id="clip0_1850_137016">
+          <rect width="298" height="267" fill="white" />
         </clipPath>
       </defs>
     </svg>
   `;
-  wrap.appendChild(fig1);
-
-  // SVG 2
-  const fig2 = document.createElement('div');
-  fig2.innerHTML = `
-    <svg role="presentation" aria-hidden="true" width="344" height="525" class="figure2" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 308.3 444" style="enable-background:new 0 0 308.3 444;" xml:space="preserve">
-      <path fill="none" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" d="M22.3,398.1c-1.3,0.8-3,0.9-4.8,1c-1,0.1-2.1,0.1-3.2-0.3c-2.6-0.9-5.7-2.3-7.9-4c-0.9-0.7-2.1-1.7-2.6-2.5		c-0.6-1,4.3-1.2,5.1-1.3c3.3-0.3,6.7-0.4,10.1,1.5c1.7,0.9,2.5,1.8,3.6,3" />
-      <path fill="none" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" d="M260.4,22.3c-0.5,1.4-1.8,2.3-3.1,3.4c-0.7,0.6-1.5,1.2-2.6,1.5c-2.6,0.6-5.9,1.1-8.7,0.8		c-1.1-0.1-2.7-0.3-3.7-0.7c-1.2-0.5,2.5-3.4,3.1-3.8c2.4-2,4.9-3.9,8.7-4.1c1.9-0.1,3.1,0.2,4.8,0.6" />
-      <path fill="none" stroke="#1A1A1A" stroke-width="2" stroke-linejoin="round" d="M164.5,236.9c2,0,15.1-16.1-8.8-25.5C152,217,148.6,229.9,164.5,236.9z" />
-      <path fill="none" stroke="#1A1A1A" stroke-width="2" stroke-linejoin="round" d="M157,268.2c1.3,0,9.6-10.2-5.6-16.1C149.1,255.6,146.9,263.7,157,268.2z" />
-      <path fill="none" stroke="#1A1A1A" stroke-width="2" stroke-linejoin="round" d="M290.2,69.8c-1.6-0.1-10.7-12.8,9.2-17.7C302,56.4,303.7,66,290.2,69.8z" />
-      <path fill="none" stroke="#1A1A1A" stroke-width="2" stroke-linejoin="round" d="M32.1,424c-0.8-0.8-10.8-1-4.7,11.6C30.6,435.3,36,432.6,32.1,424z" />
-      <path fill="none" stroke="#1A1A1A" stroke-width="2" stroke-linejoin="round" d="M32.8,424.4c0.1-1,8.1-5.3,10.4,8.1C40.5,433.5,34.6,433.4,32.8,424.4z" />
-      <path fill="none" stroke="#1A1A1A" stroke-width="2" stroke-linejoin="round" d="M251.9,170.8c-1.1-0.5-10,3.2,1.2,12.6C255.8,181.9,259.3,177.4,251.9,170.8z" />
-      <path fill="none" stroke="#1A1A1A" stroke-width="2" stroke-linejoin="round" d="M24,397c0,1.1,13.5,9.6,21.2-2.7C40.5,391.8,29.7,388.8,24,397z" />
-      <path fill="none" stroke="#1A1A1A" stroke-width="2" stroke-linejoin="round" d="M252.7,170.9c-0.3-1,4.7-8.1,12.8,3.6C263.7,176.5,258.5,178.6,252.7,170.9z" />
-      <path fill="none" stroke="#1A1A1A" stroke-width="2" stroke-linejoin="round" d="M260.9,20.5c0.7,1,16.6,0.9,14.6-13.6C270.3,7.2,260.1,10.5,260.9,20.5z" />
-      <path fill="none" stroke="#1A1A1A" stroke-width="2" stroke-linejoin="round" d="M69.5,318.8c1.1,0.5,14-7.4,3.6-19.1C69.1,302.6,62.8,310.4,69.5,318.8z" />
-      <path fill="none" stroke="#1A1A1A" stroke-width="2" stroke-linejoin="round" d="M289.8,112.4c0.8-1.3,17.1-2.5,13.1,16.1C297.7,128.4,287.7,125.1,289.8,112.4z" />
-      <path fill="none" stroke="#1A1A1A" stroke-width="2" stroke-linejoin="round" d="M291.2,111.5c-0.2,0.9-9.4,4.8-11.6-6.8C282.7,103.7,289.4,103.6,291.2,111.5z" />
-      <path fill="none" stroke="#1A1A1A" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="10" d="M261.6,20.1c23.9,28.3,30.9,58,30.9,73.4c0,34.4-16.9,60.5-52,84.4c-36,24.5-70.5,55.9-93.4,76.6		c-22.9,20.6-46.6,42.1-66.5,56.3C48,334,21.8,381.9,21.8,406.3c0,14,6,17.4,9.5,17.4s6.4-1.7,8.9-4.3" />
-    </svg>
-  `;
-  wrap.appendChild(fig2);
+  wrap.appendChild(fig3);
 
   // Render items
   const variants = ['business', 'students', 'individuals'];
@@ -143,7 +122,7 @@ export default function decorate(block) {
     const category = cols[0] ? cols[0].textContent : 'Lorem Ipsum';
     const title = cols[1] ? cols[1].textContent : 'Lorem ipsum dolor sit amet';
     const href = cols[2] ? cols[2].querySelector('a')?.href || '#' : '#';
-    const imgName = cols[3] ? cols[3].textContent.trim() : 'negocios432x425.png';
+    const imgName = cols[3] ? cols[3].textContent.trim() : '';
 
     const li = document.createElement('li');
     li.className = 'h-highlights__item aos-fast-mobile';

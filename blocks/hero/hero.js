@@ -6,8 +6,10 @@ export default function decorate(block) {
   const slides = [...block.children];
   block.innerHTML = '';
 
+  const TEST_IMAGE_URL = 'https://main--universal-microbank-2--sergioeguaras2.aem.live/media_134b848c697e9152f269fa3b79696b855040912ba.png?width=2000&format=webply&optimize=medium';
+
   const getImageUrl = (path) => {
-    if (!path) return '';
+    if (!path) return TEST_IMAGE_URL;
     if (path.startsWith('http') || path.startsWith('//') || path.startsWith('data:')) {
       return path;
     }
@@ -97,12 +99,12 @@ export default function decorate(block) {
       }
       group.appendChild(pic);
     } else {
-      // Fallback pattern if no image is authored (using production microbank absolute assets)
+      // Fallback pattern if no image is authored using the user test image URL
       const fallbackPicture = document.createElement('picture');
       fallbackPicture.innerHTML = `
-        <img src="${getImageUrl('images/microbank_collage_v1_1920x776_bn.jpg')}" class="original" alt="" role="presentation" /> 
-        <img src="${getImageUrl('images/microbank_collage_v1_1440x876_bn.jpg')}" class="medium" alt="" role="presentation" /> 
-        <img src="${getImageUrl('images/microbank_collage_v1_768x812_bn.jpg')}" class="small" alt="" role="presentation" />
+        <img src="${TEST_IMAGE_URL}" class="original" alt="" role="presentation" /> 
+        <img src="${TEST_IMAGE_URL}" class="medium" alt="" role="presentation" /> 
+        <img src="${TEST_IMAGE_URL}" class="small" alt="" role="presentation" />
       `;
       group.appendChild(fallbackPicture);
     }

@@ -6,8 +6,10 @@ export default function decorate(block) {
   const rows = [...block.children];
   block.innerHTML = '';
 
+  const TEST_IMAGE_URL = 'https://main--universal-microbank-2--sergioeguaras2.aem.live/media_134b848c697e9152f269fa3b79696b855040912ba.png?width=2000&format=webply&optimize=medium';
+
   const getImageUrl = (path) => {
-    if (!path) return '';
+    if (!path || path === 'EIB-color.png') return TEST_IMAGE_URL;
     if (path.startsWith('http') || path.startsWith('//') || path.startsWith('data:')) {
       return path;
     }
@@ -40,7 +42,7 @@ export default function decorate(block) {
       const linkEl = cols[3] ? cols[3].querySelector('a') : null;
       const variant = cols[4] ? cols[4].textContent.trim() : 'bei';
 
-      let imgSrc = 'EIB-color.png';
+      let imgSrc = '';
       if (imgCol) {
         const img = imgCol.querySelector('img');
         if (img) {
