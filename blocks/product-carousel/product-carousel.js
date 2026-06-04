@@ -8,9 +8,14 @@
  * @param {HTMLElement} block Elemento raíz del bloque
  */
 
+const BLOCK_BASE_PATH = [
+  'https://product-carousel--universal-microbank-2--SergioEguaras2.aem.live',
+  'blocks/product-carousel/media',
+].join('/');
+
 const DEFAULT_CARDS = [
   {
-    image: '/blocks/product-carousel/media/pb-home-hero2-1440x876.webp',
+    image: `${BLOCK_BASE_PATH}/pb-home-hero2-1440x876.webp`,
     alt: 'Persona emprendedora trabajando con un ordenador',
     kicker: 'Negocios y emprendedores',
     title: 'Impulsa tu negocio',
@@ -19,7 +24,7 @@ const DEFAULT_CARDS = [
     linkUrl: '#',
   },
   {
-    image: '/blocks/product-carousel/media/microbank-collage-v1-1440x876-bn.jpg',
+    image: `${BLOCK_BASE_PATH}/microbank-collage-v1-1440x876-bn.jpg`,
     alt: 'Collage de personas beneficiarias de MicroBank',
     kicker: 'Particulares',
     title: 'Apoyo para tus proyectos',
@@ -28,7 +33,7 @@ const DEFAULT_CARDS = [
     linkUrl: '#',
   },
   {
-    image: '/blocks/product-carousel/media/mbk-cambiosocial-1440x876.webp',
+    image: `${BLOCK_BASE_PATH}/mbk-cambiosocial-1440x876.webp`,
     alt: 'Persona trabajando con un portátil en unas escaleras',
     kicker: 'Impacto social',
     title: 'Construimos valor social',
@@ -37,7 +42,7 @@ const DEFAULT_CARDS = [
     linkUrl: '#',
   },
   {
-    image: '/blocks/product-carousel/media/mb-home-slider-1-1440x775.webp',
+    image: `${BLOCK_BASE_PATH}/mb-home-slider-1-1440x775.webp`,
     alt: 'Dos personas trabajando juntas en una oficina',
     kicker: 'Emprendimiento femenino',
     title: 'Apoyamos tu emprendimiento',
@@ -46,7 +51,7 @@ const DEFAULT_CARDS = [
     linkUrl: '#',
   },
   {
-    image: '/blocks/product-carousel/media/pb-home-hero3-1440x876.webp',
+    image: `${BLOCK_BASE_PATH}/pb-home-hero3-1440x876.webp`,
     alt: 'Persona emprendedora trabajando en un invernadero',
     kicker: 'Negocios sostenibles',
     title: 'Haz crecer tu proyecto',
