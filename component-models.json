@@ -230,10 +230,18 @@
     "id": "eu-institutions",
     "fields": [
       {
-        "component": "richtext",
+        "component": "text",
         "valueType": "string",
-        "name": "content",
-        "label": "Contenido"
+        "name": "eyebrow",
+        "label": "Texto eyebrow",
+        "value": "CON EL APOYO DE NUESTROS PARTNERS"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "title",
+        "label": "Título",
+        "value": "Con el apoyo de instituciones europeas"
       }
     ]
   }
