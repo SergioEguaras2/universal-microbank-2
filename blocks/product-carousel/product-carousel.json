@@ -1,0 +1,88 @@
+{
+  "definitions": [
+    {
+      "title": "Carrusel de productos",
+      "id": "product-carousel",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block",
+            "template": {
+              "name": "Carrusel de productos",
+              "model": "product-carousel"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": "product-carousel",
+      "fields": [
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "eyebrow",
+          "label": "Texto superior",
+          "value": "Préstamos que se adaptan a ti"
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "title",
+          "label": "Título",
+          "value": "¿Qué préstamo se adapta mejor a tu negocio?"
+        },
+        {
+          "component": "richtext",
+          "valueType": "string",
+          "name": "description",
+          "label": "Descripción",
+          "value": "Elige la solución que mejor encaja con tus necesidades."
+        },
+        {
+          "component": "reference",
+          "valueType": "string",
+          "name": "image",
+          "label": "Imagen de tarjeta",
+          "multi": false
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "kicker",
+          "label": "Categoría de tarjeta",
+          "value": "Negocios y emprendedores"
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "cardTitle",
+          "label": "Título de tarjeta",
+          "value": "Impulsa tu negocio"
+        },
+        {
+          "component": "richtext",
+          "valueType": "string",
+          "name": "cardText",
+          "label": "Texto de tarjeta",
+          "value": "Financiación pensada para iniciar, ampliar o consolidar tu proyecto."
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "linkText",
+          "label": "Texto del enlace",
+          "value": "Conoce los préstamos"
+        },
+        {
+          "component": "aem-content",
+          "name": "linkUrl",
+          "label": "Enlace"
+        }
+      ]
+    }
+  ],
+  "filters": []
+}
