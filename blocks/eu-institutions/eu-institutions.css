@@ -1,7 +1,7 @@
 /* eu-institutions block */
 
 .eu-institutions {
-  background-color: #0d1e2e;
+  background-color: #1a3a5c;
   color: #fff;
   padding: 32px 48px;
   font-family: 'CaixaBank Sans', Arial, sans-serif;
@@ -27,11 +27,12 @@
 
 /* Section title */
 .eu-institutions-title {
-  font-size: 1.1rem;
+  font-size: 2.2rem;
   font-weight: 700;
+  font-style: italic;
   color: #fff;
   margin: 0 0 28px;
-  line-height: 1.3;
+  line-height: 1.2;
 }
 
 /* Logos row */
