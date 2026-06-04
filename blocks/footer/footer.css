@@ -118,9 +118,8 @@
 @media (min-width: 992px) {
   .footer__links .footer__links-wrap .footer__links-list > ul {
     display: flex;
-    flex-direction: row;
+    flex-flow: row wrap;
     justify-content: space-between;
-    flex-wrap: wrap;
   }
 }
 
@@ -178,16 +177,16 @@
   width: 100%;
   text-align: left;
   background-color: transparent;
-  border: 0px;
+  border: 0;
   padding-left: 0;
 }
 
-.footer__links .footer__links-wrap .footer__links-list > ul .footer__link .footer__link-title a:after, .footer__links .footer__links-wrap .footer__links-list > ul .footer__link .footer__link-title button:after {
+.footer__links .footer__links-wrap .footer__links-list > ul .footer__link .footer__link-title a::after, .footer__links .footer__links-wrap .footer__links-list > ul .footer__link .footer__link-title button::after {
   content: "";
   height: 25px;
   width: 14px;
   border: none;
-  background: url(icons/ic_arrow-down.svg) center center no-repeat;
+  background: url("icons/ic_arrow-down.svg") center center no-repeat;
   position: absolute;
   background-size: 1.6rem;
   transition: transform 0.3s;
@@ -195,12 +194,12 @@
 }
 
 @media (min-width: 992px) {
-  .footer__links .footer__links-wrap .footer__links-list > ul .footer__link .footer__link-title a:after, .footer__links .footer__links-wrap .footer__links-list > ul .footer__link .footer__link-title button:after {
+  .footer__links .footer__links-wrap .footer__links-list > ul .footer__link .footer__link-title a::after, .footer__links .footer__links-wrap .footer__links-list > ul .footer__link .footer__link-title button::after {
     display: none;
   }
 }
 
-.footer__links .footer__links-wrap .footer__links-list > ul .footer__link .footer__link-title a:not(.collapsed):after, .footer__links .footer__links-wrap .footer__links-list > ul .footer__link .footer__link-title button:not(.collapsed):after {
+.footer__links .footer__links-wrap .footer__links-list > ul .footer__link .footer__link-title a:not(.collapsed)::after, .footer__links .footer__links-wrap .footer__links-list > ul .footer__link .footer__link-title button:not(.collapsed)::after {
   transform: rotate(180deg);
 }
 

@@ -24,7 +24,7 @@ for (const varName of required) {
 }
 
 const { AEM_ADMIN_TOKEN, AEM_EDS_ORG, AEM_EDS_SITE } = process.env;
-const BASE_URL = `https://admin.hlx.page`;
+const BASE_URL = 'https://admin.hlx.page';
 const BRANCH = 'main';
 
 /**
@@ -41,7 +41,7 @@ async function adminOperation(type, pagePath) {
   const response = await fetch(url, {
     method,
     headers: {
-      'Authorization': `token ${AEM_ADMIN_TOKEN}`,
+      Authorization: `token ${AEM_ADMIN_TOKEN}`,
       'Content-Type': 'application/json',
     },
   });

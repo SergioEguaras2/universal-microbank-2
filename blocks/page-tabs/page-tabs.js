@@ -30,7 +30,7 @@ export default function decorate(block) {
     li.setAttribute('role', 'presentation');
 
     const btn = document.createElement('button');
-    btn.className = 'nav-link' + (i === 0 ? ' active' : '');
+    btn.className = `nav-link${i === 0 ? ' active' : ''}`;
     btn.id = tabId;
     btn.setAttribute('type', 'button');
     btn.setAttribute('role', 'tab');
@@ -41,7 +41,7 @@ export default function decorate(block) {
     nav.append(li);
 
     const pane = document.createElement('div');
-    pane.className = 'tab-pane' + (i === 0 ? ' active' : '');
+    pane.className = `tab-pane${i === 0 ? ' active' : ''}`;
     pane.id = panelId;
     pane.setAttribute('role', 'tabpanel');
     pane.setAttribute('aria-labelledby', tabId);
@@ -61,7 +61,7 @@ export default function decorate(block) {
     });
   });
 
-  contentRows.forEach(r => r.remove());
+  contentRows.forEach((r) => r.remove());
   labelRow?.replaceWith(nav);
   block.append(tabContent);
   block.classList.add('page-tabs--initialized');

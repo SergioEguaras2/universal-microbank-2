@@ -12,10 +12,8 @@ export default function decorate(block) {
 
   // Detectar si primera fila es configuración (ID)
   const firstCells = [...(rows[0]?.querySelectorAll(':scope > div') ?? [])];
-  let configRow = null;
   let itemRows = rows;
   if (firstCells.length === 1 && !firstCells[0]?.querySelector('img, a')) {
-    configRow = rows[0];
     const idVal = firstCells[0].textContent.trim();
     if (idVal) block.id = idVal;
     itemRows = rows.slice(1);
@@ -40,7 +38,7 @@ export default function decorate(block) {
     if (valueCell) {
       const value = document.createElement('span');
       value.className = 'product-conditions__value';
-      const clones = Array.from(valueCell.childNodes).map(n => n.cloneNode(true));
+      const clones = Array.from(valueCell.childNodes).map((n) => n.cloneNode(true));
       value.append(...clones);
       li.append(value);
     }

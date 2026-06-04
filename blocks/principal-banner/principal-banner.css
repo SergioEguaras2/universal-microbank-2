@@ -319,14 +319,14 @@
   color: #FFFFFF;
   text-align: left;
   text-transform: uppercase;
-  margin: 1.6rem 0 0 0;
+  margin: 1.6rem 0 0;
 }
 
 @media (min-width: 992px) {
   .principal-banner__caption p {
     font-size: 2.4rem;
     line-height: 3.1rem;
-    margin: 2.2rem 0 0 0;
+    margin: 2.2rem 0 0;
   }
 }
 
@@ -341,7 +341,7 @@
   position: relative;
   top: -2px;
   height: 0.7rem;
-  background: url(icons/ic_yellow-wave-underline.svg) no-repeat center;
+  background: url("icons/ic_yellow-wave-underline.svg") no-repeat center;
   transition: transform 0.5s;
 }
 
@@ -459,7 +459,7 @@
 }
 
 .principal-banner .slick-prev {
-  background: url(icons/ic_arrow-next-v2.png) no-repeat center center;
+  background: url("icons/ic_arrow-next-v2.png") no-repeat center center;
   left: 2.8rem;
   transform: scaleX(-1);
 }
@@ -467,19 +467,19 @@
 @media (min-width: 992px) {
   .principal-banner .slick-prev {
     right: auto;
-    left: 0rem;
+    left: 0;
   }
 }
 
 .principal-banner .slick-next {
-  background: url(icons/ic_arrow-next-v2.png) no-repeat center center;
+  background: url("icons/ic_arrow-next-v2.png") no-repeat center center;
   right: 2.8rem;
 }
 
 @media (min-width: 992px) {
   .principal-banner .slick-next {
     left: auto;
-    right: 0rem;
+    right: 0;
   }
 }
 

@@ -24,9 +24,9 @@
   }
 }
 
-.region-breadcrumb .breadcrumbsimple:after, .region-breadcrumb .breadcrumb:after {
+.region-breadcrumb .breadcrumbsimple::after, .region-breadcrumb .breadcrumb::after {
   content: "";
-  height: 0px;
+  height: 0;
   background: #F1F1F1;
   width: 200%;
   top: 0;
@@ -49,7 +49,7 @@
   white-space: nowrap;
 }
 
-.region-breadcrumb .breadcrumbsimple li:after, .region-breadcrumb .breadcrumb li:after {
+.region-breadcrumb .breadcrumbsimple li::after, .region-breadcrumb .breadcrumb li::after {
   content: "/";
   font-size: 12px;
   line-height: 16.8px;
@@ -59,7 +59,7 @@
   padding-right: 0.7rem;
 }
 
-.region-breadcrumb .breadcrumbsimple li:last-child:after, .region-breadcrumb .breadcrumb li:last-child:after {
+.region-breadcrumb .breadcrumbsimple li:last-child::after, .region-breadcrumb .breadcrumb li:last-child::after {
   content: none;
 }
 

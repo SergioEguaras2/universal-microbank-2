@@ -5,7 +5,8 @@
  *
  * Entrada AEM:
  *   Fila 0: celda 0 = título sección, celda 1 = enlace "Ver todos"
- *   Filas 1..N: celda 0 = imagen, celda 1 = categoría, celda 2 = título, celda 3 = fecha, celda 4 = enlace
+ *   Filas 1..N: celda 0 = imagen, celda 1 = categoría, celda 2 = título,
+ *               celda 3 = fecha, celda 4 = enlace
  */
 export default function decorate(block) {
   if (!block) return;

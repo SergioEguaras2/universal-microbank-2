@@ -4,9 +4,6 @@
 export default function decorate(block) {
   block.classList.add('custom-test-card--initialized');
 
-  // Guardamos los datos de celdas originales del documento AEM
-  const cells = [...block.querySelectorAll(':scope > div > div')];
-  
   // Plantilla HTML del componente original:
   const template = `
 <div class="test-card">
@@ -17,7 +14,7 @@ export default function decorate(block) {
 
   // Limpiamos el bloque y cargamos la estructura HTML estructurada
   block.innerHTML = template;
-  
+
   // Opcional: Re-mapear el contenido del autor a los elementos correspondientes
   // Ej: block.querySelector('.card-title').textContent = cells[0]?.textContent || '';
 }

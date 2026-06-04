@@ -37,9 +37,9 @@ export default function decorate(block) {
   const milestones = [25, 50, 75, 100];
   window.addEventListener('scroll', () => {
     const scrollPct = Math.round(
-      (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100
+      (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100,
     );
-    for (const milestone of milestones) {
+    milestones.forEach((milestone) => {
       if (scrollPct >= milestone && maxScroll < milestone) {
         maxScroll = milestone;
         window.dataLayer.push({
@@ -48,6 +48,6 @@ export default function decorate(block) {
           page: window.location.pathname,
         });
       }
-    }
+    });
   }, { passive: true });
 }

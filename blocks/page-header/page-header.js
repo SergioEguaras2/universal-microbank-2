@@ -23,7 +23,7 @@ export default function decorate(block) {
   inner.className = 'page-header__inner product-spacing';
 
   if (textCell) {
-    const clones = Array.from(textCell.childNodes).map(n => n.cloneNode(true));
+    const clones = Array.from(textCell.childNodes).map((n) => n.cloneNode(true));
     inner.append(...clones);
   }
 

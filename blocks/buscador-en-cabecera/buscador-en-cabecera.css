@@ -4,11 +4,11 @@
  */
 
 header.bg-blur .main-header .row #prebuscadorCabecera .search-trigger {
-  background-image: url(icons/ic_search.svg);
+  background-image: url("icons/ic_search.svg");
 }
 
 header .main-header .row #prebuscadorCabecera .search-trigger {
-  background: url(icons/ic_search-white.svg) center center no-repeat transparent;
+  background: url("icons/ic_search-white.svg") center center no-repeat transparent;
   width: 2.4rem;
   height: 2.4rem;
   margin-right: 1rem;
@@ -21,7 +21,7 @@ header .main-header .row #prebuscadorCabecera .search-trigger {
 }
 
 header.bg-blur .main-header .row #prebuscadorCabecera .search form .search-trigger {
-  background: url(icons/ic_close_menu-black.svg) center center no-repeat transparent;
+  background: url("icons/ic_close_menu-black.svg") center center no-repeat transparent;
 }
 
 header .main-header.opened-search .order-3 #prebuscadorCabecera .search form .search-trigger {
@@ -34,7 +34,7 @@ header .main-header .row #prebuscadorCabecera .search a.search-trigger {
 
 header .main-header .row #prebuscadorCabecera .search form .search-trigger {
   opacity: 1 !important;
-  background: url(icons/ic_close_menu-black.svg) center center no-repeat transparent;
+  background: url("icons/ic_close_menu-black.svg") center center no-repeat transparent;
   margin-right: 3.5rem;
   border: none;
   display: none;

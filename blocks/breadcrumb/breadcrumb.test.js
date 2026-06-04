@@ -6,7 +6,9 @@
  * Ejecutar: npx vitest run blocks/breadcrumb/breadcrumb.test.js
  */
 
-import { describe, it, expect, beforeEach, vi } from 'vitest';
+import {
+  describe, it, expect, beforeEach, vi,
+} from 'vitest';
 
 // ─── Setup del entorno DOM ────────────────────────────────────────────────────
 // vitest usa jsdom por defecto (@vitest/browser o jsdom en vitest.config.js)

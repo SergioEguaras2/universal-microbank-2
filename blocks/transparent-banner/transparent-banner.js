@@ -23,7 +23,7 @@ export default function decorate(block) {
     const [imgCell, textCell] = [...row.querySelectorAll(':scope > div')];
 
     const slide = document.createElement('div');
-    slide.className = 'transparent-banner__carousel-item' + (i === 0 ? ' slick-active' : '');
+    slide.className = `transparent-banner__carousel-item${i === 0 ? ' slick-active' : ''}`;
     slide.setAttribute('aria-hidden', i !== 0 ? 'true' : 'false');
 
     // Media
@@ -64,7 +64,7 @@ export default function decorate(block) {
     dotsWrap.className = 'transparent-banner__dots';
     slides.forEach((_, i) => {
       const dot = document.createElement('li');
-      dot.className = 'transparent-banner__dot' + (i === 0 ? ' slick-active' : '');
+      dot.className = `transparent-banner__dot${i === 0 ? ' slick-active' : ''}`;
       dot.setAttribute('aria-label', `Slide ${i + 1}`);
       dot.addEventListener('click', () => {
         go(i);

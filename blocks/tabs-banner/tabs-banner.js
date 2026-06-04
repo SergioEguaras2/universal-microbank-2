@@ -41,7 +41,7 @@ export default function decorate(block) {
 
   carouselRows.forEach((row, i) => {
     const slide = document.createElement('div');
-    slide.className = 'tabs-banner__slide' + (i === 0 ? ' slick-active' : '');
+    slide.className = `tabs-banner__slide${i === 0 ? ' slick-active' : ''}`;
     slide.append(...row.childNodes);
     contentWrap.append(slide);
     row.remove();
@@ -53,7 +53,7 @@ export default function decorate(block) {
     dots.className = 'tabs-banner__dots';
     carouselRows.forEach((_, i) => {
       const dot = document.createElement('li');
-      dot.className = 'tabs-banner__dot' + (i === 0 ? ' active' : '');
+      dot.className = `tabs-banner__dot${i === 0 ? ' active' : ''}`;
       dot.setAttribute('aria-label', `Slide ${i + 1}`);
       dot.addEventListener('click', () => {
         contentWrap.querySelectorAll('.tabs-banner__slide').forEach((s, j) => {

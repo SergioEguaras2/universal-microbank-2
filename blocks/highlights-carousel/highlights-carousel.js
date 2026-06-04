@@ -6,7 +6,8 @@
  *
  * Entrada AEM:
  *   Fila 0: celda 0 = título, celda 1 = descripción, celda 2 = enlace "Ver más"
- *   Filas 1..N: cada fila = un item del carousel (celda 0 = imagen, celda 1 = título, celda 2 = subtítulo)
+ *   Filas 1..N: cada fila = un item del carousel (celda 0 = imagen,
+ *               celda 1 = título, celda 2 = subtítulo)
  */
 export default function decorate(block) {
   if (!block) return;

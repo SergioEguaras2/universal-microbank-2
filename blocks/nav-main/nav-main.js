@@ -4,7 +4,8 @@
  *          .navbar-nav, .nav-item, .nav-link[.active]
  *
  * Entrada AEM:
- *   Cada fila = un item de nav. Celda 0 = texto del enlace, celda 1 = URL, celda 2 = subitems (separados por |)
+ *   Cada fila = un item de nav. Celda 0 = texto del enlace, celda 1 = URL,
+ *   celda 2 = subitems (separados por |)
  */
 export default function decorate(block) {
   if (!block) return;
@@ -41,10 +42,10 @@ export default function decorate(block) {
     const isActive = window.location.pathname === new URL(href, window.location.origin).pathname;
 
     const li = document.createElement('li');
-    li.className = 'nav-item' + (isActive ? ' active' : '');
+    li.className = `nav-item${isActive ? ' active' : ''}`;
 
     const a = document.createElement('a');
-    a.className = 'nav-link' + (isActive ? ' active' : '');
+    a.className = `nav-link${isActive ? ' active' : ''}`;
     a.href = href;
     a.textContent = label;
     if (isActive) a.setAttribute('aria-current', 'page');
@@ -54,7 +55,7 @@ export default function decorate(block) {
     // Subitems (megamenú)
     if (subCell?.textContent.trim()) {
       li.classList.add('nav-item--has-submenu');
-      const subLabels = subCell.textContent.split('|').map(s => s.trim()).filter(Boolean);
+      const subLabels = subCell.textContent.split('|').map((s) => s.trim()).filter(Boolean);
       const submenu = document.createElement('ul');
       submenu.className = 'nav-submenu';
       subLabels.forEach((sub) => {
