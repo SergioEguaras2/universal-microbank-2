@@ -1,0 +1,49 @@
+.video-banner {
+  display: none;
+}
+
+@media (width >= 768px) {
+  .video-banner {
+    display: block;
+    padding: 5rem 2rem;
+  }
+}
+
+.video-banner-placeholder {
+  margin: auto;
+  max-width: 100%;
+}
+
+@media (width >= 768px) {
+  .video-banner-placeholder {
+    overflow: hidden;
+    border-radius: 2rem;
+  }
+}
+
+@media (width >= 1200px) {
+  .video-banner-placeholder {
+    max-width: 1200px;
+  }
+}
+
+@media (width >= 1440px) {
+  .video-banner-placeholder {
+    max-width: 1400px;
+  }
+}
+
+.video-banner .video-banner-placeholder .video-js {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+.video-banner .video-banner-placeholder .video-js .vjs-big-play-button {
+  background-color: #009ad8 !important;
+}
+
+.video-banner .video-banner-placeholder video {
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+}
