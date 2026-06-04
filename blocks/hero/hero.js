@@ -6,6 +6,18 @@ export default function decorate(block) {
   const slides = [...block.children];
   block.innerHTML = '';
 
+  const getImageUrl = (path) => {
+    if (!path) return '';
+    if (path.startsWith('http') || path.startsWith('//') || path.startsWith('data:')) {
+      return path;
+    }
+    const cleanPath = path.replace(/^(\.\.\/|\.\/|\/)+/, '');
+    if (cleanPath.startsWith('images/')) {
+      return `https://www.microbank.com/${cleanPath}`;
+    }
+    return `https://www.microbank.com/images/${cleanPath}`;
+  };
+
   // Create play/pause button
   const togglePlay = document.createElement('div');
   togglePlay.className = 'principal-banner__container-toggle container';
@@ -85,12 +97,12 @@ export default function decorate(block) {
       }
       group.appendChild(pic);
     } else {
-      // Fallback pattern if no image is authored
+      // Fallback pattern if no image is authored (using production microbank absolute assets)
       const fallbackPicture = document.createElement('picture');
       fallbackPicture.innerHTML = `
-        <img src="/images/microbank_collage_v1_1920x776_bn.jpg" class="original" alt="" role="presentation" /> 
-        <img src="/images/microbank_collage_v1_1440x876_bn.jpg" class="medium" alt="" role="presentation" /> 
-        <img src="/images/microbank_collage_v1_768x812_bn.jpg" class="small" alt="" role="presentation" />
+        <img src="${getImageUrl('images/microbank_collage_v1_1920x776_bn.jpg')}" class="original" alt="" role="presentation" /> 
+        <img src="${getImageUrl('images/microbank_collage_v1_1440x876_bn.jpg')}" class="medium" alt="" role="presentation" /> 
+        <img src="${getImageUrl('images/microbank_collage_v1_768x812_bn.jpg')}" class="small" alt="" role="presentation" />
       `;
       group.appendChild(fallbackPicture);
     }
