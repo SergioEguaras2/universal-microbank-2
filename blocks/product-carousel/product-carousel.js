@@ -24,7 +24,7 @@ const DEFAULT_CARDS = [
     linkUrl: '#',
   },
   {
-    image: `${BLOCK_BASE_PATH}/microbank-collage-v1-1440x876-bn.jpg`,
+    image: `${BLOCK_BASE_PATH}/microbank_collage_v1_1440x876_bn.jpg`,
     alt: 'Collage de personas beneficiarias de MicroBank',
     kicker: 'Particulares',
     title: 'Apoyo para tus proyectos',
