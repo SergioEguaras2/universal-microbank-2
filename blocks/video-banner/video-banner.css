@@ -1,4 +1,4 @@
-.video-banner {
+:is(.video-banner, .banner-de-v-deo) {
   --video-accent-color: #009ad8;
 
   display: block;
@@ -6,7 +6,7 @@
 }
 
 @media (width >= 768px) {
-  .video-banner {
+  :is(.video-banner, .banner-de-v-deo) {
     padding: 5rem 2rem;
   }
 }
@@ -39,53 +39,68 @@
   }
 }
 
-.video-banner .video-banner-placeholder .video-js {
+:is(.video-banner, .banner-de-v-deo) .video-banner-placeholder .video-js,
+:is(.video-banner, .banner-de-v-deo) .video-placeholder .video-js {
   width: 100%;
   aspect-ratio: 16 / 9;
 }
 
-.video-banner .video-banner-placeholder .video-js .vjs-big-play-button,
-.video-banner .video-placeholder .video-js .vjs-big-play-button {
+:is(.video-banner, .banner-de-v-deo) .video-banner-placeholder .video-js .vjs-big-play-button,
+:is(.video-banner, .banner-de-v-deo) .video-placeholder .video-js .vjs-big-play-button {
   border-color: var(--video-accent-color) !important;
-  background-color: #fff !important;
+  background-color: var(--video-accent-color) !important;
+  opacity: 1;
 }
 
-.video-banner .video-banner-placeholder .video-js:hover .vjs-big-play-button,
-.video-banner .video-banner-placeholder .video-js:focus .vjs-big-play-button,
-.video-banner .video-banner-placeholder .video-js:active .vjs-big-play-button,
-.video-banner .video-placeholder .video-js:hover .vjs-big-play-button,
-.video-banner .video-placeholder .video-js:focus .vjs-big-play-button,
-.video-banner .video-placeholder .video-js:active .vjs-big-play-button {
+:is(.video-banner, .banner-de-v-deo) .video-banner-placeholder .video-js:hover .vjs-big-play-button,
+:is(.video-banner, .banner-de-v-deo) .video-banner-placeholder .video-js:focus .vjs-big-play-button,
+:is(.video-banner, .banner-de-v-deo) .video-banner-placeholder .video-js:active .vjs-big-play-button,
+:is(.video-banner, .banner-de-v-deo) .video-placeholder .video-js:hover .vjs-big-play-button,
+:is(.video-banner, .banner-de-v-deo) .video-placeholder .video-js:focus .vjs-big-play-button,
+:is(.video-banner, .banner-de-v-deo) .video-placeholder .video-js:active .vjs-big-play-button,
+:is(.video-banner, .banner-de-v-deo) .video-banner-placeholder .video-js .vjs-big-play-button:hover,
+:is(.video-banner, .banner-de-v-deo) .video-banner-placeholder .video-js .vjs-big-play-button:focus,
+:is(.video-banner, .banner-de-v-deo) .video-banner-placeholder .video-js .vjs-big-play-button:active,
+:is(.video-banner, .banner-de-v-deo) .video-placeholder .video-js .vjs-big-play-button:hover,
+:is(.video-banner, .banner-de-v-deo) .video-placeholder .video-js .vjs-big-play-button:focus,
+:is(.video-banner, .banner-de-v-deo) .video-placeholder .video-js .vjs-big-play-button:active {
   border-color: var(--video-accent-color) !important;
-  background-color: #fff !important;
+  background-color: var(--video-accent-color) !important;
+  opacity: 1;
 }
 
-.video-banner .video-banner-placeholder .video-js .vjs-big-play-button .vjs-icon-placeholder,
-.video-banner .video-placeholder .video-js .vjs-big-play-button .vjs-icon-placeholder {
+:is(.video-banner, .banner-de-v-deo) .video-banner-placeholder .video-js .vjs-big-play-button .vjs-icon-placeholder,
+:is(.video-banner, .banner-de-v-deo) .video-placeholder .video-js .vjs-big-play-button .vjs-icon-placeholder {
   color: transparent;
 }
 
-.video-banner .video-banner-placeholder .video-js .vjs-big-play-button .vjs-icon-placeholder::before,
-.video-banner .video-placeholder .video-js .vjs-big-play-button .vjs-icon-placeholder::before {
-  color: var(--video-accent-color);
+:is(.video-banner, .banner-de-v-deo) .video-banner-placeholder .video-js .vjs-big-play-button .vjs-icon-placeholder::before,
+:is(.video-banner, .banner-de-v-deo) .video-placeholder .video-js .vjs-big-play-button .vjs-icon-placeholder::before {
+  color: #fff !important;
 }
 
-.video-banner .video-js .vjs-play-progress,
-.video-banner .video-js .vjs-volume-level,
-.video-banner .video-js .vjs-menu li.vjs-selected,
-.video-banner .video-js .vjs-slider-bar,
-.video-banner .video-js .vjs-play-progress::before {
+:is(.video-banner, .banner-de-v-deo) .video-js .vjs-play-progress,
+:is(.video-banner, .banner-de-v-deo) .video-js .vjs-volume-level,
+:is(.video-banner, .banner-de-v-deo) .video-js .vjs-menu li.vjs-selected,
+:is(.video-banner, .banner-de-v-deo) .video-js .vjs-slider-bar,
+:is(.video-banner, .banner-de-v-deo) .video-js .vjs-play-progress::before,
+:is(.video-banner, .banner-de-v-deo) .video-js .vjs-progress-holder .vjs-play-progress,
+:is(.video-banner, .banner-de-v-deo) .video-js .vjs-progress-holder .vjs-play-progress::before,
+:is(.video-banner, .banner-de-v-deo) .video-js .vjs-volume-bar .vjs-volume-level,
+:is(.video-banner, .banner-de-v-deo) .video-js .vjs-volume-level::before {
   background-color: var(--video-accent-color) !important;
-}
-
-.video-banner .video-js .vjs-control:focus,
-.video-banner .video-js .vjs-control:hover,
-.video-banner .video-js .vjs-button:focus,
-.video-banner .video-js .vjs-button:hover {
   color: var(--video-accent-color) !important;
 }
 
-.video-banner .video-banner-placeholder video {
+:is(.video-banner, .banner-de-v-deo) .video-js .vjs-control:focus,
+:is(.video-banner, .banner-de-v-deo) .video-js .vjs-control:hover,
+:is(.video-banner, .banner-de-v-deo) .video-js .vjs-button:focus,
+:is(.video-banner, .banner-de-v-deo) .video-js .vjs-button:hover {
+  color: var(--video-accent-color) !important;
+}
+
+:is(.video-banner, .banner-de-v-deo) .video-banner-placeholder video,
+:is(.video-banner, .banner-de-v-deo) .video-placeholder video {
   width: 100%;
   height: 100%;
   min-width: 0;
