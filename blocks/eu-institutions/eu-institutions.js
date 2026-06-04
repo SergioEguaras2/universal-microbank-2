@@ -36,7 +36,6 @@ export default function decorate(block) {
   const itemRows = rows.slice(1);
 
   if (itemRows.length > 0) {
-    // Lee las filas del documento si existen
     itemRows.forEach((row) => {
       const cells = [...row.children];
       const logoCell = cells[0];
@@ -93,22 +92,47 @@ export default function decorate(block) {
       logosWrap.append(item);
     });
   } else {
-    // Fallback hardcodeado si no hay filas en el documento
     const institutions = [
-      { name: 'Banco Europeo de Inversiones (BEI)', href: '#' },
-      { name: 'Fondo Europeo de Inversiones (FEI)', href: '#' },
-      { name: 'Banco de Desarrollo del Consejo de Europa (CEB)', href: '#' },
+      {
+        name: 'Banco Europeo de Inversiones (BEI)',
+        href: 'https://www.eib.org/en/',
+        logo: 'https://microbank.com/deployedfiles/mbk/Estaticos/Imagenes/EIB-color.png',
+        alt: 'Logo del banco europeo de inversiones',
+      },
+      {
+        name: 'Fondo Europeo de Inversiones (FEI)',
+        href: 'https://www.eif.org/',
+        logo: 'https://microbank.com/deployedfiles/mbk/Estaticos/Imagenes/EIF_believeinsmall_RGB_white.png',
+        alt: 'Logo del European Investment Fund',
+      },
+      {
+        name: 'Banco de Desarrollo del Consejo de Europa (CEB)',
+        href: 'https://coebank.org/en/',
+        logo: 'https://microbank.com/deployedfiles/mbk/Estaticos/Imagenes/CEB.svg',
+        alt: 'Banco de desarrollo del consejo de europa',
+      },
     ];
 
-    institutions.forEach(({ name, href }) => {
+    institutions.forEach(({
+      name, href, logo, alt,
+    }) => {
       const item = document.createElement('a');
       item.className = 'eu-institutions-item';
       item.href = href;
+      item.target = '_blank';
+      item.rel = 'noopener noreferrer';
 
       const logoWrap = document.createElement('div');
       logoWrap.className = 'eu-institutions-item-logo';
       logoWrap.setAttribute('data-aue-prop', 'logo');
       logoWrap.setAttribute('data-aue-type', 'media');
+
+      const img = document.createElement('img');
+      img.src = logo;
+      img.alt = alt;
+      img.setAttribute('loading', 'lazy');
+      img.setAttribute('decoding', 'async');
+      logoWrap.append(img);
 
       const labelWrap = document.createElement('div');
       labelWrap.className = 'eu-institutions-item-label';
