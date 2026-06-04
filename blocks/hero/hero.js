@@ -24,11 +24,27 @@ export default function decorate(block) {
   slides.forEach((slide, idx) => {
     const cols = [...slide.children];
     
-    // In EDS, we author the images in col 0, title in col 1, caption in col 2, and button in col 3.
-    const imageContainer = cols[0];
-    const titleText = cols[1] ? cols[1].textContent : 'Lorem Ipsum';
-    const captionHtml = cols[2] ? cols[2].innerHTML : 'Lorem ipsum dolor sit amet';
-    const buttonLink = cols[3] ? cols[3].querySelector('a') : null;
+    let imageContainer = null;
+    let titleText = '';
+    let captionHtml = '';
+    let buttonLink = null;
+
+    if (cols.length === 1) {
+      // Single cell authoring
+      const content = cols[0];
+      const picture = content.querySelector('picture');
+      if (picture) {
+        imageContainer = content;
+      } else {
+        titleText = content.textContent;
+      }
+    } else {
+      // Standard multi-cell authoring
+      imageContainer = cols[0];
+      titleText = cols[1] ? cols[1].textContent : '';
+      captionHtml = cols[2] ? cols[2].innerHTML : '';
+      buttonLink = cols[3] ? cols[3].querySelector('a') : null;
+    }
 
     const item = document.createElement('div');
     item.className = `principal-banner__carousel-item titulo_negativo ${idx === 0 ? 'active' : ''}`;
@@ -44,13 +60,41 @@ export default function decorate(block) {
     group.className = 'principal-banner__image-group';
     group.innerHTML = '<div class="principal-banner__image-mask"></div>';
 
-    const picture = document.createElement('picture');
-    picture.innerHTML = `
-      <img src="../images/microbank_collage_v1_1920x776_bn.jpg" class="original" alt="" role="presentation" /> 
-      <img src="../images/microbank_collage_v1_1440x876_bn.jpg" class="medium" alt="" role="presentation" /> 
-      <img src="../images/microbank_collage_v1_768x812_bn.jpg" class="small" alt="" role="presentation" />
-    `;
-    group.appendChild(picture);
+    // Extract dynamic picture(s) authored by the user
+    const pictures = imageContainer ? [...imageContainer.querySelectorAll('picture')] : [];
+    
+    if (pictures.length >= 3) {
+      // If author provided 3 pictures for responsive screens
+      pictures[0].querySelector('img')?.classList.add('original');
+      pictures[1].querySelector('img')?.classList.add('medium');
+      pictures[2].querySelector('img')?.classList.add('small');
+      
+      group.appendChild(pictures[0]);
+      group.appendChild(pictures[1]);
+      group.appendChild(pictures[2]);
+    } else if (pictures.length > 0) {
+      // If author provided 1 or 2 pictures, make the first one visible on all screens
+      const pic = pictures[0];
+      const img = pic.querySelector('img');
+      if (img) {
+        img.className = 'original medium small';
+        img.style.display = 'block';
+        img.style.width = '100%';
+        img.style.height = '100%';
+        img.style.objectFit = 'cover';
+      }
+      group.appendChild(pic);
+    } else {
+      // Fallback pattern if no image is authored
+      const fallbackPicture = document.createElement('picture');
+      fallbackPicture.innerHTML = `
+        <img src="/images/microbank_collage_v1_1920x776_bn.jpg" class="original" alt="" role="presentation" /> 
+        <img src="/images/microbank_collage_v1_1440x876_bn.jpg" class="medium" alt="" role="presentation" /> 
+        <img src="/images/microbank_collage_v1_768x812_bn.jpg" class="small" alt="" role="presentation" />
+      `;
+      group.appendChild(fallbackPicture);
+    }
+
     wrap.appendChild(group);
     media.appendChild(wrap);
     item.appendChild(media);
@@ -64,16 +108,20 @@ export default function decorate(block) {
     const col = document.createElement('div');
     col.className = 'col';
 
-    const h2 = document.createElement('h2');
-    h2.className = 'principal-banner__title';
-    h2.setAttribute('data-c2d-cmp-text-property', 'title');
-    h2.textContent = titleText;
-    col.appendChild(h2);
+    if (titleText) {
+      const h2 = document.createElement('h2');
+      h2.className = 'principal-banner__title';
+      h2.setAttribute('data-c2d-cmp-text-property', 'title');
+      h2.textContent = titleText;
+      col.appendChild(h2);
+    }
 
-    const captionDiv = document.createElement('div');
-    captionDiv.className = 'principal-banner__caption animated';
-    captionDiv.innerHTML = `<p data-c2d-cmp-text-property="caption">${captionHtml}</p>`;
-    col.appendChild(captionDiv);
+    if (captionHtml) {
+      const captionDiv = document.createElement('div');
+      captionDiv.className = 'principal-banner__caption animated';
+      captionDiv.innerHTML = `<p data-c2d-cmp-text-property="caption">${captionHtml}</p>`;
+      col.appendChild(captionDiv);
+    }
 
     if (buttonLink) {
       const buttonWrap = document.createElement('div');
