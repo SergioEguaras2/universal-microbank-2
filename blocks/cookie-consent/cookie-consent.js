@@ -3,7 +3,8 @@
  * CSS BEM: .button_wrap, .btn, .btn-blue, .btn-secondary, .cookie-consent
  *
  * Entrada AEM:
- *   Fila 0: celda 0 = texto del aviso de cookies, celda 1 = texto botón aceptar, celda 2 = texto botón rechazar
+ *   Fila 0: celda 0 = texto del aviso de cookies,
+ *           celda 1 = texto botón aceptar, celda 2 = texto botón rechazar
  */
 export default function decorate(block) {
   if (!block) return;
@@ -51,7 +52,7 @@ export default function decorate(block) {
   );
 
   banner.append(textWrap, btns);
-  rows.forEach(r => r.remove());
+  rows.forEach((r) => r.remove());
   block.append(banner);
   block.classList.add('cookie-consent--initialized');
 }

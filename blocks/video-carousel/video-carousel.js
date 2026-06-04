@@ -47,7 +47,7 @@ export default function decorate(block) {
   videoRows.forEach((row, i) => {
     const [videoCell, captionCell] = [...row.querySelectorAll(':scope > div')];
     const slide = document.createElement('div');
-    slide.className = 'video-carousel__slide' + (i === 0 ? ' slick-active' : '');
+    slide.className = `video-carousel__slide${i === 0 ? ' slick-active' : ''}`;
     slide.setAttribute('aria-hidden', i !== 0 ? 'true' : 'false');
 
     const mediaWrap = document.createElement('div');

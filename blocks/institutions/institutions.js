@@ -58,7 +58,7 @@ export default function decorate(block) {
         alt: altText,
         href: linkEl ? linkEl.href : '#',
         title: linkEl ? linkEl.title || nameText : nameText,
-        variant
+        variant,
       });
     }
   });

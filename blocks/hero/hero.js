@@ -8,18 +8,6 @@ export default function decorate(block) {
 
   const TEST_IMAGE_URL = 'https://main--universal-microbank-2--sergioeguaras2.aem.live/media_134b848c697e9152f269fa3b79696b855040912ba.png?width=2000&format=webply&optimize=medium';
 
-  const getImageUrl = (path) => {
-    if (!path) return TEST_IMAGE_URL;
-    if (path.startsWith('http') || path.startsWith('//') || path.startsWith('data:')) {
-      return path;
-    }
-    const cleanPath = path.replace(/^(\.\.\/|\.\/|\/)+/, '');
-    if (cleanPath.startsWith('images/')) {
-      return `https://www.microbank.com/${cleanPath}`;
-    }
-    return `https://www.microbank.com/images/${cleanPath}`;
-  };
-
   // Create play/pause button
   const togglePlay = document.createElement('div');
   togglePlay.className = 'principal-banner__container-toggle container';
@@ -37,7 +25,7 @@ export default function decorate(block) {
 
   slides.forEach((slide, idx) => {
     const cols = [...slide.children];
-    
+
     let imageContainer = null;
     let titleText = '';
     let captionHtml = '';
@@ -54,7 +42,7 @@ export default function decorate(block) {
       }
     } else {
       // Standard multi-cell authoring
-      imageContainer = cols[0];
+      [imageContainer] = cols;
       titleText = cols[1] ? cols[1].textContent : '';
       captionHtml = cols[2] ? cols[2].innerHTML : '';
       buttonLink = cols[3] ? cols[3].querySelector('a') : null;
@@ -76,13 +64,13 @@ export default function decorate(block) {
 
     // Extract dynamic picture(s) authored by the user
     const pictures = imageContainer ? [...imageContainer.querySelectorAll('picture')] : [];
-    
+
     if (pictures.length >= 3) {
       // If author provided 3 pictures for responsive screens
       pictures[0].querySelector('img')?.classList.add('original');
       pictures[1].querySelector('img')?.classList.add('medium');
       pictures[2].querySelector('img')?.classList.add('small');
-      
+
       group.appendChild(pictures[0]);
       group.appendChild(pictures[1]);
       group.appendChild(pictures[2]);
@@ -116,7 +104,7 @@ export default function decorate(block) {
     // Text content
     const textContainer = document.createElement('div');
     textContainer.className = 'principal-banner__text container';
-    
+
     const row = document.createElement('div');
     row.className = 'row';
     const col = document.createElement('div');

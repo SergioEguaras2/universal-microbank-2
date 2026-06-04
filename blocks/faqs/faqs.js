@@ -18,7 +18,7 @@ export default function decorate(block) {
   const firstCells = [...(rows[0]?.querySelectorAll(':scope > div') ?? [])];
   const isIntro = firstCells.length >= 1 && firstCells[0]?.querySelector('h1, h2, h3, strong');
   if (isIntro) {
-    introRow = rows[0];
+    [introRow] = rows;
     itemRows = rows.slice(1);
   }
 

@@ -20,5 +20,5 @@ export default function decorate(block) {
   const heading = block.querySelector('h1, h2');
   if (heading && !heading.id) heading.id = 'hero-banner-heading';
   const img = block.querySelector('img');
-  if (img && !img.alt) img.alt = '';  // Imagen decorativa si no tiene alt
+  if (img && !img.alt) img.alt = ''; // Imagen decorativa si no tiene alt
 }

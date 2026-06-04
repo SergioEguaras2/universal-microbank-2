@@ -68,7 +68,7 @@ export default function decorate(block) {
         tag: tagText,
         nri: nriText,
         href: linkEl ? linkEl.href : '#',
-        srLabel: linkEl ? linkEl.textContent : titleText
+        srLabel: linkEl ? linkEl.textContent : titleText,
       });
     }
   });

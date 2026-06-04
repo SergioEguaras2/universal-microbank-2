@@ -48,7 +48,7 @@
   .eu-institutions ul.eu-institutions__wrap li.eu-institutions__item {
     min-width: 30%;
   }
-  .eu-institutions ul.eu-institutions__wrap li.eu-institutions__item:after {
+  .eu-institutions ul.eu-institutions__wrap li.eu-institutions__item::after {
     content: "";
     display: block;
     position: absolute;
@@ -63,7 +63,7 @@
   }
 }
 
-.eu-institutions ul.eu-institutions__wrap li.eu-institutions__item:before {
+.eu-institutions ul.eu-institutions__wrap li.eu-institutions__item::before {
   content: "";
   display: block;
   position: absolute;
@@ -77,7 +77,7 @@
   background-repeat: repeat-x;
 }
 
-.eu-institutions ul.eu-institutions__wrap li.eu-institutions__item:last-child:after {
+.eu-institutions ul.eu-institutions__wrap li.eu-institutions__item:last-child::after {
   content: "";
   display: block;
   position: absolute;
@@ -95,18 +95,15 @@
   display: block;
 }
 
-.eu-institutions ul.eu-institutions__wrap li.eu-institutions__item .eu-institutions__item-link:after {
+.eu-institutions ul.eu-institutions__wrap li.eu-institutions__item .eu-institutions__item-link::after {
   content: "";
   display: block;
   position: absolute;
-  right: 1rem;
-  left: auto;
-  top: 3.7rem;
-  bottom: 0;
+  inset: 3.7rem 1rem 0 auto;
   margin: auto;
   width: 4.1rem;
   height: 2.2rem;
-  background: url(icons/ic_drawn-arrow-right.png) no-repeat center center;
+  background: url("icons/ic_drawn-arrow-right.png") no-repeat center center;
 }
 
 .eu-institutions ul.eu-institutions__wrap li.eu-institutions__item .eu-institutions__item-link p {

@@ -6,7 +6,6 @@
  * Generado por SA-D01 del Sprint 2 — Red Agéntica AEM
  */
 
-
 // ─── Google Analytics 4 ─────────────────────────────────────────────────────
 // Detectado en Discovery (SA-8). Measurement ID: Ver configuración en TMS
 const gaScript = document.createElement('script');
@@ -15,7 +14,7 @@ gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=Ver configuración e
 document.head.appendChild(gaScript);
 
 window.dataLayer = window.dataLayer || [];
-function gtag() { window.dataLayer.push(arguments); }
+function gtag(...args) { window.dataLayer.push(...args); }
 gtag('js', new Date());
 gtag('config', 'Ver configuración en TMS', {
   page_path: window.location.pathname,
@@ -23,5 +22,5 @@ gtag('config', 'Ver configuración en TMS', {
 });
 // ─────────────────────────────────────────────────────────────────────────────
 
-
+// eslint-disable-next-line no-console
 console.log('[AEM] Scripts diferidos cargados');

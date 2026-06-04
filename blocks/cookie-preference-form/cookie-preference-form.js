@@ -90,7 +90,7 @@ export default function decorate(block) {
   save.append(btnGroup);
 
   form.append(table, save);
-  rows.forEach(r => r.remove());
+  rows.forEach((r) => r.remove());
   block.append(form);
   block.classList.add('cookie-preference-form--initialized');
 }

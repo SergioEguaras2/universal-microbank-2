@@ -145,7 +145,7 @@
 
 @media (min-width: 768px) {
   .alt-highlights ul.alt-highlights__highlights-wrapper li.alt-highlights__highlight .alt-highlights__content .alt-highlights__content-wrapper {
-    padding: 8rem 0 0 0;
+    padding: 8rem 0 0;
   }
 }
 
@@ -292,12 +292,11 @@
 .alt-highlights ul.alt-highlights__highlights-wrapper li.alt-highlights__highlight .alt-highlights__content--related-item {
   background: #fff;
   display: flex;
-  flex-direction: column;
+  flex-flow: column nowrap;
   width: 320px;
   border: 1px solid #cccbcb;
-  padding: 2rem 2rem;
+  padding: 2rem;
   align-items: center;
-  flex-wrap: nowrap;
   max-width: 425px;
   height: auto;
   min-height: 330px;
@@ -315,12 +314,12 @@
 }
 
 .alt-highlights ul.alt-highlights__highlights-wrapper li.alt-highlights__highlight .alt-highlights__content--related-item__image {
-  padding: 0 0 2rem 0;
+  padding: 0 0 2rem;
 }
 
 @media (min-width: 768px) {
   .alt-highlights ul.alt-highlights__highlights-wrapper li.alt-highlights__highlight .alt-highlights__content--related-item__image {
-    padding: 0rem 2rem 0rem 0rem;
+    padding: 0 2rem 0 0;
   }
 }
 
@@ -400,7 +399,7 @@
 }
 
 .alt-highlights ul.alt-highlights__highlights-wrapper li.alt-highlights__highlight .alt-highlights__content--related .slick-prev {
-  background: url(icons/ic_arrow-next-v2.png) no-repeat center center;
+  background: url("icons/ic_arrow-next-v2.png") no-repeat center center;
   background-size: contain;
   transform: rotate(180deg);
   justify-content: left;
@@ -427,7 +426,7 @@
 }
 
 .alt-highlights ul.alt-highlights__highlights-wrapper li.alt-highlights__highlight .alt-highlights__content--related .slick-next {
-  background: url(icons/ic_arrow-next-v2.png) no-repeat center center;
+  background: url("icons/ic_arrow-next-v2.png") no-repeat center center;
   background-size: contain;
   justify-content: right;
   left: 20rem;
@@ -628,7 +627,7 @@
   position: absolute;
   bottom: -5rem;
   right: 0;
-  background: url(images/oval-badge.png) no-repeat center;
+  background: url("images/oval-badge.png") no-repeat center;
   width: 16.8rem;
   height: 12.3rem;
   background-size: 100%;
@@ -938,7 +937,7 @@
 }
 
 .alt-highlights.real-cases {
-  margin: 4.8rem 0 0rem;
+  margin: 4.8rem 0 0;
   top: 0;
 }
 
@@ -950,9 +949,8 @@
 
 .alt-highlights.real-cases ul.alt-highlights__highlights-wrapper li.alt-highlights__highlight {
   flex-direction: column;
-  margin: 0;
   max-width: none;
-  margin: 0rem 0 0;
+  margin: 0;
 }
 
 @media (min-width: 991px) {
@@ -963,7 +961,7 @@
 
 @media (min-width: 1200px) {
   .alt-highlights.real-cases ul.alt-highlights__highlights-wrapper li.alt-highlights__highlight {
-    margin: 0rem 0 0;
+    margin: 0;
   }
 }
 
@@ -976,7 +974,7 @@
 @media (min-width: 991px) {
   .alt-highlights.real-cases ul.alt-highlights__highlights-wrapper li.alt-highlights__highlight .alt-highlights__media {
     margin: 0;
-    left: 0rem;
+    left: 0;
     width: 47%;
   }
 }
@@ -1043,7 +1041,7 @@
   }
 }
 
-.alt-highlights.real-cases ul.alt-highlights__highlights-wrapper li.alt-highlights__highlight .alt-highlights__content .alt-highlights__content-wrapper p:after {
+.alt-highlights.real-cases ul.alt-highlights__highlights-wrapper li.alt-highlights__highlight .alt-highlights__content .alt-highlights__content-wrapper p::after {
   content: "";
   background: url("icons/ic_eyelash.svg");
   top: -1.8rem;
@@ -1054,7 +1052,7 @@
 }
 
 @media (min-width: 992px) {
-  .alt-highlights.real-cases ul.alt-highlights__highlights-wrapper li.alt-highlights__highlight .alt-highlights__content .alt-highlights__content-wrapper p:after {
+  .alt-highlights.real-cases ul.alt-highlights__highlights-wrapper li.alt-highlights__highlight .alt-highlights__content .alt-highlights__content-wrapper p::after {
     right: -3.5rem;
   }
 }
@@ -1229,7 +1227,7 @@
 
 @media (min-width: 991px) {
   .alt-highlights.hazte_cliente_destacados ul.alt-highlights__highlights-wrapper li.alt-highlights__highlight .alt-highlights__media {
-    left: 0rem;
+    left: 0;
     padding-bottom: 0;
   }
 }
@@ -1257,7 +1255,7 @@
   font-family: "ZillaSlab-MediumItalic", Helvetica, Arial, sans-serif;
 }
 
-.alt-highlights.hazte_cliente_destacados ul.alt-highlights__highlights-wrapper li.alt-highlights__highlight .alt-highlights__content .alt-highlights__content-wrapper h2 span.font-Yellow.texto_subrayado:after {
+.alt-highlights.hazte_cliente_destacados ul.alt-highlights__highlights-wrapper li.alt-highlights__highlight .alt-highlights__content .alt-highlights__content-wrapper h2 span.font-Yellow.texto_subrayado::after {
   display: none;
 }
 
@@ -1360,7 +1358,7 @@
 
 @media (min-width: 992px) {
   .alt-highlights.alt-highlights-v2 ul.alt-highlights__highlights-wrapper li.alt-highlights__highlight .alt-highlights__media-icon {
-    margin: 0px 2rem 22.4rem 0;
+    margin: 0 2rem 22.4rem 0;
   }
 }
 

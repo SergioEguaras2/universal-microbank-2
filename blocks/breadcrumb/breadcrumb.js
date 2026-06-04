@@ -13,14 +13,15 @@ export default function decorate(block) {
 
   // Primera celda determina la variante visual
   const variant = cells[0]?.textContent.trim().toLowerCase() || '';
-  const modClass = variant === 'transparent'
-    ? 'region-breadcrumb--transparent'
-    : variant === 'black'
-      ? 'region-breadcrumb--black'
-      : '';
+  let modClass = '';
+  if (variant === 'transparent') {
+    modClass = 'region-breadcrumb--transparent';
+  } else if (variant === 'black') {
+    modClass = 'region-breadcrumb--black';
+  }
 
   const nav = document.createElement('nav');
-  nav.className = 'region-breadcrumb' + (modClass ? ` ${modClass}` : '');
+  nav.className = `region-breadcrumb${modClass ? ` ${modClass}` : ''}`;
   nav.setAttribute('aria-label', 'Ruta de navegación');
 
   const breadcrumb = document.createElement('div');
@@ -39,7 +40,7 @@ export default function decorate(block) {
     ].filter(Boolean).join(' ');
 
     // Preservar enlace o texto tal cual llegue de AEM (usar clones para no mover nodos)
-    const clones = Array.from(cell.childNodes).map(n => n.cloneNode(true));
+    const clones = Array.from(cell.childNodes).map((n) => n.cloneNode(true));
     li.append(...clones);
     if (isLast) li.setAttribute('aria-current', 'page');
     ul.append(li);

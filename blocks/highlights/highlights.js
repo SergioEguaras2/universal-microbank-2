@@ -113,7 +113,7 @@ export default function decorate(block) {
       </defs>
     </svg>
   `;
-  wrap.appendChild(fig3);
+  wrap.appendChild(fig1);
 
   // Render items
   const variants = ['business', 'students', 'individuals'];
