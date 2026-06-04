@@ -1,0 +1,4 @@
+/* Basic styles for faqs */
+.faqs { padding: var(--space-2,1rem); }
+.faqs__item { margin-bottom: var(--space-2,1rem); }
+.faqs__question { font-weight: 600; cursor: pointer; }

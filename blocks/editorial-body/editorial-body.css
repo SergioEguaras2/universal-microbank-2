@@ -1,0 +1,4 @@
+/* Basic styles for editorial-body */
+.editorial-body { line-height:1.6; color:var(--text-color,#111); }
+.editorial-body h1, .editorial-body h2 { margin-top:1.25rem; }
+.editorial-body p { margin: .6rem 0; }
