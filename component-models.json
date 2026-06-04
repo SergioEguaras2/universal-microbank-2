@@ -142,6 +142,17 @@
     ]
   },
   {
+    "id": "cards-microbank",
+    "fields": [
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "content",
+        "label": "Contenido del Bloque"
+      }
+    ]
+  },
+  {
     "id": "card",
     "fields": [
       {
