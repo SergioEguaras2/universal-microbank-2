@@ -236,5 +236,16 @@
         "label": "Contenido"
       }
     ]
-  }
+  },
+  {
+  "id": "product-carousel",
+  "fields": [
+    {
+      "component": "richtext",
+      "valueType": "string",
+      "name": "content",
+      "label": "Contenido"
+    }
+  ]
+}
 ]
