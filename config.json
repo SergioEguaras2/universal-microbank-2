@@ -1,0 +1,17 @@
+{
+  "mappings": [
+    "/content/universal-microbank-2/:/",
+    "/content/universal-microbank-2/en/placeholders:/placeholders.json",
+    "/content/universal-microbank-2/es/placeholders:/placeholders.json",
+    "/content/universal-microbank-2/configuration:/.helix/config.json",
+    "/content/universal-microbank-2/headers:/.helix/headers.json",
+    "/content/universal-microbank-2/metadata:/metadata.json",
+    "/content/universal-microbank-2/configs:/configs.json",
+    "/content/universal-microbank-2/configs-dev:/configs-dev.json",
+    "/content/universal-microbank-2/configs-stage:/configs-stage.json"
+  ],
+  "includes": [
+    "/content/universal-microbank-2/",
+    "/content/dam/universal-microbank-2/"
+  ]
+}
