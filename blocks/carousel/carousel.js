@@ -6,6 +6,18 @@ export default function decorate(block) {
   const rows = [...block.children];
   block.innerHTML = '';
 
+  const getImageUrl = (path) => {
+    if (!path) return '';
+    if (path.startsWith('http') || path.startsWith('//') || path.startsWith('data:')) {
+      return path;
+    }
+    const cleanPath = path.replace(/^(\.\.\/|\.\/|\/)+/, '');
+    if (cleanPath.startsWith('images/')) {
+      return `https://www.microbank.com/${cleanPath}`;
+    }
+    return `https://www.microbank.com/images/${cleanPath}`;
+  };
+
   const section = document.createElement('section');
   section.className = 'hl-carousel no-carousel';
 
@@ -32,29 +44,24 @@ export default function decorate(block) {
       viewAllLink = link;
     } else {
       // Intermediate rows: Carousel Items
-      // Col 0: Image (or image name/img element)
-      // Col 1: Title
-      // Col 2: Tag
-      // Col 3: NRI
-      // Col 4: Link (href and optional sr-label)
       const imgCol = cols[0];
       const titleText = cols[1] ? cols[1].textContent : '';
       const tagText = cols[2] ? cols[2].textContent : '';
       const nriText = cols[3] ? cols[3].textContent : '';
       const linkEl = cols[4] ? cols[4].querySelector('a') : null;
 
-      let imgSrc = '../images/negocios312x488.png';
+      let imgSrc = 'negocios312x488.png';
       if (imgCol) {
         const img = imgCol.querySelector('img');
         if (img) {
           imgSrc = img.src;
         } else if (imgCol.textContent.trim()) {
-          imgSrc = `../images/${imgCol.textContent.trim()}`;
+          imgSrc = imgCol.textContent.trim();
         }
       }
 
       items.push({
-        imgSrc,
+        imgSrc: getImageUrl(imgSrc),
         title: titleText,
         tag: tagText,
         nri: nriText,

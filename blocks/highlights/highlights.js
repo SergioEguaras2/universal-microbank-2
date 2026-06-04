@@ -6,6 +6,18 @@ export default function decorate(block) {
   const items = [...block.children];
   block.innerHTML = '';
 
+  const getImageUrl = (path) => {
+    if (!path) return '';
+    if (path.startsWith('http') || path.startsWith('//') || path.startsWith('data:')) {
+      return path;
+    }
+    const cleanPath = path.replace(/^(\.\.\/|\.\/|\/)+/, '');
+    if (cleanPath.startsWith('images/')) {
+      return `https://www.microbank.com/${cleanPath}`;
+    }
+    return `https://www.microbank.com/images/${cleanPath}`;
+  };
+
   const highlightsDiv = document.createElement('div');
   highlightsDiv.className = 'h-highlights';
 
@@ -144,7 +156,7 @@ export default function decorate(block) {
     li.innerHTML = `
       <a rel="noopener noreferrer" href="${href}" class="nav-link" title="${category.toUpperCase()}">
         <div class="h-highlights__item-image"> 
-          <img src="../images/${imgName}" alt="" role="presentation" aria-hidden="true" /> 
+          <img src="${getImageUrl(imgName)}" alt="" role="presentation" aria-hidden="true" /> 
         </div>
         <div class="h-highlights__item-text">
           <p class="h-highlights__item-budget" data-c2d-cmp-text-property="category">${category}</p>
