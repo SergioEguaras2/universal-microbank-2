@@ -10,8 +10,8 @@
 
 const DEFAULT_CARDS = [
   {
-    image: '/assets/product-carousel-negocios.jpg',
-    alt: 'Persona emprendedora en su negocio',
+    image: '/blocks/product-carousel/media/pb-home-hero2-1440x876.webp',
+    alt: 'Persona emprendedora trabajando con un ordenador',
     kicker: 'Negocios y emprendedores',
     title: 'Impulsa tu negocio',
     text: 'Financiación pensada para iniciar, ampliar o consolidar tu proyecto.',
@@ -19,21 +19,39 @@ const DEFAULT_CARDS = [
     linkUrl: '#',
   },
   {
-    image: '/assets/product-carousel-estudiantes.jpg',
-    alt: 'Estudiante trabajando con un ordenador',
-    kicker: 'Estudiantes',
-    title: 'Haz realidad tus estudios',
-    text: 'Soluciones para ayudarte a seguir formándote y avanzar en tu futuro.',
-    linkText: 'Ver financiación',
-    linkUrl: '#',
-  },
-  {
-    image: '/assets/product-carousel-particulares.jpg',
-    alt: 'Persona consultando información financiera',
+    image: '/blocks/product-carousel/media/microbank-collage-v1-1440x876-bn.jpg',
+    alt: 'Collage de personas beneficiarias de MicroBank',
     kicker: 'Particulares',
     title: 'Apoyo para tus proyectos',
     text: 'Opciones de financiación para necesidades personales y familiares.',
     linkText: 'Descubre más',
+    linkUrl: '#',
+  },
+  {
+    image: '/blocks/product-carousel/media/mbk-cambiosocial-1440x876.webp',
+    alt: 'Persona trabajando con un portátil en unas escaleras',
+    kicker: 'Impacto social',
+    title: 'Construimos valor social',
+    text: 'Financiación orientada a personas, negocios y proyectos con futuro.',
+    linkText: 'Descubre el impacto',
+    linkUrl: '#',
+  },
+  {
+    image: '/blocks/product-carousel/media/mb-home-slider-1-1440x775.webp',
+    alt: 'Dos personas trabajando juntas en una oficina',
+    kicker: 'Emprendimiento femenino',
+    title: 'Apoyamos tu emprendimiento',
+    text: 'Soluciones para impulsar proyectos con impacto económico y social.',
+    linkText: 'Saber más',
+    linkUrl: '#',
+  },
+  {
+    image: '/blocks/product-carousel/media/pb-home-hero3-1440x876.webp',
+    alt: 'Persona emprendedora trabajando en un invernadero',
+    kicker: 'Negocios sostenibles',
+    title: 'Haz crecer tu proyecto',
+    text: 'Apoyo financiero para negocios con capacidad de transformación.',
+    linkText: 'Ver soluciones',
     linkUrl: '#',
   },
 ];
@@ -128,8 +146,8 @@ function createCard(card, index) {
   image.alt = card.alt;
   image.loading = index === 0 ? 'eager' : 'lazy';
   image.decoding = 'async';
-  image.width = 420;
-  image.height = 520;
+  image.width = 440;
+  image.height = 560;
 
   const content = document.createElement('div');
   content.className = 'product-carousel-card-content';
@@ -150,6 +168,12 @@ function createCard(card, index) {
   linkText.className = 'product-carousel-card-link';
   linkText.textContent = card.linkText;
 
+  const arrow = document.createElement('span');
+  arrow.className = 'product-carousel-card-arrow';
+  arrow.textContent = '›';
+  arrow.setAttribute('aria-hidden', 'true');
+
+  linkText.append(arrow);
   content.append(kicker, cardTitle, text, linkText);
   link.append(image, content);
   item.append(link);
@@ -183,10 +207,13 @@ export default function decorate(block) {
 
   const eyebrow = textFromCell(firstRowCells[0])
     || 'Préstamos que se adaptan a ti';
+
   const title = textFromCell(secondRowCells[0])
     || '¿Qué préstamo se adapta mejor a tu negocio?';
+
   const description = textFromCell(thirdRowCells[0])
     || 'Elige la solución que mejor encaja con tus necesidades.';
+
   const cards = getCardsFromRows(rows);
 
   block.innerHTML = '';
@@ -269,11 +296,17 @@ export default function decorate(block) {
   );
 
   prevButton.addEventListener('click', () => {
-    viewport.scrollBy({ left: -viewport.clientWidth, behavior: 'smooth' });
+    viewport.scrollBy({
+      left: -viewport.clientWidth,
+      behavior: 'smooth',
+    });
   });
 
   nextButton.addEventListener('click', () => {
-    viewport.scrollBy({ left: viewport.clientWidth, behavior: 'smooth' });
+    viewport.scrollBy({
+      left: viewport.clientWidth,
+      behavior: 'smooth',
+    });
   });
 
   arrows.append(prevButton, nextButton);
@@ -282,6 +315,7 @@ export default function decorate(block) {
   block.append(container);
 
   const items = [...track.children];
+
   const sync = () => {
     updateState(viewport, items, dotButtons, prevButton, nextButton);
   };
@@ -291,6 +325,7 @@ export default function decorate(block) {
     () => window.requestAnimationFrame(sync),
     { passive: true },
   );
+
   window.addEventListener('resize', sync);
   sync();
 }
