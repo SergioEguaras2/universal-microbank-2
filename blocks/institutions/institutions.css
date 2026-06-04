@@ -1,0 +1,29 @@
+/**
+ * institutions.css — Estilos del bloque institutions
+ * Mobile-first. BEM para nomenclatura de clases.
+ * Variables CSS de :root (definidas en styles/styles.css).
+ *
+ * Generado por SA-D02 del Sprint 2 — Red Agéntica AEM
+ */
+
+/* ── Contenedor principal ── */
+.institutions {
+  display: block;
+  width: 100%;
+  max-width: var(--max-width, 1200px);
+  margin: 0 auto;
+  padding: var(--spacing-m, 1rem);
+  color: var(--color-text, #333333);
+  font-family: var(--font-body, sans-serif);
+}
+
+/* ── Estado de inicialización ── */
+.institutions--initialized {
+  animation: none;
+}
+
+/* ── Elementos internos (BEM) ── */
+.institutions__item {
+  padding: var(--spacing-s, 0.5rem);
+}
+

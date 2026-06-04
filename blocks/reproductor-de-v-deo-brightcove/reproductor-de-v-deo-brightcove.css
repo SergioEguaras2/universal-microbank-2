@@ -1,0 +1,6 @@
+/* Estilos encapsulados para el bloque reproductor-de-v-deo-brightcove */
+.reproductor-de-v-deo-brightcove {
+  display: block;
+  margin: var(--spacing-m) auto;
+  max-width: var(--max-width);
+}

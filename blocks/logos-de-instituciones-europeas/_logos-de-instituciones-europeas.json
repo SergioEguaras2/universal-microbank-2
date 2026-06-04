@@ -1,0 +1,33 @@
+{
+  "definitions": [
+    {
+      "title": "Logos De Instituciones Europeas",
+      "id": "logos-de-instituciones-europeas",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block",
+            "template": {
+              "name": "Logos De Instituciones Europeas",
+              "model": "logos-de-instituciones-europeas"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": "logos-de-instituciones-europeas",
+      "fields": [
+        {
+          "component": "richtext",
+          "valueType": "string",
+          "name": "content",
+          "label": "Contenido del Bloque"
+        }
+      ]
+    }
+  ],
+  "filters": []
+}

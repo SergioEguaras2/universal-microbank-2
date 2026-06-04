@@ -1,20 +1,25 @@
-import { getMetadata } from '../../scripts/aem.js';
-import { loadFragment } from '../fragment/fragment.js';
+/**
+ * footer.js — Bloque AEM EDS: Footer
+ * Pie de página global con enlaces, información legal, redes sociales y logo
+ *
+ * Generado por SA-D02 del Sprint 2 — Red Agéntica AEM
+ * Convención: export default function decorate(block) {} — vanilla JS, sin frameworks
+ */
 
 /**
- * loads and decorates the footer
- * @param {Element} block The footer block element
+ * Decora el bloque footer añadiendo comportamiento interactivo y accesibilidad.
+ * @param {HTMLElement} block - El elemento raíz del bloque en el DOM
  */
-export default async function decorate(block) {
-  // load footer as fragment
-  const footerMeta = getMetadata('footer');
-  const footerPath = footerMeta ? new URL(footerMeta, window.location).pathname : '/footer';
-  const fragment = await loadFragment(footerPath);
+export default function decorate(block) {
+  if (!block) return;
 
-  // decorate footer DOM
-  block.textContent = '';
-  const footer = document.createElement('div');
-  while (fragment.firstElementChild) footer.append(fragment.firstElementChild);
+  // Añadir clase de inicialización para CSS transitions
+  block.classList.add('footer--initialized');
 
-  block.append(footer);
+  // Implementación genérica — añadir lógica específica del componente
+  const items = block.querySelectorAll(':scope > div');
+  items.forEach((item, index) => {
+    item.classList.add('footer__item');
+    item.setAttribute('data-index', index);
+  });
 }

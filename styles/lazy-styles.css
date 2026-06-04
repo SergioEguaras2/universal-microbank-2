@@ -1,1 +1,15 @@
-/* add global styles that can be loaded post LCP here */
+/**
+ * lazy-styles.css — Estilos de carga diferida
+ * Se cargan tras la primera paint para no bloquear el renderizado inicial.
+ * Contiene estilos de componentes secundarios y animaciones.
+ *
+ * Generado por SA-D02 del Sprint 2 — Red Agéntica AEM
+ */
+
+/* Transiciones y animaciones */
+@media (prefers-reduced-motion: no-preference) {
+  .animated {
+    animation-duration: 0.3s;
+    animation-fill-mode: both;
+  }
+}

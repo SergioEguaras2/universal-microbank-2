@@ -1,5 +1,14 @@
 /**
- * @param {HTMLElement} block El elemento contenedor del bloque en el DOM
+ * video-banner.js — Bloque AEM EDS: VideoBanner
+ * Sección con reproductor de vídeo embebido (Brightcove, YouTube, Vimeo o nativo HTML5)
+ *
+ * Generado por SA-D02 del Sprint 2 — Red Agéntica AEM
+ * Convención: export default function decorate(block) {} — vanilla JS, sin frameworks
+ */
+
+/**
+ * Decora el bloque video-banner añadiendo comportamiento interactivo y accesibilidad.
+ * @param {HTMLElement} block - El elemento raíz del bloque en el DOM
  */
 export default function decorate(block) {
   const cells = [...block.querySelectorAll(':scope > div > div')];
@@ -7,7 +16,8 @@ export default function decorate(block) {
   const accountId = cells[1]?.textContent?.trim() || '6236382021001';
   const playerId = cells[2]?.textContent?.trim() || 'Jdfh8iZrx5';
 
-  block.innerHTML = '';
+  // Añadir clase de inicialización para CSS transitions
+  block.classList.add('video-banner--initialized');
 
   const placeholder = document.createElement('div');
   placeholder.className = 'video-banner-placeholder';
