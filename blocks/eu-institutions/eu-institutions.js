@@ -113,7 +113,9 @@ export default function decorate(block) {
       },
     ];
 
-    institutions.forEach(({ name, href, logo, alt }) => {
+    institutions.forEach(({
+      name, href, logo, alt,
+    }) => {
       const item = document.createElement('a');
       item.className = 'eu-institutions-item';
       item.href = href;
