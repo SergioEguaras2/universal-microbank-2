@@ -225,5 +225,16 @@
         "label": "Contenido"
       }
     ]
+  },
+  {
+    "id": "eu-institutions",
+    "fields": [
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "content",
+        "label": "Contenido"
+      }
+    ]
   }
 ]
