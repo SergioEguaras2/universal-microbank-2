@@ -41,6 +41,10 @@ export default function decorate(block) {
       if (desc && !desc.trim().startsWith('<p')) {
         desc = `<p>${desc}</p>`;
       }
+      // mark description elements as editable for the authoring UI
+      title = title.replace(/<h([1-6])/, '<h$1 data-c2d-cmp-text-property="heading"');
+      desc = desc.replace(/<p/, '<p data-c2d-cmp-text-property="description"');
+
       descriptionHtml = `
         <div data-aos="fade-up" class="hl-carousel-description-text aos-fast-mobile">
           ${title}
@@ -141,11 +145,12 @@ export default function decorate(block) {
     article.setAttribute('data-aos-offset', '100');
     article.setAttribute('data-aos-delay', `${(idx + 1) * 100}`);
 
+    // make image and text editable/contributable in the editor
     article.innerHTML = `
       <a href="${item.href}"> 
         <span class="sr-only" data-c2d-cmp-text-property="sr-label">${item.srLabel}</span>
-        <div class="hl-carousel-highlights-item-img"> 
-          <img src="${item.imgSrc}" alt="" role="presentation" aria-hidden="true" /> 
+        <div class="hl-carousel-highlights-item-img" data-c2d-cmp-media="image"> 
+          <img src="${item.imgSrc}" data-c2d-cmp-media-src="${item.imgSrc}" alt="${item.title || ''}" role="presentation" aria-hidden="true" /> 
         </div>
         <div class="hl-carousel-highlights-item-text">
           <h3 data-c2d-cmp-text-property="title">${item.title}</h3>
@@ -169,7 +174,8 @@ export default function decorate(block) {
   const text = viewAllLink ? viewAllLink.textContent : 'Ver todos los productos';
   const linkDiv = document.createElement('div');
   linkDiv.className = 'hl-carousel-highlights-link';
-  linkDiv.innerHTML = `<p><a href="${href}" title="${text}">${text}</a></p>`;
+  // make link text editable
+  linkDiv.innerHTML = `<p><a href="${href}" title="${text}" data-c2d-cmp-text-property="view-all">${text}</a></p>`;
   highlightsDiv.appendChild(linkDiv);
 
   section.appendChild(highlightsDiv);
