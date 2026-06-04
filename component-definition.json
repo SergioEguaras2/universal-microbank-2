@@ -83,6 +83,21 @@
       "id": "blocks",
       "components": [
         {
+          "title": "Alt Highlights",
+          "id": "alt-highlights",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Alt Highlights",
+                  "model": "alt-highlights"
+                }
+              }
+            }
+          }
+        },
+        {
           "title": "Migas de pan",
           "id": "breadcrumb",
           "plugins": {
@@ -98,6 +113,21 @@
           }
         },
         {
+          "title": "Buscador En Cabecera",
+          "id": "buscador-en-cabecera",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Buscador En Cabecera",
+                  "model": "buscador-en-cabecera"
+                }
+              }
+            }
+          }
+        },
+        {
           "title": "Cards",
           "id": "cards",
           "plugins": {
@@ -106,22 +136,37 @@
                 "resourceType": "core/franklin/components/block/v1/block",
                 "template": {
                   "name": "Cards",
-                  "filter": "cards"
+                  "model": "cards"
                 }
               }
             }
           }
         },
         {
-          "title": "Card",
-          "id": "card",
+          "title": "Carousel",
+          "id": "carousel",
           "plugins": {
             "xwalk": {
               "page": {
-                "resourceType": "core/franklin/components/block/v1/block/item",
+                "resourceType": "core/franklin/components/block/v1/block",
                 "template": {
-                  "name": "Card",
-                  "model": "card"
+                  "name": "Carousel",
+                  "model": "carousel"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Carrusel De Destacados",
+          "id": "carrusel-de-destacados",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Carrusel De Destacados",
+                  "model": "carrusel-de-destacados"
                 }
               }
             }
@@ -133,42 +178,60 @@
           "plugins": {
             "xwalk": {
               "page": {
-                "resourceType": "core/franklin/components/columns/v1/columns",
+                "resourceType": "core/franklin/components/block/v1/block",
                 "template": {
-                  "columns": "2",
-                  "rows": "1"
+                  "name": "Columns",
+                  "model": "columns"
                 }
               }
             }
           }
         },
         {
-          "title": "Column",
-          "id": "column",
+          "title": "Custom Test Card",
+          "id": "custom-test-card",
           "plugins": {
             "xwalk": {
               "page": {
-                "resourceType": "core/franklin/components/columns/v1/columns/column",
-                "template": {}
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Custom Test Card",
+                  "model": "custom-test-card"
+                }
               }
             }
           }
         },
         {
-  "title": "Logos de instituciones europeas",
-  "id": "eu-institutions",
-  "plugins": {
-    "xwalk": {
-      "page": {
-        "resourceType": "core/franklin/components/block/v1/block",
-        "template": {
-          "name": "eu-institutions",
-          "model": "eu-institutions"
-        }
-      }
-    }
-  }
-},
+          "title": "EU Institutions",
+          "id": "eu-institutions",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "EU Institutions",
+                  "model": "eu-institutions"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Pie de página",
+          "id": "footer",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Pie de página",
+                  "model": "footer"
+                }
+              }
+            }
+          }
+        },
         {
           "title": "Fragment",
           "id": "fragment",
@@ -179,6 +242,36 @@
                 "template": {
                   "name": "Fragment",
                   "model": "fragment"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Cabecera principal",
+          "id": "header",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Cabecera principal",
+                  "model": "header"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Banner / Carrusel principal",
+          "id": "hero-banner",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Banner / Carrusel principal",
+                  "model": "hero-banner"
                 }
               }
             }
@@ -200,6 +293,126 @@
           }
         },
         {
+          "title": "Highlights Carousel",
+          "id": "highlights-carousel",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Highlights Carousel",
+                  "model": "highlights-carousel"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Highlights",
+          "id": "highlights",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Highlights",
+                  "model": "highlights"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Institutions",
+          "id": "institutions",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Institutions",
+                  "model": "institutions"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Link Highlights",
+          "id": "link-highlights",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Link Highlights",
+                  "model": "link-highlights"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Logos De Instituciones Europeas",
+          "id": "logos-de-instituciones-europeas",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Logos De Instituciones Europeas",
+                  "model": "logos-de-instituciones-europeas"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Migas De Pan",
+          "id": "migas-de-pan",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Migas De Pan",
+                  "model": "migas-de-pan"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Modal / Diálogo",
+          "id": "modal",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Modal / Diálogo",
+                  "model": "modal"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Navegación principal",
+          "id": "navigation",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Navegación principal",
+                  "model": "navigation"
+                }
+              }
+            }
+          }
+        },
+        {
           "title": "Offer Maker",
           "id": "offer-maker",
           "plugins": {
@@ -208,22 +421,7 @@
                 "resourceType": "core/franklin/components/block/v1/block",
                 "template": {
                   "name": "Offer Maker",
-                  "filter": "offer-maker"
-                }
-              }
-            }
-          }
-        },
-        {
-          "title": "Offer",
-          "id": "offer",
-          "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block/item",
-                "template": {
-                  "name": "Offer",
-                  "model": "offer"
+                  "model": "offer-maker"
                 }
               }
             }
@@ -238,22 +436,22 @@
                 "resourceType": "core/franklin/components/block/v1/block",
                 "template": {
                   "name": "Principal Banner",
-                  "filter": "principal-banner"
+                  "model": "principal-banner"
                 }
               }
             }
           }
         },
         {
-          "title": "Banner Slide",
-          "id": "banner-slide",
+          "title": "Carrusel de productos",
+          "id": "product-carousel",
           "plugins": {
             "xwalk": {
               "page": {
-                "resourceType": "core/franklin/components/block/v1/block/item",
+                "resourceType": "core/franklin/components/block/v1/block",
                 "template": {
-                  "name": "Banner Slide",
-                  "model": "banner-slide"
+                  "name": "Carrusel de productos",
+                  "model": "product-carousel"
                 }
               }
             }
@@ -268,22 +466,37 @@
                 "resourceType": "core/franklin/components/block/v1/block",
                 "template": {
                   "name": "Product Conditions",
-                  "filter": "product-conditions"
+                  "model": "product-conditions"
                 }
               }
             }
           }
         },
         {
-          "title": "Condition Item",
-          "id": "condition-item",
+          "title": "Cuadrícula mosaico de casos",
+          "id": "real-cases-grid",
           "plugins": {
             "xwalk": {
               "page": {
-                "resourceType": "core/franklin/components/block/v1/block/item",
+                "resourceType": "core/franklin/components/block/v1/block",
                 "template": {
-                  "name": "Condition Item",
-                  "model": "condition-item"
+                  "name": "Cuadrícula mosaico de casos",
+                  "model": "real-cases-grid"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Reproductor De V Deo Brightcove",
+          "id": "reproductor-de-v-deo-brightcove",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Reproductor De V Deo Brightcove",
+                  "model": "reproductor-de-v-deo-brightcove"
                 }
               }
             }
@@ -305,30 +518,90 @@
           }
         },
         {
-  "title": "Reproductor de vídeo Brightcove",
-  "id": "video-banner", 
-  "plugins": {
-    "xwalk": {
-      "page": {
-        "resourceType": "core/franklin/components/block/v1/block",
-        "template": {
-          "name": "video-banner",
-          "model": "video-banner"
-        }
-      }
-    }
-  }
-},
+          "title": "Reproductor de vídeo Brightcove",
+          "id": "video-banner", 
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "video-banner",
+                  "model": "video-banner"
+                }
+              }
+            }
+          }
+        },
         {
-          "title": "Banner de Vídeo Impacto",
+          "title": "Buscador",
+          "id": "search",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Buscador",
+                  "model": "search"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Redes sociales",
+          "id": "social",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Redes sociales",
+                  "model": "social"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Pestañas de contenido",
+          "id": "tabs",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Pestañas de contenido",
+                  "model": "tabs"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Banner de vídeo",
           "id": "video-banner",
           "plugins": {
             "xwalk": {
               "page": {
                 "resourceType": "core/franklin/components/block/v1/block",
                 "template": {
-                  "name": "Video Banner",
+                  "name": "Banner de vídeo",
                   "model": "video-banner"
+                }
+              }
+            }
+          }
+        },
+        {
+          "title": "Reproductor de vídeo Brightcove",
+          "id": "video-player",
+          "plugins": {
+            "xwalk": {
+              "page": {
+                "resourceType": "core/franklin/components/block/v1/block",
+                "template": {
+                  "name": "Reproductor de vídeo Brightcove",
+                  "model": "video-player"
                 }
               }
             }

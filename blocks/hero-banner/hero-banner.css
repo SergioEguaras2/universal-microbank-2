@@ -1,0 +1,29 @@
+/**
+ * hero-banner.css — Estilos del bloque hero-banner
+ * Mobile-first. BEM para nomenclatura de clases.
+ * Variables CSS de :root (definidas en styles/styles.css).
+ *
+ * Generado por SA-D02 del Sprint 2 — Red Agéntica AEM
+ */
+
+/* ── Contenedor principal ── */
+.hero-banner {
+  display: block;
+  width: 100%;
+  max-width: var(--max-width, 1200px);
+  margin: 0 auto;
+  padding: var(--spacing-m, 1rem);
+  color: var(--color-text, #333333);
+  font-family: var(--font-body, sans-serif);
+}
+
+/* ── Estado de inicialización ── */
+.hero-banner--initialized {
+  animation: none;
+}
+
+/* ── Elementos internos (BEM) ── */
+.hero-banner__item {
+  padding: var(--spacing-s, 0.5rem);
+}
+

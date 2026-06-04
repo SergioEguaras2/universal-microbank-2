@@ -58,7 +58,7 @@
         "search-bar",
         "breadcrumb",
         "highlight-double",
-        "highlight-carousel",
+        "highlights-carousel",
         "link-highlights",
         "nav-main",
         "real-cases-grid",
@@ -69,7 +69,8 @@
         "transparent-banner",
         "video-carousel",
         "video-player",
-        "video-banner"
+        "video-banner",
+        "hero-banner"
         
       ]
     }

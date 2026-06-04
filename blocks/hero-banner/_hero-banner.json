@@ -1,0 +1,58 @@
+{
+  "definitions": [
+    {
+      "title": "Banner / Carrusel principal",
+      "id": "hero-banner",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block",
+            "template": {
+              "name": "Banner / Carrusel principal",
+              "model": "hero-banner"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": "hero-banner",
+      "fields": [
+        {
+          "component": "reference",
+          "valueType": "string",
+          "name": "image",
+          "label": "Imagen de fondo",
+          "multi": false
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "title",
+          "label": "Título principal"
+        },
+        {
+          "component": "richtext",
+          "valueType": "string",
+          "name": "text",
+          "label": "Texto descriptivo"
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "cta-label",
+          "label": "Texto del CTA"
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "cta-url",
+          "label": "URL del CTA"
+        }
+      ]
+    }
+  ],
+  "filters": []
+}

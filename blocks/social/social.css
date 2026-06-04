@@ -1,0 +1,78 @@
+/**
+ * social.css — Estilos del bloque social
+ * CSS adaptado del portal original a convenciones AEM EDS.
+ * Mobile-first. Variables CSS de :root (definidas en styles/styles.css).
+ *
+ * Generado por SA-D02 del Sprint 2 — Red Agéntica AEM
+ */
+
+/* ── Contenedor AEM EDS ── */
+.social {
+  display: block;
+  width: 100%;
+  max-width: var(--max-width, 1200px);
+  margin: 0 auto;
+  color: var(--color-text, #333333);
+  font-family: var(--font-body, sans-serif);
+}
+
+/* ── Estado de inicialización ── */
+.social--initialized {
+  animation: none;
+}
+
+/* ── Estilos extraídos del portal original ── */
+/* Estilos para bloque AEM EDS: social */
+/* Raíces BEM: social */
+/* Extraído de: Estaticos__MBK_Home.css */
+
+/* ── Origen: Estaticos__MBK_Home.css ── */
+.social-icons {
+  align-items: end;
+  display: flex;
+  gap: 1rem;
+  justify-content: end;
+}
+
+.social-icons > ul {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: end;
+}
+
+.social-icons__color-white svg path {
+  fill: #fff;
+}
+
+.blog-detail-head .social-icons, .post-detail-head .social-icons {
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.25);
+  padding-bottom: 2.4rem;
+}
+
+.header .social-icons {
+  height: 100%;
+  align-items: center;
+}
+
+.header .social-icons a {
+  line-height: 3.6rem;
+}
+
+.link-highlights.highlights .link-highlights__highlights-social_media .social_media--list-title p {
+  color: #1A1A1A;
+  font-family: "OpenSans-Bold", Helvetica, Arial, sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.76rem;
+  letter-spacing: -0.64px;
+}
+
+.link-highlights.highlights .link-highlights__highlights-social_media .social_media--list {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.link-highlights.highlights .link-highlights__highlights-social_media .social_media--list svg {
+  width: 24px;
+  height: 24px;
+}

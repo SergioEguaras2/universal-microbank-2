@@ -1,0 +1,3 @@
+/* Basic styles for cookie-consent */
+.cookie-consent { position: fixed; bottom: 1rem; left: 1rem; right: 1rem; background: var(--surface,#fff); padding: var(--space-2,1rem); box-shadow: 0 6px 18px rgba(0,0,0,.08); border-radius:8px; }
+.cookie-consent__actions { display:flex; gap: .5rem; justify-content:flex-end; }

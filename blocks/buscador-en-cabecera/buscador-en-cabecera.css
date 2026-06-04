@@ -1,0 +1,41 @@
+/**
+ * buscador-en-cabecera.css — Estilos del bloque buscador-en-cabecera
+ * Extraído automáticamente desde el portal original.
+ */
+
+header.bg-blur .main-header .row #prebuscadorCabecera .search-trigger {
+  background-image: url("icons/ic_search.svg");
+}
+
+header .main-header .row #prebuscadorCabecera .search-trigger {
+  background: url("icons/ic_search-white.svg") center center no-repeat transparent;
+  width: 2.4rem;
+  height: 2.4rem;
+  margin-right: 1rem;
+}
+
+@media (min-width: 992px) {
+  header .main-header .row #prebuscadorCabecera .search-trigger {
+    margin: 0;
+  }
+}
+
+header.bg-blur .main-header .row #prebuscadorCabecera .search form .search-trigger {
+  background: url("icons/ic_close_menu-black.svg") center center no-repeat transparent;
+}
+
+header .main-header.opened-search .order-3 #prebuscadorCabecera .search form .search-trigger {
+  display: block;
+}
+
+header .main-header .row #prebuscadorCabecera .search a.search-trigger {
+  transition: opacity 0.5s;
+}
+
+header .main-header .row #prebuscadorCabecera .search form .search-trigger {
+  opacity: 1 !important;
+  background: url("icons/ic_close_menu-black.svg") center center no-repeat transparent;
+  margin-right: 3.5rem;
+  border: none;
+  display: none;
+}

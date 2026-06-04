@@ -1,0 +1,33 @@
+{
+  "definitions": [
+    {
+      "title": "Institutions",
+      "id": "institutions",
+      "plugins": {
+        "xwalk": {
+          "page": {
+            "resourceType": "core/franklin/components/block/v1/block",
+            "template": {
+              "name": "Institutions",
+              "model": "institutions"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": "institutions",
+      "fields": [
+        {
+          "component": "richtext",
+          "valueType": "string",
+          "name": "content",
+          "label": "Contenido"
+        }
+      ]
+    }
+  ],
+  "filters": []
+}

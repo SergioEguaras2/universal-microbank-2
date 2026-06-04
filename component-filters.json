@@ -23,7 +23,7 @@
       "search-bar",
       "breadcrumb",
       "highlight-double",
-      "highlight-carousel",
+      "highlights-carousel",
       "link-highlights",
       "nav-main",
       "real-cases-grid",
@@ -34,46 +34,8 @@
       "transparent-banner",
       "video-carousel",
       "video-player",
-      "video-banner"
-    ]
-  },
-  {
-    "id": "cards",
-    "components": [
-      "card"
-    ]
-  },
-  {
-    "id": "columns",
-    "components": [
-      "column"
-    ]
-  },
-  {
-    "id": "column",
-    "components": [
-      "text",
-      "image",
-      "button",
-      "title"
-    ]
-  },
-  {
-    "id": "offer-maker",
-    "components": [
-      "offer"
-    ]
-  },
-  {
-    "id": "principal-banner",
-    "components": [
-      "banner-slide"
-    ]
-  },
-  {
-    "id": "product-conditions",
-    "components": [
-      "condition-item"
+      "video-banner",
+      "hero-banner"
     ]
   }
 ]

@@ -1,0 +1,87 @@
+.hl-carousel {
+  padding: 0;
+  margin: 5rem 0;
+  position: relative;
+  z-index: 1;
+}
+
+@media (min-width: 992px) {
+  .hl-carousel {
+    padding: 0;
+    margin: 0 0 5rem;
+  }
+}
+
+.hl-carousel.no-carousel {
+  overflow: visible;
+}
+
+@media (min-width: 1400px) {
+  .hl-carousel.no-carousel .hl-carousel__highlights .hl-carousel__highlights-wrap .slick-list~* {
+    display: none;
+  }
+}
+
+.hl-carousel.no-carousel .hl-carousel__highlights .hl-carousel__highlights-link {
+  position: relative;
+  display: block;
+  top: 3rem;
+}
+
+@media (min-width: 992px) {
+  .hl-carousel.no-carousel .hl-carousel__highlights .hl-carousel__highlights-link {
+    top: 2rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .hl-carousel.no-carousel .hl-carousel__highlights .hl-carousel__highlights-link {
+    right: 2rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .hl-carousel.no-carousel .hl-carousel__highlights .hl-carousel__highlights-link {
+    top: 3.85rem;
+    right: 0;
+  }
+}
+
+.hl-carousel.no-carousel .hl-carousel__highlights .hl-carousel__highlights-link p {
+  text-align: center;
+}
+
+@media (min-width: 992px) {
+  .hl-carousel.no-carousel .hl-carousel__highlights .hl-carousel__highlights-link p {
+    text-align: right;
+  }
+}
+
+.hl-carousel.no-carousel .hl-carousel__highlights .hl-carousel__highlights-link p>a {
+  font-family: "OpenSans-Bold", Helvetica, Arial, sans-serif;
+  font-size: 1.6rem;
+  line-height: 110%;
+  align-items: center;
+  color: #000000;
+  text-align: center;
+  letter-spacing: -0.04em;
+  position: relative;
+}
+
+@media (min-width: 1440px) {
+  .hl-carousel.no-carousel .hl-carousel__highlights .hl-carousel__highlights-link p>a {
+    right: 3.3rem;
+  }
+}
+
+.hl-carousel.no-carousel .hl-carousel__highlights .hl-carousel__highlights-link p>a::after {
+  padding-right: 0;
+  color: white;
+  right: -3.3rem;
+  width: 2.3rem;
+  height: 2.3rem;
+  bottom: 0;
+  position: absolute;
+  background: url("../../../components_preview/css/icons/ic_drawn-arrow-right-sm-black.png") no-repeat center right;
+  letter-spacing: -0.04em;
+}

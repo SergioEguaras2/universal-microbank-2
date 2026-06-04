@@ -9,22 +9,7 @@
             "resourceType": "core/franklin/components/block/v1/block",
             "template": {
               "name": "Offer Maker",
-              "filter": "offer-maker"
-            }
-          }
-        }
-      }
-    },
-    {
-      "title": "Offer",
-      "id": "offer",
-      "plugins": {
-        "xwalk": {
-          "page": {
-            "resourceType": "core/franklin/components/block/v1/block/item",
-            "template": {
-              "name": "Offer",
-              "model": "offer"
+              "model": "offer-maker"
             }
           }
         }
@@ -33,45 +18,16 @@
   ],
   "models": [
     {
-      "id": "offer",
+      "id": "offer-maker",
       "fields": [
         {
-          "component": "text",
-          "name": "title",
-          "value": "",
-          "label": "Loan Title (e.g. Préstamo Personal)",
-          "valueType": "string"
-        },
-        {
-          "component": "text",
-          "name": "tinTae",
-          "value": "",
-          "label": "TIN / TAE (e.g. 5,00 % / 5,12 %)",
-          "valueType": "string"
-        },
-        {
-          "component": "text",
-          "name": "installment",
-          "value": "",
-          "label": "Cuota Mensual (e.g. 150 €)",
-          "valueType": "string"
-        },
-        {
           "component": "richtext",
-          "name": "description",
-          "value": "",
-          "label": "Description & Links",
-          "valueType": "string"
+          "valueType": "string",
+          "name": "content",
+          "label": "Contenido del Bloque"
         }
       ]
     }
   ],
-  "filters": [
-    {
-      "id": "offer-maker",
-      "components": [
-        "offer"
-      ]
-    }
-  ]
+  "filters": []
 }
