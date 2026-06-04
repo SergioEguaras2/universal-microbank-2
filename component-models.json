@@ -211,6 +211,17 @@
     ]
   },
   {
+    "id": "carousel",
+    "fields": [
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "content",
+        "label": "Contenido del Bloque"
+      }
+    ]
+  },
+  {
     "id": "carrusel-de-destacados",
     "fields": [
       {
