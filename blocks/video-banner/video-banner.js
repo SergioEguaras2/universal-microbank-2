@@ -29,7 +29,8 @@ export default function decorate(block) {
   videoEl.setAttribute('data-embed', 'default');
   videoEl.setAttribute('controls', '');
   videoEl.setAttribute('data-application-id', '');
-  videoEl.className = 'video-js';
+  videoEl.setAttribute('data-setup', JSON.stringify({ fluid: true }));
+  videoEl.className = 'video-js vjs-fluid vjs-16-9';
 
   placeholder.appendChild(videoEl);
   block.appendChild(placeholder);
